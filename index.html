@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>看得见的物理 · 初中物理互动动画课堂</title>
+<meta name="description" content="面向初中物理的互动教学网站：用动画、3D 模型和虚拟实验台，帮助学生理解每一章的物理知识。">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav">
+      <a href="index.html" class="on">首页</a>
+      <a href="chapter1/index.html">第1章 机械运动</a>
+      <a href="lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<section class="home-hero">
+  <div class="container home-hero-inner">
+    <div>
+      <h1>让物理<em>看得见</em><br>摸得着</h1>
+      <p class="lead">把课本上的概念变成会动的画面：拖一拖刻度尺、切换一下参照物、亲手释放斜面上的小车——在互动中理解初中物理的每一个知识点。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="chapter1/index.html">从第1章开始学习 →</a>
+        <a class="btn btn-lg" href="lab/index.html">🔬 进入物理实验台</a>
+      </div>
+    </div>
+    <div class="hero-visual"><div id="heroDemo"></div></div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="feature-row">
+    <div class="feature"><div class="ico">🎬</div><h3>动画讲解</h3><p>频闪照片、运动图像、尺度之旅……把抽象的概念画出来、动起来。</p></div>
+    <div class="feature"><div class="ico">🧊</div><h3>3D 模型</h3><p>可以旋转、缩放的三维场景，从任意角度观察参照物和斜面实验。</p></div>
+    <div class="feature"><div class="ico">🔬</div><h3>虚拟实验台</h3><p>按教案中的实验步骤动手操作，自动记录数据、分析结论，可以反复做。</p></div>
+  </div>
+
+  <div class="block-title"><h2>八年级上册</h2><span>人教版</span></div>
+  <div class="chapter-grid">
+    <a class="chapter-card" href="chapter1/index.html"><span class="ico">🚄</span><span class="no">第 1 章</span><h3>机械运动</h3><p>长度和时间的测量 · 运动的描述 · 运动的快慢 · 测量平均速度</p><span class="state ready">● 已上线 · 18 个互动</span></a>
+    <div class="chapter-card soon"><span class="ico">🔊</span><span class="no">第 2 章</span><h3>声现象</h3><p>声音的产生与传播 · 声音的特性 · 声的利用 · 噪声</p><span class="state wip">○ 制作中</span></div>
+    <div class="chapter-card soon"><span class="ico">🌡️</span><span class="no">第 3 章</span><h3>物态变化</h3><p>温度 · 熔化和凝固 · 汽化和液化 · 升华和凝华</p><span class="state wip">○ 制作中</span></div>
+    <div class="chapter-card soon"><span class="ico">💡</span><span class="no">第 4 章</span><h3>光现象</h3><p>光的直线传播 · 光的反射 · 平面镜成像 · 光的折射 · 光的色散</p><span class="state wip">○ 制作中</span></div>
+    <div class="chapter-card soon"><span class="ico">🔍</span><span class="no">第 5 章</span><h3>透镜及其应用</h3><p>透镜 · 凸透镜成像的规律 · 眼睛和眼镜 · 显微镜和望远镜</p><span class="state wip">○ 制作中</span></div>
+    <div class="chapter-card soon"><span class="ico">⚖️</span><span class="no">第 6 章</span><h3>质量与密度</h3><p>质量 · 密度 · 测量物质的密度 · 密度与社会生活</p><span class="state wip">○ 制作中</span></div>
+  </div>
+
+  <div class="block-title"><h2>八年级下册</h2><span>人教版</span></div>
+  <div class="chapter-grid">
+    <div class="chapter-card soon"><span class="ico">🏋️</span><span class="no">第 7 章</span><h3>力</h3><p>力 · 弹力 · 重力</p><span class="state wip">○ 制作中</span></div>
+    <div class="chapter-card soon"><span class="ico">🛹</span><span class="no">第 8 章</span><h3>运动和力</h3><p>牛顿第一定律 · 二力平衡 · 摩擦力</p><span class="state wip">○ 制作中</span></div>
+    <div class="chapter-card soon"><span class="ico">🏊</span><span class="no">第 9 章</span><h3>压强</h3><p>压强 · 液体的压强 · 大气压强 · 流体压强与流速的关系</p><span class="state wip">○ 制作中</span></div>
+    <div class="chapter-card soon"><span class="ico">🚢</span><span class="no">第 10 章</span><h3>浮力</h3><p>浮力 · 阿基米德原理 · 物体的浮沉条件及应用</p><span class="state wip">○ 制作中</span></div>
+    <div class="chapter-card soon"><span class="ico">🎢</span><span class="no">第 11 章</span><h3>功和机械能</h3><p>功 · 功率 · 动能和势能 · 机械能及其转化</p><span class="state wip">○ 制作中</span></div>
+    <div class="chapter-card soon"><span class="ico">⚙️</span><span class="no">第 12 章</span><h3>简单机械</h3><p>杠杆 · 滑轮 · 机械效率</p><span class="state wip">○ 制作中</span></div>
+  </div>
+
+  <div class="lab-banner">
+    <div><h2>🔬 物理实验台</h2><p>刻度尺测长度、累积法测铜丝直径、停表计时、3D 斜面测平均速度、超声波测速……教案里的实验，在这里都能动手做。</p></div>
+    <a class="btn btn-lg" href="lab/index.html">开始实验 →</a>
+  </div>
+
+  <div class="block-title"><h2>课堂使用小贴士</h2></div>
+  <div class="grid-3" style="margin-bottom:50px">
+    <div class="card"><h4>📽️ 投影展示</h4><p class="small muted" style="margin:0">每个互动演示右上角都有“全屏”按钮，适合在教室大屏幕上演示。</p></div>
+    <div class="card"><h4>💻 离线使用</h4><p class="small muted" style="margin:0">网站不依赖外部网络资源，下载后直接双击 <code>index.html</code> 即可在电脑上打开。</p></div>
+    <div class="card"><h4>📝 随堂练习</h4><p class="small muted" style="margin:0">每节末尾都有即时判分的练习题和解析，章节页还有章末综合练习。</p></div>
+  </div>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script src="assets/js/core.js"></script>
+<script>
+// 首页动画：斜面上滚下的小球 + 频闪照片 + 实时 s–t 图像
+(function () {
+  var box = document.getElementById('heroDemo');
+  var T = 0;
+  var S = PS.stage(box, { ratio: '560 / 400', draw: draw });
+  var loop = PS.loop(function (dt) { T += dt; if (T > 6.2) T = 0; S.render(); }, S.stage);
+  function draw(ctx, w, h) {
+    ctx.fillStyle = '#f8fafd'; ctx.fillRect(0, 0, w, h);
+    var x0 = w * 0.08, y0 = h * 0.12, x1 = w * 0.92, y1 = h * 0.52;
+    var L = Math.hypot(x1 - x0, y1 - y0), ang = Math.atan2(y1 - y0, x1 - x0);
+    // 斜面
+    var gr = ctx.createLinearGradient(0, y0, 0, y1 + 20);
+    gr.addColorStop(0, '#f6e3c4'); gr.addColorStop(1, '#ecd2a8');
+    ctx.fillStyle = gr;
+    ctx.beginPath(); ctx.moveTo(x0, y0 + 6); ctx.lineTo(x1, y1 + 6); ctx.lineTo(x1, y1 + 20); ctx.lineTo(x0, y1 + 20); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#d9b98a'; ctx.fillRect(x0 - 10, y1 + 20, x1 - x0 + 20, 6);
+    ctx.strokeStyle = '#b07d45'; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(x0, y0 + 6); ctx.lineTo(x1, y1 + 6); ctx.stroke();
+    var tEnd = 4.2, a = 2 * L / (tEnd * tEnd);
+    var t = Math.min(T, tEnd);
+    var r = Math.max(9, w * 0.022);
+    var pos = function (tt) { var s = 0.5 * a * tt * tt; return [x0 + Math.cos(ang) * s + Math.sin(ang) * r, y0 + Math.sin(ang) * s - Math.cos(ang) * r + 6]; };
+    for (var k = 0; k <= Math.floor(t / 0.6); k++) {
+      var p = pos(k * 0.6);
+      ctx.fillStyle = 'rgba(59,91,219,.25)';
+      ctx.beginPath(); ctx.arc(p[0], p[1], r, 0, Math.PI * 2); ctx.fill();
+    }
+    var q = pos(t);
+    var g = ctx.createRadialGradient(q[0] - r * 0.3, q[1] - r * 0.3, 2, q[0], q[1], r);
+    g.addColorStop(0, '#91a7ff'); g.addColorStop(1, '#3b5bdb');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(q[0], q[1], r, 0, Math.PI * 2); ctx.fill();
+    PS.draw.text(ctx, '频闪照片：每 0.6 s 拍一次', x0, h * 0.06 + 4, { size: 12, weight: 700, color: '#3a4458' });
+    // s–t 图
+    var bx = w * 0.12, by = h * 0.64, bw = w * 0.8, bh = h * 0.28;
+    ctx.strokeStyle = '#1b2333'; ctx.lineWidth = 1.5;
+    PS.draw.arrow(ctx, bx, by + bh, bx + bw + 10, by + bh, { width: 1.5, head: 7 });
+    PS.draw.arrow(ctx, bx, by + bh, bx, by - 8, { width: 1.5, head: 7 });
+    ctx.fillStyle = '#1b2333'; ctx.font = PS.font(12, 700);
+    ctx.fillText('t', bx + bw + 4, by + bh - 6); ctx.fillText('s', bx + 6, by - 2);
+    ctx.strokeStyle = '#e8590c'; ctx.lineWidth = 3; ctx.beginPath();
+    for (var tt = 0; tt <= t; tt += 0.03) { var X = bx + tt / tEnd * bw, Y = by + bh - (0.5 * a * tt * tt) / L * bh; tt ? ctx.lineTo(X, Y) : ctx.moveTo(X, Y); }
+    ctx.stroke();
+    PS.draw.text(ctx, '路程—时间图像', bx + bw, by - 2, { size: 12, weight: 700, color: '#e8590c', align: 'right' });
+  }
+  loop.start();
+})();
+</script>
+</body>
+</html>
