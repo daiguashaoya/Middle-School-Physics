@@ -354,13 +354,6 @@
     document.body.append(b);
   });
 
-  /** 让画布按 VW×VH 的虚拟坐标绘制；返回把“屏幕像素字号”换成虚拟字号的函数 F(px, 最小px) */
-  PS.virtual = function (ctx, w, hh, VW, VH) {
-    const k = w / VW;
-    ctx.scale(k, hh / VH);
-    return (px, min) => Math.max(min || 11, px * k) / k;
-  };
-
   /* ---------------- 示波器 ---------------- */
   /**
    * b：{x, y, w, h}；o.traces：[{fn(x∈[0,1]) → y∈[−1,1], color, width, dash, alpha}]
