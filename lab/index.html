@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>物理实验台 · 看得见的物理</title>
-<meta name="description" content="初中物理虚拟实验台：刻度尺测长度、累积法、停表、参照物、测量小车平均速度、超声波测速。">
+<meta name="description" content="初中物理虚拟实验台：刻度尺测长度、测量小车平均速度、超声波测速、真空罩中的电铃、探究音调和响度、示波器观察声波、比较材料的隔声性能等。">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/css/main.css">
 <style>
@@ -29,9 +29,8 @@
 <header class="topbar">
   <div class="topbar-inner">
     <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
-    <nav class="nav">
+    <nav class="nav" data-root="../">
       <a href="../index.html">首页</a>
-      <a href="../chapter1/index.html">第1章 机械运动</a>
       <a href="index.html" class="on">物理实验台</a>
     </nav>
     <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
@@ -60,6 +59,14 @@
 <script src="../assets/js/widgets/reference3d.js"></script>
 <script src="../assets/js/widgets/incline3d.js"></script>
 <script src="../assets/js/widgets/ultrasound.js"></script>
+<script src="../assets/js/widgets/sound.js"></script>
+<script src="../assets/js/widgets/vibration.js"></script>
+<script src="../assets/js/widgets/belljar3d.js"></script>
+<script src="../assets/js/widgets/soundspeed.js"></script>
+<script src="../assets/js/widgets/pitch.js"></script>
+<script src="../assets/js/widgets/waveform.js"></script>
+<script src="../assets/js/widgets/sonar.js"></script>
+<script src="../assets/js/widgets/noise.js"></script>
 <script>
 var EXPERIMENTS = [
   {
@@ -110,9 +117,64 @@ var EXPERIMENTS = [
     widgets: ['ultrasound'],
     think: [['为什么计算距离时要除以 2？', '测得的时间是超声波“去”和“回”的总时间，单程只占一半。']],
   },
+  {
+    id: 'sound-source', ch: 2, icon: '🔔', title: '探究声音是怎样产生的', sub: '转换法：放大微小的振动', lesson: '../chapter2/s1-production.html#k1',
+    goal: '观察发声体的振动，认识声音是由物体的振动产生的；体会转换法。',
+    apparatus: ['音叉', '小锤', '细线悬挂的乒乓球', '鼓和纸屑', '钢尺', '橡皮筋', '水槽'],
+    steps: ['敲击音叉，把乒乓球靠近发声的音叉，观察现象', '用手按住音叉，再观察乒乓球、听声音', '敲击撒有纸屑的鼓面，观察纸屑', '拨动钢尺、橡皮筋，观察它们的振动', '把发声的音叉放入水中，观察水面', '归纳：发声的物体有什么共同特征？'],
+    widgets: ['sound-sources'],
+    think: [['乒乓球在实验中起什么作用？', '把音叉微小的振动放大，便于观察——转换法。'], ['用手按住发声的音叉，声音为什么停止了？', '音叉停止振动，发声也就停止了。']],
+  },
+  {
+    id: 'vacuum', ch: 2, icon: '🔕', title: '真空罩中的电铃', sub: '3D 实验：声音的传播需要介质', lesson: '../chapter2/s1-production.html#k2',
+    goal: '探究声音能否在真空中传播，体会“实验 + 推理”的研究方法。',
+    apparatus: ['玻璃罩', '电铃', '泡沫塑料垫', '抽气机', '气压计'],
+    steps: ['接通电铃，听铃声', '用抽气机逐渐抽出罩内空气，注意铃声的变化，在不同气压下记录数据', '打开阀门让空气逐渐进入罩内，听铃声的变化', '根据现象进行推理，得出结论', '去掉泡沫塑料垫再抽气，比较铃声'],
+    widgets: ['belljar-3d'],
+    think: [['为什么要在电铃下垫泡沫塑料？', '防止声音通过电铃底座和底盘（固体）传出去，干扰实验结论。'], ['为什么不能直接通过实验得出“真空不能传声”？', '抽气机无法把罩内空气完全抽干净，总能听到微弱的铃声；结论是在实验的基础上推理得出的。']],
+  },
+  {
+    id: 'echo', ch: 2, icon: '📢', title: '回声测距与声呐', sub: '回声的成因 · s = vt/2', lesson: '../chapter2/s1-production.html#k4',
+    goal: '理解回声的形成和回声测距的原理，会用 s = vt/2 计算距离。',
+    apparatus: ['山崖', '声呐（超声波发射与接收装置）'],
+    steps: ['改变人到山崖的距离，大喊一声，观察声音的反射', '比较距离小于 17 m 和大于 17 m 时的情况', '用回声用时计算距离', '开动轮船，用声呐测量海深、描绘海底形状'],
+    widgets: ['echo', 'sonar'], titles: ['回声：对着山崖喊一声', '声呐：探测海深与鱼群'],
+    think: [['为什么在小房间里说话听不到回声？', '墙壁离人太近，回声比原声晚到不足 0.1 s，与原声混在一起，使原声加强。'], ['为什么不能用声呐测量地球到月球的距离？', '地月之间是真空，声音不能在真空中传播。']],
+  },
+  {
+    id: 'ruler-pitch', ch: 2, icon: '📏', title: '探究音调、响度与什么因素有关', sub: '拨动钢尺 · 控制变量', lesson: '../chapter2/s2-characteristics.html#k1',
+    goal: '探究音调与发声体振动频率的关系、响度与振幅的关系，学会使用控制变量法。',
+    apparatus: ['钢尺', '桌子'],
+    steps: ['选择探究问题（音调 / 响度）', '探究音调：保持拨动力度不变，改变钢尺伸出桌面的长度，各拨一次', '探究响度：保持伸出长度不变，用轻、中、重三种力度拨动', '观察振动的快慢和幅度，听声音的变化（数据自动记录）', '分析数据，得出结论'],
+    widgets: [['ruler-pitch', { lab: true }]],
+    think: [['钢尺伸出桌面很长时，用力拨动却听不到声音，为什么？', '振动频率低于 20 Hz，是次声波，人耳听不到。'], ['探究音调时，为什么要用大小相同的力拨动钢尺？', '控制振幅相同，避免响度的变化干扰对音调的判断。']],
+  },
+  {
+    id: 'strings', ch: 2, icon: '🎸', title: '琴弦的音调与哪些因素有关', sub: '材料 · 长度 · 粗细（控制变量）', lesson: '../chapter2/s2-characteristics.html#k1',
+    goal: '在琴弦松紧程度相同的条件下，探究音调与琴弦的材料、长度、粗细的关系。',
+    apparatus: ['琴弦 A~E（材料、长度、横截面积不同）', '琴箱'],
+    steps: ['提出问题（猜想）：音调可能与琴弦的材料、长度、粗细有关', '选择探究目的，从表中选出只有一个因素不同的两根琴弦', '依次拨动两根琴弦，比较音调高低', '分析归纳，得出结论'],
+    widgets: ['string-lab'],
+    think: [['如果选 A 和 D 两根琴弦来比较，能得出结论吗？', '不能。A 和 D 的材料、长度、粗细都不同，无法知道音调的差别是哪个因素引起的。'], ['这个探究过程的合理顺序是什么？', '提出问题（猜想）→ 实验研究 → 分析归纳 → 得出结论。']],
+  },
+  {
+    id: 'scope', ch: 2, icon: '📈', title: '用示波器观察声波', sub: '麦克风示波器 · 信号发生器', lesson: '../chapter2/s2-characteristics.html#k4',
+    goal: '用示波器观察不同声音的波形，认识音调、响度、音色与波形的关系，区分乐音和噪声。',
+    apparatus: ['麦克风（电脑自带）', '示波器', '信号发生器', '扬声器'],
+    steps: ['打开麦克风，对着它发出声音（浏览器询问时选“允许”）', '用不同音调唱“啊——”，比较波形的疏密', '用不同响度唱同一个音，比较波形的高低', '拍手、撕纸，观察噪声的波形', '用信号发生器改变频率、振幅和音色，验证结论'],
+    widgets: ['mic-scope', 'oscilloscope'], titles: ['麦克风示波器', '信号发生器 + 示波器（对比两个波形）'],
+    think: [['为什么麦克风示波器的纵轴放大倍数要固定，不能自动调节？', '如果自动放大，大声和小声的波形看起来一样高，就无法比较响度了。'], ['唱同一个音时，不同同学的波形为什么形状不同？', '每个人声带的结构不同，音色不同，波形的形状也就不同。']],
+  },
+  {
+    id: 'noise', ch: 2, icon: '🔇', title: '比较材料的隔声性能', sub: '闹钟 + 鞋盒 + 不同材料', lesson: '../chapter2/s4-noise.html#k3',
+    goal: '比较不同材料的隔声性能，了解在传播过程中减弱噪声的方法。',
+    apparatus: ['闹钟', '鞋盒', '锡箔纸', '报纸', '棉布', '海绵', '泡沫塑料', '卷尺'],
+    steps: ['让闹钟响起来，放进鞋盒', '人慢慢远离鞋盒，直到刚好听不到铃声，记录距离', '分别用不同材料包住闹钟，重复实验', '比较距离，给材料的隔声性能排序', '得出结论'],
+    widgets: ['noise-lab'],
+    think: [['实验中应该控制哪些条件相同？', '同一个闹钟、相同的响铃音量、相同的鞋盒、同一个人听，包裹材料的厚度也应相同。'], ['除了比较“听不到声音的距离”，还有什么方法？', '在相同距离处用声级计测量声级，示数越小，材料的隔声性能越好。']],
+  },
 ];
 var COMING = [
-  { ch: 2, icon: '🔊', title: '声音的产生与传播' },
   { ch: 3, icon: '🌡️', title: '探究水沸腾时温度的变化' },
   { ch: 4, icon: '🪞', title: '探究平面镜成像的特点' },
   { ch: 5, icon: '🔍', title: '探究凸透镜成像的规律' },
@@ -149,12 +211,14 @@ var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 
       h('div', { class: 'card' }, h('h4', null, '📋 实验步骤'), h('ol', null, e.steps.map(function (s) { return h('li', null, s); }))));
     wrap.append(info);
     e.widgets.forEach(function (w, i) {
+      // 组件可以写成 '名字' 或 ['名字', 参数]
+      var name = Array.isArray(w) ? w[0] : w, opts = Array.isArray(w) ? w[1] : {};
       var bench = h('div', { class: 'lab-bench' });
-      if (e.widgets.length > 1) bench.append(h('h3', null, w === 'estimate-minute' ? '挑战：估测 1 分钟' : '实验操作'));
+      if (e.widgets.length > 1) bench.append(h('h3', null, e.titles ? e.titles[i] : name === 'estimate-minute' ? '挑战：估测 1 分钟' : '实验操作'));
       var box = h('div');
       bench.append(box);
       wrap.append(bench);
-      PS.mount(w, box, {});
+      PS.mount(name, box, opts);
     });
     if (e.think && e.think.length) {
       var t = h('div', { class: 'lab-think' }, h('h4', null, '🤔 想一想'));

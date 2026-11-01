@@ -74,6 +74,15 @@ kbd { font-family: var(--mono); font-size: .85em; padding: 1px 6px; border: 1px 
 .nav a:hover { background: var(--surface-2); text-decoration: none; }
 .nav a.on { background: var(--primary-soft); color: var(--primary); }
 .nav-toggle { display: none; margin-left: auto; background: none; border: 0; padding: 8px; color: var(--ink); cursor: pointer; }
+.nav-dd { position: relative; }
+.nav-dd-btn { font: inherit; font-weight: 600; font-size: .95rem; padding: 7px 14px; border-radius: 999px; border: 0; background: none; color: var(--ink-2); cursor: pointer; white-space: nowrap; }
+.nav-dd-btn:hover, .nav-dd.open .nav-dd-btn { background: var(--surface-2); }
+.nav-dd-btn .caret { font-size: .75em; color: var(--muted); }
+.nav-dd-menu { display: none; position: absolute; top: calc(100% + 6px); left: 0; min-width: 210px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow-lg); padding: 6px; z-index: 60; }
+.nav-dd.open .nav-dd-menu { display: block; }
+.nav-dd-menu a { display: flex; align-items: center; gap: 8px; border-radius: 8px; padding: 7px 10px; white-space: nowrap; }
+.nav-dd-menu .dd-ico { width: 22px; text-align: center; }
+.nav-dd-menu .dd-soon { display: block; font-size: .8rem; color: var(--muted); padding: 4px 10px 2px; border-top: 1px dashed var(--line); margin-top: 4px; }
 
 /* ---------- 布局 ---------- */
 .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
@@ -233,6 +242,7 @@ table.t tr.hl-row td { background: #fffbea; }
 .slider { display: inline-flex; align-items: center; gap: 10px; font-size: .92rem; color: var(--ink-2); flex-wrap: nowrap; }
 .slider-label { white-space: nowrap; font-weight: 600; }
 .slider input[type=range] { width: 150px; accent-color: var(--primary); }
+.slider.wide input[type=range] { width: 230px; }
 .slider-val { min-width: 64px; font-weight: 700; color: var(--primary); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .slider.disabled { opacity: .45; }
 
@@ -439,6 +449,16 @@ a.chapter-card:hover { text-decoration: none; transform: translateY(-3px); box-s
 .sc-out { margin-top: 10px; font-size: 1.1rem; background: var(--surface-2); border: 1px dashed var(--line-2); border-radius: 10px; padding: 10px 14px; min-height: 54px; }
 .sc-out b { color: var(--green); }
 
+/* 分类卡片（第2章：信息/能量、减弱噪声的途径） */
+.us-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.us-card { background: var(--surface-2); border: 1.5px solid var(--line); border-radius: 12px; padding: 10px 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.us-card p { margin: 0; flex: 1 1 100%; font-weight: 600; font-size: .94rem; }
+.us-btns { display: flex; gap: 6px; flex-wrap: wrap; }
+.us-card small { font-size: .86rem; }
+.us-card.done .us-btns { display: none; }
+.us-card.ok { border-color: var(--green); background: var(--green-soft); }
+.us-card.bad { border-color: var(--red); background: var(--red-soft); }
+
 /* ---------- 页面插图与小组件 ---------- */
 .rule-cards { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; margin: 14px 0; }
 .rule-card { background: var(--surface); border-radius: 12px; box-shadow: var(--shadow); padding: 12px; text-align: center; border-top: 4px solid var(--primary); }
@@ -525,13 +545,13 @@ a.chapter-card:hover { text-decoration: none; transform: translateY(-3px); box-s
 }
 @media (max-width: 720px) {
   .rule-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .write-cmp, .poems, .comic { grid-template-columns: 1fr; }
+  .write-cmp, .poems, .comic, .us-grid { grid-template-columns: 1fr; }
   .motion-cards { grid-template-columns: 1fr; }
 }
 
 /* ---------- 响应式 ---------- */
 @media (max-width: 1080px) {
-  .bench { grid-template-columns: 1fr; }
+  .bench { grid-template-columns: minmax(0, 1fr); }
   .lab-info { grid-template-columns: 1fr; }
 }
 @media (max-width: 960px) {
@@ -552,6 +572,8 @@ a.chapter-card:hover { text-decoration: none; transform: translateY(-3px); box-s
   .nav { display: none; position: absolute; top: var(--topbar-h); left: 0; right: 0; background: var(--surface); flex-direction: column; padding: 10px 14px; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
   .topbar.open .nav { display: flex; }
   .nav-toggle { display: block; }
+  .nav-dd-btn { width: 100%; text-align: left; }
+  .nav-dd-menu { position: static; box-shadow: none; border: 0; padding: 0 0 0 14px; min-width: 0; }
   .page-grid { padding: 16px 14px 40px; }
   .container { padding: 0 14px; }
   .section-hero { padding: 24px 20px; border-radius: 16px; }
@@ -561,7 +583,7 @@ a.chapter-card:hover { text-decoration: none; transform: translateY(-3px); box-s
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .q-options, .q-options.cols-4 { grid-template-columns: 1fr; }
   .demo-body { padding: 12px; }
-  .slider input[type=range] { width: 110px; }
+  .slider input[type=range], .slider.wide input[type=range] { width: 110px; }
   .pager { grid-template-columns: 1fr; }
   .pager .next { grid-column: auto; }
   .lab-banner { grid-template-columns: 1fr; }

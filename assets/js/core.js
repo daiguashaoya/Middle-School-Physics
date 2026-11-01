@@ -257,6 +257,8 @@
     return {
       setEnabled(b) { enabled = b; },
       get enabled() { return enabled; },
+      /** 取得共享的 AudioContext（音效关闭或浏览器不支持时为 null），供声学组件合成声音 */
+      ctx,
       /** 金属片被撞击的“咔哒”声 */
       clack() {
         const a = ctx();
@@ -561,9 +563,30 @@
     map.forEach((_, t) => io.observe(t));
   }
 
+  /* 已上线的章节：顶栏“章节”下拉菜单由此生成。新增一章时在这里登记。 */
+  PS.CHAPTERS = [
+    { no: 1, name: '机械运动', dir: 'chapter1', icon: '🚄' },
+    { no: 2, name: '声现象', dir: 'chapter2', icon: '🔊' },
+  ];
+
   function enhanceNav() {
     const t = PS.$('.nav-toggle');
     if (t) t.addEventListener('click', () => PS.$('.topbar').classList.toggle('open'));
+    // <nav class="nav" data-root="../" data-ch="2">：在“首页”后插入章节下拉菜单
+    const nav = PS.$('.nav[data-root]');
+    if (!nav) return;
+    const root = nav.dataset.root || '';
+    const cur = parseInt(nav.dataset.ch || '0', 10);
+    const menu = PS.h('div', { class: 'nav-dd-menu' },
+      PS.CHAPTERS.map((c) => PS.h('a', { href: root + c.dir + '/index.html', class: c.no === cur ? 'on' : null },
+        PS.h('span', { class: 'dd-ico' }, c.icon), '第' + c.no + '章 ' + c.name)),
+      PS.h('span', { class: 'dd-soon' }, '后续章节制作中……'));
+    const btn = PS.h('button', { type: 'button', class: 'nav-dd-btn', 'aria-haspopup': 'true', html: '全部章节 <span class="caret">▾</span>' });
+    const dd = PS.h('div', { class: 'nav-dd' }, btn, menu);
+    btn.addEventListener('click', (e) => { e.stopPropagation(); dd.classList.toggle('open'); });
+    document.addEventListener('click', (e) => { if (!dd.contains(e.target)) dd.classList.remove('open'); });
+    const first = nav.querySelector('a');
+    if (first) first.after(dd); else nav.prepend(dd);
   }
 
   function autoMount() {

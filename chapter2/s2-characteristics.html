@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第2节 声音的特性 · 看得见的物理</title>
+<meta name="description" content="八年级物理第二章第2节：音调、响度、音色及声波的波形分析。钢尺实验、水瓶琴、听觉频率范围、信号发生器与示波器、听音辨乐器等互动动画。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+  .wf-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 720px) { .wf-cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="2">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第2章 声现象</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、音调</a>
+    <a href="#k2">二、响度</a>
+    <a href="#k3">三、音色（第2课时）</a>
+    <a href="#k4">四、从波形看声音的特性</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#ruler-pitch">🔬 实验：音调、响度与什么有关</a>
+    <a href="../lab/index.html#strings">🔬 实验：琴弦的音调</a>
+    <a href="../lab/index.html#scope">🔬 实验：用示波器观察声波</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第2章 声现象</a> › 第2节</div>
+      <h1>声音的特性</h1>
+      <p>女高音和男低音、“引吭高歌”和“低声细语”、钢琴声和小提琴声……声音千差万别。物理学用<b>音调、响度、音色</b>三个特性来描述声音，它们分别由什么决定？</p>
+      <div class="hero-tags"><span>2 课时</span><span>7 个互动演示</span><span>3 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>知道音调跟发声体振动的频率有关</li><li>知道响度跟发声体的振幅、距发声体的远近有关</li><li>知道音色由发声体的材料、结构决定</li><li>知道人的听觉频率范围，了解超声波和次声波</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>通过实验探究音调、响度与什么因素有关</li><li>音色及其影响因素</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>区分音调与响度</li><li>音调、响度、音色的波形图辨析</li></ul></div>
+    </div>
+
+    <!-- ========== 一、音调 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>音调</h2></div>
+      <div class="concept">
+        <h3>声音的高低叫 <span class="def">音调</span>，音调由发声体振动的 <span class="def">频率</span> 决定：频率越高，音调越高。</h3>
+        <p>物体每秒振动的次数叫频率，用来描述物体振动的<b>快慢</b>。频率的单位是 <b>赫兹</b>，简称赫，符号 <b>Hz</b>。物体 1 s 振动 100 次，频率就是 100 Hz。</p>
+      </div>
+
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>互动：拨动钢尺——音调与频率</h3><span class="badge o">模拟实验</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">把钢尺压在桌边，改变伸出桌面的长度，<b>用大小相同的力</b>拨动，观察振动的快慢，听音调的高低。把钢尺伸出得很长时，为什么听不到声音了？</p>
+          <div data-widget="ruler-pitch"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-exam"><b>控制变量：</b>探究音调与频率的关系时，要保持拨动钢尺的<b>力度相同</b>（振幅相同），只改变钢尺伸出桌面的长度，避免响度变化干扰判断。</div>
+
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>互动：水瓶琴——敲击和吹气有什么不同？</h3><span class="badge p">易错</span><span class="badge o">练一练</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">8 个相同的瓶子装有不同高度的水。分别用“敲击”和“吹气”两种方式演奏，看看哪个瓶子的音调最高，振动的又是什么。</p>
+          <div data-widget="bottle-organ"></div>
+        </div>
+      </div>
+      <details class="reveal"><summary>想一想：往暖水瓶里灌开水时，为什么能听出水快满了？</summary>
+        <p>灌水时，瓶内的<b>空气柱</b>振动发声。水越来越多，空气柱越来越短，振动越来越快，<b>音调越来越高</b>。听到音调变得很高时，水就快满了。</p>
+      </details>
+
+      <h3 class="sub-title">超声波和次声波</h3>
+      <div class="concept">
+        <p>大多数人能听到的声音频率范围大约是 <b>20 Hz ~ 20 000 Hz</b>。频率高于 20 000 Hz 的声音叫 <span class="def">超声波</span>，低于 20 Hz 的声音叫 <span class="def">次声波</span>。超声波和次声波人耳都听不到，但有些动物能听到。</p>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>互动：人和一些动物的发声和听觉频率范围</h3><span class="badge o">图表</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">拖动频率滑块或点击图表，看看这个频率的声音谁能听到；把鼠标移到色条上查看具体数值。</p>
+          <div data-widget="hearing-range"></div>
+        </div>
+      </div>
+      <details class="reveal"><summary>想一想：蝴蝶飞过时我们听不到声音，蚊子飞过时却能听到“嗡嗡”声，为什么？</summary>
+        <p>蝴蝶的翅膀每秒振动只有几次，频率低于 20 Hz，是次声波，人耳听不到；蚊子的翅膀每秒振动 500~600 次，在人耳的听觉范围内，所以能听到。</p>
+      </details>
+    </section>
+
+    <!-- ========== 二、响度 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no">知识点 2</span><h2>响度</h2></div>
+      <div class="concept">
+        <h3>声音的强弱叫 <span class="def">响度</span>。物体振动的幅度叫 <span class="def">振幅</span>，振幅越大，响度越大。</h3>
+        <p>我们听到的声音是否响亮，还跟 <b>距发声体的远近</b> 有关：距离越远，听到的响度越小。另外，声音越<b>集中</b>（不分散），听起来越响。</p>
+      </div>
+
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>互动：音叉与乒乓球——响度与振幅、距离</h3><span class="badge o">模拟实验</span><span class="badge g">转换法</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">分别轻敲、重敲同一个音叉，比较乒乓球被弹开的角度；再改变人到音叉的距离，或用喇叭筒让声音更集中。</p>
+          <div data-widget="fork-loudness"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-warn">
+        <b>易错：区分音调和响度。</b>生活中说的“高”“低”“大”“小”不一定是物理学中的音调：
+        <ul>
+          <li>“引吭高歌”“低声细语”、“请不要大声喧哗”——指<b>响度</b>；</li>
+          <li>“女高音”“男低音”、“这首歌太高，我唱不上去”——指<b>音调</b>；</li>
+          <li>蚊子的声音<b>音调高、响度小</b>，牛的叫声<b>音调低、响度大</b>。</li>
+        </ul>
+      </div>
+      <div class="grid-3 mb">
+        <div class="card"><h4>📣 喇叭筒</h4><p class="small muted">让声音集中向前传播，减少分散，远处的人听到的响度更大。</p></div>
+        <div class="card"><h4>🩺 听诊器</h4><p class="small muted">把心跳、呼吸的声音集中送到医生耳中，减少声音的分散，听得更清楚。</p></div>
+        <div class="card"><h4>👂 用手拢在耳边</h4><p class="small muted">收集更多的声音，听到的响度变大。</p></div>
+      </div>
+    </section>
+
+    <!-- ========== 三、音色 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no">知识点 3</span><h2>音色 <small class="badge p">第2课时</small></h2></div>
+      <div class="concept">
+        <h3><span class="def">音色</span> 反映了声音的品质与特色，由发声体的 <span class="def">材料、结构</span> 决定。</h3>
+        <p>不同发声体发出的声音，音调和响度可能相同，但音色一般不同。我们靠音色来分辨不同的乐器、不同的人。</p>
+      </div>
+
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>互动：听音辨乐器</h3><span class="badge o">练一练</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">下面几种乐器演奏的是同一个音（音调相同），响度也相同。先试听每种乐器，再听“神秘声音”，猜猜是哪种乐器。</p>
+          <div data-widget="timbre-guess"></div>
+        </div>
+      </div>
+
+      <div class="est-cards">
+        <div class="est-card"><i>🙈</i><div><b>听音辨人</b><span>蒙上眼睛也能听出是谁在说话</span></div></div>
+        <div class="est-card"><i>🥣</i><div><b>敲碗辨破损</b><span>破了的瓷碗结构变了，音色也变了</span></div></div>
+        <div class="est-card"><i>🔐</i><div><b>声纹锁</b><span>只能被主人的声音打开，识别的是音色</span></div></div>
+        <div class="est-card"><i>🎭</i><div><b>口技表演</b><span>模仿各种声音的音色</span></div></div>
+      </div>
+    </section>
+
+    <!-- ========== 四、波形 ========== -->
+    <section class="kp" id="k4">
+      <div class="kp-title"><span class="kp-no">知识点 4</span><h2>从波形看声音的特性</h2></div>
+      <p>把声音输入示波器，可以“看到”声音的波形。同一台示波器、相同的设置下：</p>
+      <div class="rule-cards wf-cards">
+        <div class="rule-card"><b>疏密</b><span>相同时间内波的个数越多（越密），频率越高，<b>音调</b>越高</span></div>
+        <div class="rule-card"><b>高低</b><span>波偏离中间横线越远，振幅越大，<b>响度</b>越大</span></div>
+        <div class="rule-card"><b>形状</b><span>波形的形状不同，<b>音色</b>不同</span></div>
+      </div>
+
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>互动：信号发生器与示波器</h3><span class="badge o">动画</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">改变频率、振幅和音色，边听边看波形。点“保存为对比波形”，再改变某个量，比较两个波形的不同。（先把电脑音量调小）</p>
+          <div data-widget="oscilloscope"></div>
+        </div>
+      </div>
+
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：波形图辨析</h3><span class="badge o">练一练</span><span class="badge p">难点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">题目随机生成，可以一直练下去。</p>
+          <div data-widget="wave-judge"></div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th>特性</th><th class="l">含义</th><th class="l">决定因素</th><th class="l">波形特征</th><th class="l">例子</th></tr></thead>
+          <tbody>
+            <tr><td><b>音调</b></td><td class="l">声音的高低</td><td class="l">频率</td><td class="l">疏密</td><td class="l">女高音、男低音</td></tr>
+            <tr><td><b>响度</b></td><td class="l">声音的强弱</td><td class="l">振幅、距发声体的远近</td><td class="l">高低（振幅）</td><td class="l">引吭高歌、低声细语</td></tr>
+            <tr><td><b>音色</b></td><td class="l">声音的品质与特色</td><td class="l">发声体的材料、结构</td><td class="l">形状</td><td class="l">闻其声知其人</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><a class="btn btn-accent" href="../lab/index.html#scope">🔬 到实验台：用麦克风示波器观察自己的声音 →</a></p>
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>音调</h4><ul><li>声音的高低，由频率决定</li><li>频率：每秒振动的次数，单位 Hz</li><li>人耳听觉范围 20 Hz ~ 20 000 Hz</li><li>超声波 &gt; 20 000 Hz，次声波 &lt; 20 Hz</li></ul></div>
+        <div class="summary-item"><h4>响度</h4><ul><li>声音的强弱</li><li>振幅越大，响度越大</li><li>距发声体越远，响度越小</li><li>声音越集中，响度越大</li></ul></div>
+        <div class="summary-item"><h4>音色</h4><ul><li>由发声体的材料、结构决定</li><li>辨别不同发声体的依据</li><li>不同发声体音调、响度可能相同，音色一般不同</li></ul></div>
+        <div class="summary-item"><h4>波形图</h4><ul><li>音调看疏密</li><li>响度看高低</li><li>音色看形状</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="s2"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s1-production.html"><small>← 上一节</small><b>第1节 声音的产生与传播</b></a>
+      <a class="next" href="s3-uses.html"><small>下一节 →</small><b>第3节 声的利用</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版八年级物理上册第二章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+// 练习题中的波形小图：n 为图中完整波的个数，a 为振幅（0~1）
+function waveSvg(label, n, a) {
+  var d = '', W = 150, H = 60;
+  for (var i = 0; i <= 150; i++) { var y = H / 2 - a * (H / 2 - 4) * Math.sin(2 * Math.PI * n * i / W); d += (i ? 'L' : 'M') + i + ' ' + y.toFixed(1); }
+  return '<svg viewBox="-4 -4 158 86" width="158" height="86" style="display:inline-block;margin:6px 12px 0 0"><rect x="-4" y="-4" width="158" height="68" rx="6" fill="#0d1626"/><line x1="0" y1="30" x2="150" y2="30" stroke="#ffffff33"/><path d="' + d + '" fill="none" stroke="#69db7c" stroke-width="2"/><text x="75" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#1b2333">' + label + '</text></svg>';
+}
+window.QUIZ = {
+  s2: [
+    { type: 'choice', q: '物理学中用来描述物体振动快慢的物理量是（　）', options: ['振幅', '频率', '音色', '响度'], answer: 1, explain: '物体每秒振动的次数叫频率，频率描述振动的快慢，单位是赫兹（Hz）。' },
+    { type: 'choice', q: '牛的叫声与蚊子的叫声相比较，下列结论正确的是（　）', cols: 1,
+      options: ['牛叫的声音音调高，响度大', '牛叫的声音音调低，响度小', '牛叫的声音音调高，响度小', '牛叫的声音音调低，响度大'], answer: 3,
+      explain: '蚊子翅膀振动得快，音调高，但振幅小，响度小；牛的声带振动得慢，音调低，但振幅大，响度大。' },
+    { type: 'choice', q: '“引吭高歌”和“低声细语”中的“高”和“低”描述的是声音的（　）', options: ['音调', '响度', '音色', '频率'], answer: 1, explain: '“引吭高歌”是放开喉咙大声唱，“低声细语”是小声说话，描述的是声音的强弱，即响度。' },
+    { type: 'choice', q: '把钢尺紧按在桌面上，逐渐增加钢尺伸出桌面的长度，用大小相同的力拨动，钢尺发出的声音（　）', options: ['音调逐渐变高', '音调逐渐变低', '响度逐渐变大', '音色逐渐改变'], answer: 1,
+      explain: '伸出桌面越长，钢尺振动越慢，频率越低，音调越低；伸出太长时频率低于 20 Hz，人耳就听不到了。' },
+    { type: 'fill', q: '大多数人能听到的声音频率范围大约是 20 Hz 到 ______ Hz。', answer: 20000, show: '20 000', unit: 'Hz', explain: '人耳的听觉频率范围约为 20 Hz ~ 20 000 Hz；高于 20 000 Hz 的叫超声波，低于 20 Hz 的叫次声波。' },
+    { type: 'choice', q: '在松紧程度相同的条件下探究琴弦音调高低与材料的关系，应选用表中编号为（　）的两根琴弦。<br><small>A：钢 30 cm 0.3 mm²；B：钢 30 cm 0.6 mm²；C：尼龙丝 40 cm 0.5 mm²；D：铜 50 cm 0.5 mm²；E：尼龙丝 50 cm 0.5 mm²</small>', options: ['D 和 E', 'C 和 B', 'C 和 D', 'A 和 D'], answer: 0,
+      explain: '探究音调与材料的关系，要控制长度和横截面积相同、只有材料不同：D（铜）和 E（尼龙丝）都是 50 cm、0.5 mm²。' },
+    { type: 'choice', q: '往暖水瓶中灌开水时，有经验的人听声音就知道水是否快满了，他判断的依据是（　）', options: ['响度逐渐变大', '音调逐渐变高', '音调逐渐变低', '音色逐渐改变'], answer: 1,
+      explain: '振动发声的是瓶内的空气柱。水越多，空气柱越短，振动频率越高，音调越高。' },
+    { type: 'choice', q: '存放贵重物品的“银行”用仪器记录主人的“声纹”，只有主人的声音才能取走物品。“声纹”记录的是人说话声音的（　）', options: ['音调', '响度', '音色', '三者都有'], answer: 2, explain: '不同的人声带的结构不同，发出声音的音色不同，声纹锁依据音色来识别。' },
+    { type: 'choice', q: '甲、乙两个音叉振动时发出声音的波形如图（同一台示波器，设置相同）。下列判断正确的是（　）<br>' + waveSvg('甲', 4, 0.75) + waveSvg('乙', 2, 0.75), cols: 1,
+      options: ['甲音叉比乙音叉发声的音调低', '甲音叉比乙音叉发声的响度大', '甲、乙两音叉发声的频率相同', '甲音叉比乙音叉振动得快'], answer: 3,
+      explain: '相同时间内甲有 4 个波、乙有 2 个波，甲振动得快、频率高、音调高；两者偏离中线的幅度相同，振幅相同，响度相同。' },
+    { type: 'judge', q: '用大小不同的力敲击同一个音叉，音叉发出声音的音调不同。', answer: false, explain: '同一个音叉的振动频率是固定的，音调不变；用力不同，振幅不同，改变的是响度。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/widgets/sound.js"></script>
+<script src="../assets/js/widgets/pitch.js"></script>
+<script src="../assets/js/widgets/waveform.js"></script>
+</body>
+</html>
