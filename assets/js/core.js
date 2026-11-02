@@ -442,6 +442,80 @@
     return (px, min) => Math.max(min || 11, px * k) / k;
   };
 
+  /* ---------------- 画布拖动、手柄、卡片分类（第4章起使用，原在 optics.js） ---------------- */
+  (function () {
+    const h = PS.h, D = PS.draw, TAU = Math.PI * 2;
+    /**
+     * 画布拖动（按虚拟坐标）：o.VW / o.VH 虚拟尺寸；o.hit(p) 返回被拖动的对象或 null；
+     * o.move(obj, p) 拖动中；o.end(obj) 松开；o.click(p) 没有命中时点击；o.hover(p) 返回 true 时显示手形光标
+     */
+    PS.drag = function (S, o) {
+      let cur = null;
+      const cv = S.canvas;
+      cv.style.touchAction = 'none';
+      const vp = (e) => { const p = S.pos(e); return { x: (p.x * o.VW) / S.w, y: (p.y * o.VH) / S.h }; };
+      cv.addEventListener('pointerdown', (e) => {
+        const p = vp(e);
+        cur = o.hit(p);
+        if (cur != null) { cv.setPointerCapture(e.pointerId); e.preventDefault(); if (o.start) o.start(cur, p); }
+        else if (o.click) o.click(p);
+      });
+      cv.addEventListener('pointermove', (e) => {
+        const p = vp(e);
+        if (cur != null) { o.move(cur, p); e.preventDefault(); }
+        else cv.style.cursor = o.hit(p) != null || (o.hover && o.hover(p)) ? 'grab' : '';
+      });
+      const up = () => { if (cur != null && o.end) o.end(cur); cur = null; };
+      cv.addEventListener('pointerup', up);
+      cv.addEventListener('pointercancel', up);
+      return { get active() { return cur; } };
+    };
+
+    /** 画一个可拖动的手柄（圆点） */
+    PS.handle = function (ctx, x, y, r, color, label, F) {
+      ctx.save();
+      ctx.fillStyle = 'rgba(255,255,255,.92)'; ctx.strokeStyle = color || '#3b5bdb'; ctx.lineWidth = 2.5;
+      ctx.beginPath(); ctx.arc(x, y, r || 9, 0, TAU); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = color || '#3b5bdb';
+      ctx.beginPath(); ctx.arc(x, y, (r || 9) * 0.4, 0, TAU); ctx.fill();
+      if (label) D.text(ctx, label, x, y - (r || 9) - 6, { size: F ? F(12) : 12, weight: 700, color: color || '#3b5bdb', align: 'center' });
+      ctx.restore();
+    };
+
+    /**
+     * 卡片分类练习：items = [[文字, 类别下标, 解析], ...]；cats = ['镜面反射', '漫反射']（或 [{label, cls}]）
+     */
+    PS.sortCards = function (el, items, cats, o) {
+      o = o || {};
+      const names = cats.map((c) => (typeof c === 'string' ? c : c.label));
+      const score = h('div', { class: 'quiz-score' });
+      const grid = h('div', { class: 'us-grid opt-sort' });
+      let ok = 0, done = 0;
+      function build() {
+        ok = 0; done = 0; grid.innerHTML = '';
+        items.slice().sort(() => Math.random() - 0.5).forEach(([t, k, why]) => {
+          const card = h('div', { class: 'us-card' }, h('p', { html: t }));
+          const res = h('small');
+          const pick = (g) => {
+            if (card.classList.contains('done')) return;
+            card.classList.add('done', g === k ? 'ok' : 'bad');
+            done++; if (g === k) ok++;
+            res.innerHTML = (g === k ? '✔ ' : '✘ ') + '<b>' + names[k] + '</b>' + (why ? '：' + why : '');
+            g === k ? PS.sound.good() : PS.sound.bad();
+            upd();
+          };
+          card.append(h('div', { class: 'us-btns' }, names.map((n, i) => PS.ui.button(n, () => pick(i), 'btn btn-sm'))), res);
+          grid.append(card);
+        });
+        upd();
+      }
+      function upd() { score.innerHTML = '已判断 <b>' + done + '</b> / ' + items.length + ' · 答对 <b class="ok">' + ok + '</b>' + (done === items.length ? (ok === items.length ? ' · 🎉 全对！' : ' · 再试一次？') : ''); }
+      el.append(h('div', { class: 'quiz-head' }, score, PS.ui.button('重新开始', build, 'btn btn-ghost btn-sm')), grid);
+      if (!document.getElementById('opt-sort-style')) document.head.append(h('style', { id: 'opt-sort-style' }, '.opt-sort{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}.opt-sort .us-btns{display:flex;flex-wrap:wrap;gap:6px}'));
+      build();
+    };
+  })();
+
   /* ---------------- 随堂练习 ---------------- */
   /**
    * questions: [{type:'choice'|'judge'|'fill', q, options, answer, tol, unit, explain}]
@@ -577,6 +651,7 @@
     { no: 3, name: '物态变化', dir: 'chapter3', icon: '🌡️' },
     { no: 4, name: '光现象', dir: 'chapter4', icon: '💡' },
     { no: 5, name: '透镜及其应用', dir: 'chapter5', icon: '🔍' },
+    { no: 6, name: '质量与密度', dir: 'chapter6', icon: '⚖️' },
   ];
 
   function enhanceNav() {

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第3节 测量物质的密度 · 看得见的物理</title>
+<meta name="description" content="八年级物理第六章第3节：量筒的使用与读数、测量盐水的密度、测量小石块的密度、误差分析、针压法与沉锤法。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="6">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第6章 质量与密度</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、量筒的使用</a>
+    <a href="#k2">二、测量液体的密度</a>
+    <a href="#k3">三、测量固体的密度</a>
+    <a href="#k4">拓展：针压法、沉锤法</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#liquid-density">🔬 实验：测盐水的密度</a>
+    <a href="../lab/index.html#solid-density">🔬 实验：测小石块的密度</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第6章 质量与密度</a> › 第3节</div>
+      <h1>测量物质的密度</h1>
+      <p>密度不能直接测量，但质量能用天平测，体积能用量筒测——用 ρ = m/V 就能“间接”测出密度。这一节动手测盐水和小石块的密度。</p>
+      <div class="hero-tags"><span>1 课时</span><span>4 个互动演示</span><span>2 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>会用量筒测液体的体积和小块不规则固体的体积</li><li>会用天平和量筒测液体和固体的密度</li><li>能分析实验步骤对测量结果的影响</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>量筒的使用方法</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>测量液体和固体密度的方法与误差分析</li></ul></div>
+    </div>
+
+    <!-- ========== 一、量筒 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>量筒的使用</h2></div>
+      <div class="concept"><h3><span class="def">量筒</span></h3><p style="margin:0">量筒（量杯）用来测量液体的体积，也可以用<b>排水法</b>测形状不规则的固体的体积。量筒上的单位一般是<b>毫升（mL）</b>：<b>1 mL = 1 cm³</b>，1 L = 1 dm³ = 10⁻³ m³。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：量筒读数</h3><span class="badge o">练一练</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">先看量程和分度值，再读出凹液面底部对准的刻度。切换“俯视”“仰视”，看看读数会怎样偏。</p>
+          <div data-widget="cylinder-read"></div>
+        </div>
+      </div>
+
+      <div class="grid-2 mb">
+        <div class="tip" style="margin:0"><b>使用方法：</b>①看清<b>量程</b>和<b>分度值</b>；②量筒放在<b>水平台</b>上；③读数时视线与<b>凹液面的底部相平</b>（水银等形成凸液面时，与凸液面的顶部相平）。</div>
+        <div class="tip tip-exam" style="margin:0"><b>易错：</b><b>俯视读数偏大，仰视读数偏小</b>。如果是用量筒“量取”一定体积的液体，俯视时实际量取的液体反而偏少。</div>
+      </div>
+    </section>
+
+    <!-- ========== 二、测液体的密度 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no exp">实验</span><h2>测量液体（盐水）的密度</h2></div>
+      <div class="concept"><h3><span class="def">原理与器材</span></h3><p style="margin:0">原理：<b>ρ = m/V</b>。器材：天平、量筒、烧杯、盐水。<br>步骤：①测出烧杯和盐水的总质量 <span class="var">m</span>₁；②把烧杯中的<b>一部分</b>盐水倒入量筒，读出体积 <span class="var">V</span>；③测出烧杯和剩余盐水的质量 <span class="var">m</span>₂；④<span class="var">ρ</span> = <span class="frac"><span>m₁ − m₂</span><span>V</span></span>。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>虚拟实验：测量盐水的密度</h3><span class="badge o">动手</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">按步骤读出天平和量筒的示数并填写，点“倒入量筒”把一部分盐水倒进量筒，最后算出盐水的密度；下面比较三种实验方案的误差。</p>
+          <div data-widget="liquid-density"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-warn"><b>为什么要“倒一部分”、测剩余的质量？</b>烧杯壁上总会沾一些盐水。按这个顺序，倒入量筒的盐水的质量和体积是<b>同一部分</b>，烧杯壁上沾的盐水不影响结果。另外，量筒又高又细，<b>不能放在天平上</b>称量。</div>
+    </section>
+
+    <!-- ========== 三、测固体的密度 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no exp">实验</span><h2>测量小石块的密度</h2></div>
+      <div class="concept"><h3><span class="def">原理与步骤</span></h3><p style="margin:0">①用天平测出石块的质量 <span class="var">m</span>；②在量筒中倒入<b>适量</b>的水，读出体积 <span class="var">V</span>₁；③用细线系住石块，<b>浸没</b>在水中，读出总体积 <span class="var">V</span>₂；④<span class="var">ρ</span> = <span class="frac"><span>m</span><span>V₂ − V₁</span></span>。这种测体积的方法叫<b>排水法</b>（等量替代）。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>虚拟实验：测量小石块的密度</h3><span class="badge o">动手</span><span class="badge p">易错</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">按“规范操作”完成实验；再试试“先测体积，再测质量”和“石块会吸水”，比较测得的密度和真实值。</p>
+          <div data-widget="stone-density"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-warn"><b>误差分析：</b>①先测体积再测质量，石块沾了水，质量偏大，密度<b>偏大</b>——所以要<b>先测质量后测体积</b>；②石块吸水，V₂ 偏小，体积偏小，密度<b>偏大</b>。</div>
+      <div class="example">
+        <b>例</b>　测一块形状不规则的金属块的密度：天平平衡时砝码为 20 g、5 g，游码在 1.8 g 处；量筒中水的体积从 30 mL 升到 40 mL。金属块的密度是多少？从它上面取下一部分再测，密度怎样变化？
+        <details class="reveal"><summary>看解答</summary><p>m = 20 g + 5 g + 1.8 g = 26.8 g，V = 40 mL − 30 mL = 10 cm³，ρ = 26.8 g ÷ 10 cm³ = 2.68 g/cm³ = <b>2.68×10³ kg/m³</b>。密度是物质的特性，取下一部分后密度<b>不变</b>。</p></details>
+      </div>
+    </section>
+
+    <!-- ========== 四、拓展：密度比水小的固体 ========== -->
+    <section class="kp" id="k4">
+      <div class="kp-title"><span class="kp-no">拓展</span><h2>密度比水小的物体怎样测体积</h2></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：针压法和沉锤法</h3><span class="badge o">动画</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">蜡块放进水里会漂浮，不能直接用排水法。点“下一步”看看两种办法。</p>
+          <div data-widget="float-volume"></div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card"><h4>📌 针压法（压入法）</h4><p class="small" style="margin:0">用细长的铁丝或针把蜡块压入水中，刚好浸没，V = V₂ − V₁。</p></div>
+        <div class="card"><h4>⚓ 沉锤法（悬垂法）</h4><p class="small" style="margin:0">在蜡块下面系一个重锤：先只让重锤浸没读 V₁，再让二者一起浸没读 V₂，V = V₂ − V₁。</p></div>
+      </div>
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>量筒</h4><ul><li>1 mL = 1 cm³</li><li>看量程和分度值</li><li>视线与凹液面底部相平</li><li>俯视偏大，仰视偏小</li></ul></div>
+        <div class="summary-item"><h4>测液体密度</h4><ul><li>测 m₁ → 倒一部分测 V → 测 m₂</li><li>ρ = (m₁ − m₂)/V</li></ul></div>
+        <div class="summary-item"><h4>测固体密度</h4><ul><li>先测质量 m</li><li>排水法：V = V₂ − V₁</li><li>ρ = m/(V₂ − V₁)</li></ul></div>
+        <div class="summary-item"><h4>误差与拓展</h4><ul><li>先测体积：m 偏大，ρ 偏大</li><li>吸水：V 偏小，ρ 偏大</li><li>密度比水小：针压法、沉锤法</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s2-density.html"><small>← 上一节</small><b>第2节 密度</b></a>
+      <a class="next" href="s4-density-life.html"><small>下一节 →</small><b>第4节 密度与社会生活</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版八年级物理上册第六章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '用量筒测液体的体积时，下列说法错误的是（　）', cols: 1, options: ['读数时视线要与凹液面的底部相平', '俯视读数会偏小', '使用前要看清量筒的量程和分度值', '量筒要放在水平台上'], answer: 1, explain: '俯视读数偏大，仰视读数偏小。' },
+    { type: 'fill', q: '30 mL = ______ cm³。', answer: 30, unit: 'cm³', explain: '1 mL = 1 cm³。' },
+    { type: 'choice', q: '测盐水的密度时，合理的步骤顺序是：①测烧杯和剩余盐水的质量 m₂；②把烧杯中的一部分盐水倒入量筒，读出体积 V；③测烧杯和盐水的总质量 m₁。（　）', options: ['③②①', '①②③', '②③①', '③①②'], answer: 0, explain: '先测总质量，再倒出一部分测体积，最后测剩余的质量，ρ = (m₁ − m₂)/V。' },
+    { type: 'choice', q: '某同学先测空烧杯的质量，再测烧杯和盐水的总质量，然后把盐水全部倒入量筒测体积，测得的密度（　）', options: ['偏大', '偏小', '准确', '无法判断'], answer: 0, explain: '烧杯壁上沾有盐水，量筒中盐水的体积偏小，密度偏大。' },
+    { type: 'fill', q: '用天平测得小石块的质量为 26.8 g，量筒中水的体积由 30 mL 升到 40 mL，小石块的密度是 ______ kg/m³。', answer: [2680, '2.68×10³', '2.68×10^3'], unit: 'kg/m³', explain: 'V = 10 cm³，ρ = 26.8 g ÷ 10 cm³ = 2.68 g/cm³ = 2.68×10³ kg/m³。', show: '2.68×10³' },
+    { type: 'judge', q: '测小石块的密度时，应先测体积，再测质量。', answer: false, explain: '先测体积，石块沾水后质量偏大，密度偏大；应先测质量后测体积。' },
+    { type: 'choice', q: '测某吸水的石块的密度时，测得的密度会（　）', options: ['偏小', '不变', '无法判断', '偏大'], answer: 3, explain: '石块吸水，V₂ 偏小，测得的体积偏小，密度偏大。' },
+    { type: 'choice', q: '测小石块体积时，量筒中要倒入“适量”的水，“适量”是指（　）', cols: 1, options: ['水越少越好', '水越多越好', '能浸没石块，且浸没后液面不超过量程', '水面刚好到量筒的一半'], answer: 2, explain: '水要能浸没石块，石块放入后液面又不能超过量筒的量程。' },
+    { type: 'judge', q: '把一块金属切去一半，剩下部分的密度变为原来的一半。', answer: false, explain: '密度是物质的特性，质量和体积都变为一半，密度不变。' },
+    { type: 'choice', q: '测蜡块（密度比水小）的体积，可以采用的方法是（　）', cols: 1, options: ['直接放入量筒的水中读数', '用细针把蜡块压入水中，使它浸没', '用刻度尺测量它在水面上的高度', '把蜡块放在天平上称量'], answer: 1, explain: '蜡块漂浮在水面上，要用针压法或沉锤法使它浸没。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/widgets/mass.js"></script>
+<script src="../assets/js/widgets/measure.js"></script>
+</body>
+</html>
