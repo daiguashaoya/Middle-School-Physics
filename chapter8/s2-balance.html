@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第2节 二力平衡 · 看得见的物理</title>
+<meta name="description" content="八年级物理第八章第2节：平衡状态和平衡力、3D 探究二力平衡的条件（小车、木块、卡片）、拖动两个力找平衡条件、跳伞运动员、力和运动的关系、平衡力和相互作用力。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="8">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第8章 运动和力</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、平衡状态和平衡力</a>
+    <a href="#k2">二、二力平衡的条件</a>
+    <a href="#k3">三、二力平衡条件的应用</a>
+    <a href="#k4">四、平衡力和相互作用力</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#two-force">🔬 实验：探究二力平衡的条件</a>
+    <a href="../lab/index.html#force-motion">🔬 实验：力和运动的关系</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第8章 运动和力</a> › 第2节</div>
+      <h1>二力平衡</h1>
+      <p>桌上的书受到重力，却静止不动；匀速行驶的汽车受到很多力，运动状态却不变。这一节探究两个力平衡的条件，并用它分析物体的受力和运动。</p>
+      <div class="hero-tags"><span>1 课时</span><span>6 个互动演示</span><span>1 个 3D 实验</span><span>2 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>知道什么是平衡状态和平衡力</li><li>通过实验探究二力平衡的条件</li><li>会用二力平衡的条件分析物体的受力情况</li><li>知道力和运动的关系，能区分平衡力和相互作用力</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>二力平衡的条件</li><li>二力平衡条件的应用</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>探究二力平衡的条件</li><li>区分平衡力和相互作用力</li></ul></div>
+    </div>
+
+    <!-- ========== 一、平衡状态 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>平衡状态和平衡力</h2></div>
+      <p>牛顿第一定律告诉我们，不受力的物体保持静止或匀速直线运动状态。可是我们身边的物体都受到力的作用，有的也保持静止或匀速直线运动，这是为什么？</p>
+      <div class="concept"><h3><span class="def">平衡状态</span>与<span class="def">平衡力</span></h3><p style="margin:0">物体受到几个力的作用时，如果保持<b>静止状态</b>或<b>匀速直线运动状态</b>，我们就说这几个力<b>相互平衡</b>，物体处于<b>平衡状态</b>。物体只受两个力并处于平衡状态，叫做<b>二力平衡</b>——这是最简单的平衡。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>分一分：哪些物体处于平衡状态？</h3><span class="badge o">练一练</span><span class="badge p">易错</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">判断每个物体是否处于平衡状态（静止或匀速直线运动）。</p>
+          <div data-widget="balance-state"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-warn"><b>易错：</b>①“匀速转弯”不是平衡状态——运动方向变了；②竖直上抛的小球到达最高点、荡秋千到达最高点时，只是<b>瞬间</b>速度为零，受力并不平衡，<b>不是</b>平衡状态。</div>
+    </section>
+
+    <!-- ========== 二、二力平衡的条件 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no exp">实验</span><h2>探究二力平衡的条件</h2></div>
+      <p>两个力要满足什么条件才能平衡？把小车（或轻质卡片）放在桌面上，两端各系一根细线，细线跨过桌边的滑轮挂上钩码，钩码的重力就是拉小车的力。</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>3D 实验：探究二力平衡的条件</h3><span class="badge t">3D 实验</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">先用手按住小车，改变两边钩码的个数，再松手观察；把小车扭转一个角度再松手；换成轻质卡片，把卡片剪开再试。也可以换成木块，看看摩擦力带来的影响。</p>
+          <div data-widget="twoforce-3d"></div>
+        </div>
+      </div>
+
+      <div class="concept"><h3><span class="def">二力平衡的条件</span></h3><p style="margin:0">作用在<b>同一物体</b>上的两个力，如果<b>大小相等</b>、<b>方向相反</b>，并且<b>在同一条直线上</b>，这两个力就彼此平衡。简记为：<b>同体、等大、反向、共线</b>。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动手：拖动两个力，找出平衡的条件</h3><span class="badge o">动手</span><span class="badge p">难点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">拖动箭头的末端改变力的大小和方向，拖动作用点改变力的位置，看四个条件是否满足；点“松手”看卡片会不会动。</p>
+          <div data-widget="balance-cond"></div>
+        </div>
+      </div>
+
+      <div class="table-wrap mb">
+        <table class="t">
+          <thead><tr><th>实验中的做法</th><th class="l">目的</th></tr></thead>
+          <tbody>
+            <tr><td>用小车或轻质卡片，不用木块</td><td class="l">减小<b>摩擦力</b>对实验的影响（小车是滚动摩擦，卡片不接触桌面）；卡片很轻，重力可以忽略。</td></tr>
+            <tr><td>两边挂不同个数的钩码</td><td class="l">探究两个力的<b>大小</b>不等时能否平衡。</td></tr>
+            <tr><td>把小车扭转一个角度后松手</td><td class="l">探究两个力<b>不在同一直线上</b>时能否平衡。</td></tr>
+            <tr><td>把卡片从中间剪开</td><td class="l">探究两个力作用在<b>两个物体</b>上时能否平衡。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== 三、二力平衡条件的应用 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no">知识点 2</span><h2>二力平衡条件的应用</h2></div>
+      <div class="grid-3 mb">
+        <div class="card"><h4>🏺 静止的花瓶</h4><p class="small muted" style="margin:0">重力 G 与桌面的支持力 F 平衡：F = G，支持力竖直向上。</p></div>
+        <div class="card"><h4>💡 悬挂的吊灯</h4><p class="small muted" style="margin:0">重力 G 与吊线的拉力 F 平衡：F = G，拉力竖直向上。</p></div>
+        <div class="card"><h4>🚗 匀速行驶的汽车</h4><p class="small muted" style="margin:0">水平方向：牵引力与阻力平衡；竖直方向：重力与支持力平衡。</p></div>
+      </div>
+      <div class="tip tip-exam"><b>应用：</b>①已知一个力，根据二力平衡求另一个力（大小相等、方向相反）；②根据物体的受力情况判断它的运动状态。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：跳伞运动员</h3><span class="badge o">动画</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">运动员和伞总重 800 N。点“跳出飞机”，观察重力和空气阻力的大小、速度—时间图像；适当时候打开降落伞。</p>
+          <div data-widget="parachute"></div>
+        </div>
+      </div>
+
+      <div class="example">
+        <b>例</b>　跳伞运动员和伞的总重力为 1000 N，打开降落伞后在空中匀速直线下降。他们受到的空气阻力是多大？方向如何？
+        <details class="reveal"><summary>看解答</summary><p>把运动员和伞看成一个整体，它匀速直线下降，处于平衡状态，受到的重力和空气阻力是一对平衡力，所以 f = G = <b>1000 N</b>，方向<b>竖直向上</b>。</p></details>
+      </div>
+      <p>物体受平衡力时运动状态不变；如果受到的力不平衡，会怎样？</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动手：力和运动的关系</h3><span class="badge o">动手</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">光滑冰面上的冰壶受到两个水平方向的力。选择它原来的运动状态，调节两个力的大小，点“开始”，观察 v–t 图像。</p>
+          <div data-widget="force-motion"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-good"><b>力和运动的关系：</b>物体<b>不受力</b>或<b>受平衡力</b>时，运动状态不变（保持静止或匀速直线运动）；物体<b>受非平衡力</b>时，运动状态改变（速度大小或方向改变）。</div>
+      <div class="tip tip-warn"><b>易错：</b>“物体受平衡力，一定静止”是错的——原来运动的物体受平衡力，做匀速直线运动；“静止的物体一定不受力”也是错的——它可能受平衡力。</div>
+    </section>
+
+    <!-- ========== 四、平衡力和相互作用力 ========== -->
+    <section class="kp" id="k4">
+      <div class="kp-title"><span class="kp-no">知识点 3</span><h2>平衡力和相互作用力</h2></div>
+      <div class="table-wrap mb">
+        <table class="t">
+          <thead><tr><th></th><th>一对平衡力</th><th>一对相互作用力</th></tr></thead>
+          <tbody>
+            <tr><td>相同点</td><td colspan="2">大小相等、方向相反、作用在同一条直线上</td></tr>
+            <tr><td>作用对象</td><td><b>同一个</b>物体</td><td>分别作用在<b>两个</b>物体上（甲对乙、乙对甲）</td></tr>
+            <tr><td>作用效果</td><td>使物体保持平衡（效果相互抵消）</td><td>分别产生各自的效果，不能抵消</td></tr>
+            <tr><td>时间关系</td><td>一个力消失，另一个力可以存在</td><td>同时产生、同时消失</td></tr>
+            <tr><td>力的性质</td><td>可以是不同性质的力（如重力与支持力）</td><td>一定是同一性质的力（如都是弹力）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：平衡力还是相互作用力</h3><span class="badge o">练一练</span><span class="badge p">易错</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">在每个场景中选出两个力，判断它们是一对平衡力、一对相互作用力，还是都不是。</p>
+          <div data-widget="pair-judge"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-exam"><b>判断的关键：</b>看两个力是否作用在<b>同一个物体</b>上——是，可能是平衡力；作用在两个物体上、而且是“甲对乙、乙对甲”，是相互作用力。书受到的重力和书对桌面的压力，虽然大小相等、方向相同，但<b>既不是平衡力，也不是相互作用力</b>。</div>
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>平衡状态</h4><ul><li>静止或匀速直线运动</li><li>受平衡力（或不受力）</li><li>最高点瞬间静止 ≠ 平衡状态</li></ul></div>
+        <div class="summary-item"><h4>二力平衡的条件</h4><ul><li>同体、等大、反向、共线</li><li>实验用小车或轻质卡片减小摩擦</li><li>扭转：探究共线；剪开：探究同体</li></ul></div>
+        <div class="summary-item"><h4>应用</h4><ul><li>已知一个力，求平衡的另一个力</li><li>不受力或受平衡力：运动状态不变</li><li>受非平衡力：运动状态改变</li></ul></div>
+        <div class="summary-item"><h4>平衡力与相互作用力</h4><ul><li>都是等大、反向、共线</li><li>平衡力：同一物体</li><li>相互作用力：两个物体，同时产生同时消失</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s1-newton.html"><small>← 上一节</small><b>第1节 牛顿第一定律</b></a>
+      <a class="next" href="s3-friction.html"><small>下一节 →</small><b>第3节 摩擦力</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版八年级物理下册第八章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '下列物体中，处于平衡状态的是（　）', cols: 1, options: ['在平直公路上匀速直线行驶的汽车', '加速上升的火箭', '竖直上抛到最高点的小球', '匀速转弯的汽车'], answer: 0, explain: '平衡状态是静止或匀速直线运动状态。匀速转弯方向在变，加速上升速度在变，最高点的小球只受重力，都不是平衡状态。' },
+    { type: 'choice', q: '二力平衡的条件是：作用在同一物体上的两个力（　）', cols: 1, options: ['大小相等、方向相反、不在同一直线上', '大小相等、方向相同、在同一直线上', '大小相等、方向相反、在同一直线上', '大小不等、方向相反、在同一直线上'], answer: 2, explain: '同体、等大、反向、共线。' },
+    { type: 'choice', q: '探究二力平衡条件时，把小车扭转一个角度后松手，这样做是为了探究两个力（　）', cols: 1, options: ['是否作用在同一物体上', '大小是否相等', '方向是否相反', '是否作用在同一直线上'], answer: 3, explain: '扭转后两个拉力不在同一直线上，松手后小车转动，说明不在同一直线上的两个力不能平衡。' },
+    { type: 'judge', q: '探究二力平衡条件时，用小车代替木块，是为了减小摩擦力对实验的影响。', answer: true, explain: '小车受到的是滚动摩擦，比木块受到的滑动摩擦小得多。' },
+    { type: 'fill', q: '一盏电灯吊在天花板下静止，电灯重 5 N，电线对电灯的拉力是 ______ N。', answer: 5, unit: 'N', explain: '电灯静止，重力与拉力是一对平衡力，F = G = 5 N。' },
+    { type: 'choice', q: '一个降落伞重 50 N，运动员打开伞后匀速直线下降，运动员和伞受到的空气阻力为 750 N，则运动员受到的重力为（　）', options: ['750 N', '800 N', '700 N', '50 N'], answer: 2, explain: '人和伞匀速下降，总重力等于阻力：G人 + 50 N = 750 N，G人 = 700 N。' },
+    { type: 'choice', q: '关于运动和力，下列说法中正确的是（　）', cols: 1, options: ['物体在平衡力作用下，一定做匀速直线运动', '运动的物体在平衡力作用下，一定做匀速直线运动', '物体处于静止状态，一定不受外力', '物体在平衡力作用下，一定保持静止状态'], answer: 1, explain: '物体受平衡力时运动状态不变：原来静止的保持静止，原来运动的做匀速直线运动。静止的物体可能受平衡力。' },
+    { type: 'choice', q: '书静止在水平桌面上，下列各对力中属于平衡力的是（　）', cols: 1, options: ['书受到的重力和桌面对书的支持力', '书对桌面的压力和桌面对书的支持力', '桌子受到的重力和书对桌面的压力', '书受到的重力和书对桌面的压力'], answer: 0, explain: '书受到的重力和支持力都作用在书上，大小相等、方向相反、在同一直线上，是一对平衡力。书对桌面的压力和桌面对书的支持力是一对相互作用力。' },
+    { type: 'judge', q: '一对相互作用力一定同时产生、同时消失，而一对平衡力中的一个力消失，另一个力可以继续存在。', answer: true, explain: '这是平衡力与相互作用力的区别之一。' },
+    { type: 'choice', q: '流水线上的工件随传送带一起在水平方向做匀速直线运动，工件在水平方向上（　）', options: ['受到一对平衡力', '受到向右的摩擦力', '受到向左的摩擦力', '不受力'], answer: 3, explain: '工件与传送带一起匀速运动，没有相对运动也没有相对运动的趋势，在水平方向上不受力。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/vendor/three.min.js"></script>
+<script src="../assets/vendor/OrbitControls.js"></script>
+<script src="../assets/js/widgets/force.js"></script>
+<script src="../assets/js/widgets/dynamics.js"></script>
+<script src="../assets/js/widgets/twoforce.js"></script>
+<script src="../assets/js/widgets/twoforce3d.js"></script>
+</body>
+</html>

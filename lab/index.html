@@ -103,6 +103,13 @@
 <script src="../assets/js/widgets/elastic.js"></script>
 <script src="../assets/js/widgets/gravity.js"></script>
 <script src="../assets/js/widgets/earth3d.js"></script>
+<script src="../assets/js/widgets/dynamics.js"></script>
+<script src="../assets/js/widgets/newton.js"></script>
+<script src="../assets/js/widgets/resist3d.js"></script>
+<script src="../assets/js/widgets/twoforce.js"></script>
+<script src="../assets/js/widgets/twoforce3d.js"></script>
+<script src="../assets/js/widgets/friction.js"></script>
+<script src="../assets/js/widgets/bike3d.js"></script>
 <script>
 var EXPERIMENTS = [
   {
@@ -458,9 +465,57 @@ var EXPERIMENTS = [
     widgets: ['gravity-direction', 'center-gravity'], titles: ['重力的方向', '找重心'],
     think: [['为什么用悬挂法能找到薄板的重心？', '薄板静止时，重心在悬挂点的正下方，即在铅垂线上；两条铅垂线的交点就是重心。'], ['“竖直向下”和“垂直向下”一样吗？', '不一样。竖直向下是与水平面垂直向下，重力的方向总是竖直向下。']],
   },
+  {
+    id: 'resist', ch: 8, icon: '🛝', title: '探究阻力对物体运动的影响', sub: '3D 斜面小车 · 科学推理', lesson: '../chapter8/s1-newton.html#k2',
+    goal: '探究阻力对物体运动的影响，经过推理理解“运动的物体不受力将做匀速直线运动”。',
+    apparatus: ['斜面', '小车', '长木板', '毛巾', '棉布', '玻璃板', '刻度尺'],
+    steps: ['在水平木板上铺上毛巾，让小车从斜面顶端（同一点）由静止滑下，记下小车停止的位置，测出滑行距离', '去掉毛巾，铺上棉布，让小车从同一点由静止滑下，测出滑行距离', '去掉棉布（木板表面）、换成玻璃板，重复实验', '比较滑行距离和速度减小的快慢，推理：如果水平面绝对光滑会怎样'],
+    widgets: [['resist-3d', { lab: true }], 'galileo-ramp'], titles: ['3D 阻力对物体运动的影响', '伽利略的理想斜面实验'],
+    think: [['为什么要让小车从斜面的同一高度由静止滑下？', '使小车到达水平面时的速度相同（控制变量法），只改变水平面的粗糙程度。'], ['这个实验能直接证明牛顿第一定律吗？', '不能。不受阻力的情况无法实现，牛顿第一定律是在实验的基础上经过科学推理得出的。']],
+  },
+  {
+    id: 'inertia', ch: 8, icon: '🚌', title: '惯性现象', sub: '小球与金属片 · 公交车 · 安全带', lesson: '../chapter8/s1-newton.html#k4',
+    goal: '通过实验和生活实例认识一切物体都有惯性，会用惯性解释现象。',
+    apparatus: ['惯性演示器（小球、金属片、弹簧片）', '杯子、硬卡片、硬币', '小车和木块'],
+    steps: ['把金属片放在支座上，小球放在金属片上，用弹簧片迅速把金属片弹出，观察小球', '杯口放卡片、卡片上放硬币，迅速弹出卡片，观察硬币；再慢慢推卡片比较', '观察公交车启动、刹车时乘客、吊环和杯中水的变化', '按“四步”解释看到的惯性现象'],
+    widgets: ['inertia-demos', 'bus-inertia'], titles: ['惯性演示', '公交车上的惯性'],
+    think: [['为什么要“迅速”弹出卡片？', '迅速弹出时，卡片对硬币的摩擦力作用时间很短，硬币几乎来不及运动，由于惯性保持静止而落入杯中。'], ['汽车的安全带能减小人的惯性吗？', '不能。惯性只与质量有关；安全带是在紧急刹车时拉住人，减小惯性带来的伤害。']],
+  },
+  {
+    id: 'two-force', ch: 8, icon: '⚖️', title: '探究二力平衡的条件', sub: '3D 小车 · 木块 · 轻质卡片', lesson: '../chapter8/s2-balance.html#k2',
+    goal: '探究作用在同一物体上的两个力满足什么条件时彼此平衡。',
+    apparatus: ['小车（或轻质卡片）', '木块', '两个滑轮', '细线', '钩码若干（每个 50 g）'],
+    steps: ['两边挂相同个数的钩码，用手按住小车后松手，观察小车是否静止', '两边挂不同个数的钩码，松手后观察', '两边钩码相同，把小车扭转一个角度后松手，观察', '换用轻质卡片，把卡片从中间剪开，观察两半卡片的运动', '换用木块重复步骤 2，体会摩擦力对实验的影响'],
+    widgets: [['twoforce-3d', { lab: true }], 'balance-cond'], titles: ['3D 探究二力平衡的条件', '拖动两个力找平衡条件'],
+    think: [['为什么用小车或轻质卡片，而不用木块？', '减小摩擦力对实验的影响：木块受到的摩擦力较大，两边拉力不等时木块也可能静止。'], ['把小车扭转一个角度后松手，是为了探究什么？', '探究不在同一直线上的两个力能否平衡。']],
+  },
+  {
+    id: 'force-motion', ch: 8, icon: '🥌', title: '力和运动的关系', sub: '平衡力与非平衡力 · 跳伞', lesson: '../chapter8/s2-balance.html#k3',
+    goal: '认识物体不受力、受平衡力时运动状态不变，受非平衡力时运动状态改变。',
+    apparatus: ['光滑冰面上的冰壶（模拟）', '两个可调大小的水平拉力', '跳伞运动员（模拟）'],
+    steps: ['冰壶原来静止，使两个力大小相等，观察冰壶；再使两个力不等，观察', '冰壶原来运动，重复上面的操作，观察 v–t 图像', '跳伞：观察重力与空气阻力的大小，找出加速、匀速、减速下落的条件'],
+    widgets: ['force-motion', 'parachute'], titles: ['力和运动的关系', '跳伞运动员'],
+    think: [['物体受平衡力，一定静止吗？', '不一定。原来运动的物体受平衡力，做匀速直线运动。'], ['跳伞运动员什么时候匀速下落？', '空气阻力增大到等于重力时，二力平衡，运动员匀速下落。']],
+  },
+  {
+    id: 'friction', ch: 8, icon: '🧱', title: '探究影响滑动摩擦力大小的因素', sub: '匀速拉动 · 改进装置', lesson: '../chapter8/s3-friction.html#k3',
+    goal: '会用弹簧测力计测量滑动摩擦力，探究滑动摩擦力的大小与哪些因素有关。',
+    apparatus: ['弹簧测力计（0~5 N，分度值 0.1 N）', '木块（长方体）', '砝码', '长木板', '棉布', '毛巾'],
+    steps: ['用弹簧测力计沿水平方向拉着木块在木板上做匀速直线运动，读出示数', '在木块上加放砝码，重复实验（改变压力）', '在木板上分别铺棉布、毛巾，重复实验（改变接触面的粗糙程度）', '把木块侧放、竖放，或改变拉动速度，重复实验', '改用“测力计固定、拉动木板”的方法再测一次，比较两种方案'],
+    widgets: [['friction-lab', { lab: true }], 'static-friction'], titles: ['探究影响滑动摩擦力大小的因素', '静摩擦力：推箱子和手握瓶子'],
+    think: [['为什么要拉着木块做匀速直线运动？', '匀速直线运动时木块处于平衡状态，拉力与滑动摩擦力是一对平衡力，测力计的示数等于滑动摩擦力。'], ['改进后的装置有什么优点？', '木块相对桌面静止，测力计示数稳定、便于读数，而且木板不必匀速拉动。']],
+  },
+  {
+    id: 'friction-use', ch: 8, icon: '🚲', title: '摩擦的利用与防止', sub: '增大和减小摩擦 · 3D 自行车', lesson: '../chapter8/s3-friction.html#k5',
+    goal: '知道增大有益摩擦和减小有害摩擦的方法，能分析生活中的实例。',
+    apparatus: ['木箱、弹簧测力计', '砂纸、玻璃、圆木棒、润滑油', '自行车'],
+    steps: ['用测力计匀速拉动木箱，记下示数', '分别加重物、垫砂纸、垫圆木、加润滑油等，比较示数的变化', '观察自行车，找出哪些地方增大了摩擦、哪些地方减小了摩擦，说出用的方法'],
+    widgets: ['friction-methods', 'bike-3d'], titles: ['增大和减小摩擦的方法', '3D 自行车上的摩擦'],
+    think: [['自行车刹车时用力捏闸，用的是什么方法？', '增大压力来增大摩擦。'], ['为什么给机器加润滑油能减小摩擦？', '润滑油在两个接触面之间形成油膜，使接触面彼此分离。']],
+  },
 ];
 var COMING = [];
-var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 物态变化', 4: '第4章 光现象', 5: '第5章 透镜及其应用', 6: '第6章 质量与密度', 7: '第7章 力' };
+var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 物态变化', 4: '第4章 光现象', 5: '第5章 透镜及其应用', 6: '第6章 质量与密度', 7: '第7章 力', 8: '第8章 运动和力' };
 
 (function () {
   var h = PS.h;
@@ -476,7 +531,7 @@ var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 
     side.append(b);
   });
   side.append(h('h3', null, '后续章节（制作中）'));
-  if (!COMING.length) side.append(h('p', { class: 'small muted', style: { margin: '2px 10px 8px' } }, '第8章起的实验正在制作中……'));
+  if (!COMING.length) side.append(h('p', { class: 'small muted', style: { margin: '2px 10px 8px' } }, '第9章起的实验正在制作中……'));
   COMING.forEach(function (c) {
     side.append(h('div', { class: 'lab-item soon' }, h('span', { class: 'ico' }, c.icon), h('span', null, h('b', null, c.title), h('small', null, CH_NAMES[c.ch] + ' · 即将上线'))));
   });
