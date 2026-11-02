@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第2节 弹力 · 看得见的物理</title>
+<meta name="description" content="八年级物理第七章第2节：弹性和塑性、弹力的产生条件、探究弹簧的伸长量与拉力的关系、弹簧测力计的构造和使用、读数练习。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="7">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第7章 力</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、弹性和塑性</a>
+    <a href="#k2">二、弹力</a>
+    <a href="#k3">三、弹簧测力计的原理</a>
+    <a href="#k4">四、弹簧测力计的使用</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#elastic">🔬 实验：弹簧的伸长与拉力</a>
+    <a href="../lab/index.html#spring-scale">🔬 实验：用弹簧测力计测力</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第7章 力</a> › 第2节</div>
+      <h1>弹力</h1>
+      <p>拉弯的弓能把箭射出，压缩的弹簧能把东西弹开——这些力是怎样产生的？怎样测量力的大小？这一节认识弹力，学会使用弹簧测力计。</p>
+      <div class="hero-tags"><span>1 课时</span><span>5 个互动演示</span><span>2 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>知道什么是弹性、塑性和弹力，知道弹力产生的条件</li><li>了解弹簧测力计的原理和构造</li><li>会正确使用弹簧测力计测量力的大小</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>弹力产生的条件</li><li>弹簧测力计的使用</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>弹力的概念及产生条件</li></ul></div>
+    </div>
+
+    <!-- ========== 一、弹性和塑性 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>弹性和塑性</h2></div>
+      <div class="grid-2 mb">
+        <div class="concept" style="margin:0"><h3><span class="def">弹性</span></h3><p style="margin:0">物体受力时发生形变，不受力时又<b>恢复到原来的形状</b>，物体的这种特性叫做弹性。如：弹簧、橡皮筋、塑料尺、气球、跳板。</p></div>
+        <div class="concept" style="margin:0"><h3><span class="def">塑性</span></h3><p style="margin:0">物体发生形变后，<b>不能自动恢复到原来的形状</b>，物体的这种特性叫做塑性。如：橡皮泥、面团、细铝丝、湿泥土。</p></div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动手：能不能恢复原状？</h3><span class="badge o">动手</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选择一种物体，在画面上按住拖动使它发生形变，再松手，看它能不能恢复原来的形状。也可以点“演示”。</p>
+          <div data-widget="elastic-plastic"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-warn"><b>弹性限度：</b>物体的弹性有一定的限度。弹簧被拉得太长，超过了它的<b>弹性限度</b>，就不能完全恢复原来的形状了。所以使用弹簧、弹簧测力计时，不能超过它们的弹性限度（量程）。</div>
+    </section>
+
+    <!-- ========== 二、弹力 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no">知识点 2</span><h2>弹力</h2></div>
+      <div class="concept"><h3><span class="def">弹力</span></h3><p style="margin:0">物体由于发生<b>弹性形变</b>而产生的力叫做弹力。我们通常所说的<b>压力、支持力、拉力、推力</b>都属于弹力。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：弹力是怎样产生的？</h3><span class="badge o">动画</span><span class="badge p">难点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">书放在桌面上，桌面和书都发生了微小的形变——拖动滑块把它放大看看。再看看其他几个场景中有没有弹力。</p>
+          <div data-widget="elastic-force"></div>
+        </div>
+      </div>
+
+      <div class="grid-2 mb">
+        <div class="tip tip-good" style="margin:0"><b>判断有没有弹力：</b>①两个物体<b>直接接触</b>；②接触处<b>相互挤压或拉伸</b>，发生了弹性形变。两个条件缺一不可——弹力是<b>接触力</b>，不接触的物体之间不会有弹力。</div>
+        <div class="tip tip-exam" style="margin:0"><b>易错：</b>书对桌面的压力，是<b>书</b>发生形变产生的；桌面对书的支持力，是<b>桌面</b>发生形变产生的——弹力是<b>施力物体</b>发生形变产生的。</div>
+      </div>
+    </section>
+
+    <!-- ========== 三、弹簧测力计的原理 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no">知识点 3</span><h2>弹簧测力计的原理</h2></div>
+      <p>用大小不同的力拉弹簧，弹簧伸长的长度不同。弹簧的伸长量与拉力有什么关系？在弹簧下逐个增挂钩码，测出弹簧的长度，算出伸长量。</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>实验：弹簧的伸长量与拉力的关系</h3><span class="badge o">探究</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">逐个挂上钩码（每个 0.5 N），记录弹簧的长度，自动算出伸长量并画出图像。最后试试挂上 7 个、8 个钩码，超过弹性限度会怎样？</p>
+          <div data-widget="hooke-lab"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-good"><b>结论（弹簧测力计的原理）：</b>在弹性限度内，弹簧受到的拉力越大，弹簧的伸长量就越大——<b>弹簧的伸长量跟它受到的拉力成正比</b>。</div>
+      <div class="tip tip-warn"><b>注意：</b>“伸长量”是弹簧伸长的长度 ΔL = L − L₀，不包括弹簧原来的长度。弹簧的<b>长度</b>与拉力<b>不成正比</b>。</div>
+      <div class="example">
+        <b>例</b>　一根弹簧原长 10 cm，挂 2 N 的物体时长 12 cm。在弹性限度内，挂 5 N 的物体时弹簧长多少？
+        <details class="reveal"><summary>看解答</summary><p>2 N 的拉力使弹簧伸长 2 cm，即每 1 N 伸长 1 cm。5 N 时伸长 5 cm，弹簧长 10 cm + 5 cm = <b>15 cm</b>。</p></details>
+      </div>
+    </section>
+
+    <!-- ========== 四、弹簧测力计的使用 ========== -->
+    <section class="kp" id="k4">
+      <div class="kp-title"><span class="kp-no">知识点 4</span><h2>弹簧测力计的构造和使用</h2></div>
+      <div class="concept"><h3><span class="def">测力计</span></h3><p style="margin:0">测量力的大小的工具叫做测力计。实验室中常用<b>弹簧测力计</b>，它由<b>弹簧、指针、刻度板、拉环和挂钩</b>等组成。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动手：认识和使用弹簧测力计</h3><span class="badge o">动手</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">先认识各部分，再按步骤使用：调零、来回拉几次、挂上物体、读数。也看看“斜着拉”“倒挂”“超过量程”会怎样。</p>
+          <div data-widget="spring-scale"></div>
+        </div>
+      </div>
+
+      <div class="table-wrap mb">
+        <table class="t">
+          <thead><tr><th>阶段</th><th class="l">要点</th></tr></thead>
+          <tbody>
+            <tr><td>使用前</td><td class="l">①观察<b>量程</b>和<b>分度值</b>；②检查指针是否指在<b>零刻度线</b>，不在要<b>调零</b>；③轻轻来回拉动挂钩几次，防止弹簧、指针卡住或与外壳摩擦。</td></tr>
+            <tr><td>使用时</td><td class="l">①所测的力<b>不能超过量程</b>；②拉力的方向要与弹簧的<b>轴线方向一致</b>；③被测的力要作用在<b>挂钩</b>上，不能倒挂；④读数时，视线要与刻度板<b>垂直</b>，等指针稳定后再读；⑤记录数据要带单位。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：弹簧测力计读数</h3><span class="badge o">练一练</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">读出量程、分度值和示数（示数读到分度值即可），题目可以一直换。</p>
+          <div data-widget="scale-read"></div>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card"><h4>✊ 握力计</h4><p class="small muted" style="margin:0">体育测试中测握力，单位常用 kg 或 N。</p></div>
+        <div class="card"><h4>🔩 牵引测力计</h4><p class="small muted" style="margin:0">测量拖拉机、汽车等的牵引力。</p></div>
+        <div class="card"><h4>📟 数显测力计</h4><p class="small muted" style="margin:0">用力传感器测力，直接显示数字，精确度高。</p></div>
+      </div>
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>弹性和塑性</h4><ul><li>能恢复原状：弹性</li><li>不能恢复原状：塑性</li><li>弹性有一定的限度</li></ul></div>
+        <div class="summary-item"><h4>弹力</h4><ul><li>物体发生弹性形变而产生的力</li><li>条件：接触 + 弹性形变</li><li>压力、支持力、拉力都是弹力</li></ul></div>
+        <div class="summary-item"><h4>原理</h4><ul><li>在弹性限度内，弹簧的伸长量跟拉力成正比</li><li>伸长量 ΔL = L − L₀</li></ul></div>
+        <div class="summary-item"><h4>使用</h4><ul><li>看量程、分度值，调零</li><li>不超量程，拉力沿弹簧轴线</li><li>挂在挂钩上，视线垂直刻度板</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s1-force.html"><small>← 上一节</small><b>第1节 力</b></a>
+      <a class="next" href="s3-gravity.html"><small>下一节 →</small><b>第3节 重力</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版八年级物理下册第七章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '下列物体中，具有弹性的是（　）', options: ['面团', '弹簧', '湿泥土', '橡皮泥'], answer: 1, explain: '弹簧受力形变后，撤去外力能恢复原状，具有弹性；其余三种具有塑性。' },
+    { type: 'choice', q: '关于弹力，下列说法正确的是（　）', options: ['压缩的弹簧能产生弹力', '物体发生形变时产生的力叫弹力', '不相互接触的物体间也可能产生弹力', '拉力不属于弹力'], answer: 0, explain: '弹力是物体发生弹性形变产生的力，只有接触并相互挤压或拉伸才产生；拉力、压力、支持力都是弹力。' },
+    { type: 'choice', q: '书放在水平桌面上，桌面对书有支持力。这个支持力的施力物体是（　）', options: ['地球', '地面', '书', '桌面'], answer: 3, explain: '桌面对书施加支持力，施力物体是桌面。' },
+    { type: 'choice', q: '书对桌面的压力，是由于（　）发生弹性形变而产生的。', options: ['地球', '书和桌面', '书', '桌面'], answer: 2, explain: '弹力是施力物体发生形变产生的，压力的施力物体是书，是书发生了形变。' },
+    { type: 'judge', q: '弹簧测力计是根据“在弹性限度内，弹簧的长度跟受到的拉力成正比”的原理制成的。', answer: false, explain: '成正比的是弹簧的伸长量，不是弹簧的长度。' },
+    { type: 'fill', q: '一个弹簧测力计的量程是 0~5 N，每 1 N 之间分成 5 小格，它的分度值是 ______ N。', answer: 0.2, unit: 'N', explain: '1 N ÷ 5 = 0.2 N。' },
+    { type: 'choice', q: '使用弹簧测力计时，下列说法中错误的是（　）', cols: 1, options: ['使用时弹簧、指针不能与外壳摩擦', '测量时弹簧测力计必须竖直放置', '使用前要检查指针是否指在零刻度线', '所测的力不能超过它的量程'], answer: 1, explain: '弹簧测力计可以沿任意方向使用，只要拉力方向与弹簧轴线方向一致。' },
+    { type: 'fill', q: '一根弹簧原长 10 cm，挂 2 N 的物体时长 12 cm。在弹性限度内，挂 5 N 的物体时，弹簧长 ______ cm。', answer: 15, unit: 'cm', explain: '每 1 N 使弹簧伸长 1 cm，5 N 伸长 5 cm，长度为 10 cm + 5 cm = 15 cm。' },
+    { type: 'choice', q: '一个弹簧测力计没有调零，不受力时指针指在 0.2 N 处。用它测一个力，示数为 2.6 N，这个力的实际大小是（　）', options: ['2.8 N', '2.6 N', '2.4 N', '无法确定'], answer: 2, explain: '示数比实际大 0.2 N，实际大小为 2.6 N − 0.2 N = 2.4 N。' },
+    { type: 'choice', q: '把两个弹簧测力计 A、B 的挂钩钩在一起，用手分别拉住它们的拉环，A 的示数为 5 N，则 B 的示数为（　）', options: ['0 N', '2.5 N', '5 N', '10 N'], answer: 2, explain: 'A 对 B 的拉力与 B 对 A 的拉力是一对相互作用的力，大小相等，B 的示数也是 5 N。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/widgets/force.js"></script>
+<script src="../assets/js/widgets/elastic.js"></script>
+</body>
+</html>

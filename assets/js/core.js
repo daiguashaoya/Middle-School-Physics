@@ -652,6 +652,7 @@
     { no: 4, name: '光现象', dir: 'chapter4', icon: '💡' },
     { no: 5, name: '透镜及其应用', dir: 'chapter5', icon: '🔍' },
     { no: 6, name: '质量与密度', dir: 'chapter6', icon: '⚖️' },
+    { no: 7, name: '力', dir: 'chapter7', icon: '🏋️' },
   ];
 
   function enhanceNav() {

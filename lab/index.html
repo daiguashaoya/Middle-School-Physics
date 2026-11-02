@@ -97,6 +97,12 @@
 <script src="../assets/js/widgets/density3d.js"></script>
 <script src="../assets/js/widgets/measure.js"></script>
 <script src="../assets/js/widgets/densitylife.js"></script>
+<script src="../assets/js/widgets/force.js"></script>
+<script src="../assets/js/widgets/force1.js"></script>
+<script src="../assets/js/widgets/door3d.js"></script>
+<script src="../assets/js/widgets/elastic.js"></script>
+<script src="../assets/js/widgets/gravity.js"></script>
+<script src="../assets/js/widgets/earth3d.js"></script>
 <script>
 var EXPERIMENTS = [
   {
@@ -404,9 +410,57 @@ var EXPERIMENTS = [
     widgets: ['air-density', 'water-anomaly'], titles: ['气球和纸风车', '水的反常膨胀'],
     think: [['为什么暖气片一般装在窗户下面？', '暖气片附近的空气受热，密度变小而上升；窗户附近的冷空气下降、流过来被加热，房间里的空气就循环起来了。'], ['寒冷的冬天湖面结冰了，较深的湖底水温约为多少？', '约 4 ℃。4 ℃ 的水密度最大，沉在湖底；冰的密度小，浮在水面上。']],
   },
+  {
+    id: 'force-effect', ch: 7, icon: '⚽', title: '力的作用效果', sub: '运动状态 · 力的三要素', lesson: '../chapter7/s1-force.html#k2',
+    goal: '认识力的两种作用效果；探究力的作用效果与力的大小、方向和作用点的关系。',
+    apparatus: ['小铁球', '斜面', '条形磁体', '门（或扳手、弹簧）', '刻度（量角器）'],
+    steps: ['把磁体靠近静止的小铁球，观察铁球的运动', '让小铁球从斜面滚下，在它运动方向的正前方放磁体，观察速度的变化', '再把磁体放在小球运动路径的侧旁，观察运动方向的变化', '推门：保持方向和作用点不变，改变力的大小，比较门转过的角度', '分别只改变力的方向、只改变力的作用点，比较作用效果'],
+    widgets: ['magnet-ball', 'door-3d'], titles: ['力改变物体的运动状态', '3D 推门：力的三要素'],
+    think: [['匀速转弯的汽车，运动状态改变了吗？', '改变了。运动方向在改变，运动状态就在改变。'], ['为什么门把手装在离门轴远的地方？', '力的作用点离门轴越远，用同样大的力越容易把门推开。']],
+  },
+  {
+    id: 'mutual', ch: 7, icon: '🚣', title: '力的作用是相互的', sub: '磁体小车 · 测力计对拉', lesson: '../chapter7/s1-force.html#k5',
+    goal: '通过实验认识物体间力的作用是相互的，知道相互作用的两个力的特点。',
+    apparatus: ['两辆小车', '两块条形磁体', '砝码', '旱冰鞋', '两个弹簧测力计'],
+    steps: ['在两辆靠得较近的小车上各放一块磁体（同名磁极相对），松手后观察两车的运动', '给其中一辆车加砝码，再做一次', '穿上旱冰鞋推墙，观察人的运动', '把两个弹簧测力计的挂钩钩在一起对拉，比较两个示数'],
+    widgets: ['mutual-force', 'force-diagram'], titles: ['力的作用是相互的', '作力的示意图'],
+    think: [['火箭升空时，使火箭向上运动的力的施力物体是什么？', '是火箭向下喷出的燃气。火箭对燃气施加向下的力，燃气同时对火箭施加向上的力。'], ['“以卵击石”，石头对鸡蛋的力大还是鸡蛋对石头的力大？', '一样大。一对相互作用的力大小相等，鸡蛋碎是因为它能承受的力小。']],
+  },
+  {
+    id: 'elastic', ch: 7, icon: '🌀', title: '探究弹簧的伸长量与拉力的关系', sub: '弹性 · 弹簧测力计的原理', lesson: '../chapter7/s2-elastic.html#k3',
+    goal: '探究在弹性限度内弹簧的伸长量与拉力的关系，理解弹簧测力计的原理；区分弹性和塑性。',
+    apparatus: ['铁架台', '弹簧', '刻度尺', '钩码（每个 0.5 N）', '橡皮筋、橡皮泥、细铝丝等'],
+    steps: ['把弹簧挂在铁架台上，记下不挂钩码时弹簧的长度（原长）', '逐个增挂钩码，记下每次弹簧的长度', '算出每次的伸长量 ΔL = L − L₀，画出 ΔL–F 图像', '分析数据得出结论；再挂过多的钩码，观察超过弹性限度的现象'],
+    widgets: [['hooke-lab', { lab: true }], 'elastic-plastic'], titles: ['弹簧的伸长量与拉力', '弹性和塑性'],
+    think: [['为什么不能用力“拼命”拉弹簧？', '超过弹簧的弹性限度，弹簧就不能恢复原状，会被损坏，伸长量也不再与拉力成正比。'], ['弹簧的长度与拉力成正比吗？', '不成正比。成正比的是伸长量，弹簧的长度 L = L₀ + ΔL，L–F 图像不过原点。']],
+  },
+  {
+    id: 'spring-scale', ch: 7, icon: '📏', title: '用弹簧测力计测量力', sub: '构造 · 使用 · 读数', lesson: '../chapter7/s2-elastic.html#k4',
+    goal: '认识弹簧测力计的构造，会正确使用弹簧测力计测量力的大小。',
+    apparatus: ['弹簧测力计（0~5 N，分度值 0.2 N）', '铁架台', '木块、苹果、小石块、铁块等'],
+    steps: ['观察弹簧测力计的量程和分度值', '检查指针是否指在零刻度线，必要时调零', '轻轻来回拉动挂钩几次', '把物体挂在挂钩上，物体静止后，视线垂直刻度板读数并记录', '比较斜着拉、倒挂、超过量程时的情况'],
+    widgets: ['spring-scale', 'scale-read'], titles: ['认识和使用弹簧测力计', '读数练习'],
+    think: [['没有调零，不受力时指针指在 0.2 N，测得示数 2.6 N，实际的力是多大？', '2.6 N − 0.2 N = 2.4 N。'], ['弹簧测力计只能竖直使用吗？', '不是。只要拉力方向与弹簧轴线方向一致，可以沿任意方向使用。']],
+  },
+  {
+    id: 'gravity-mass', ch: 7, icon: '🍎', title: '探究重力的大小跟质量的关系', sub: 'G–m 图像 · 不同星球', lesson: '../chapter7/s3-gravity.html#k2',
+    goal: '探究物体所受重力的大小跟质量的关系，得出 G = mg；认识质量和重力的区别。',
+    apparatus: ['弹簧测力计（或数显测力计）', '铁架台', '质量为 50 g 的钩码若干'],
+    steps: ['把一个钩码挂在测力计下，钩码静止时读出示数，就是钩码所受的重力', '逐次增挂钩码，测出对应的重力，填入表格', '算出重力与质量的比值，以质量为横坐标、重力为纵坐标描点作图', '分析图像和比值，得出结论'],
+    widgets: [['gm-lab', { lab: true }], 'planet-weight'], titles: ['探究重力与质量的关系', '在不同的地方称一称'],
+    think: [['为什么要在钩码静止时读数？', '钩码静止时，测力计对钩码的拉力才等于钩码的重力。'], ['在月球上用天平和弹簧测力计测同一个物体，示数各怎样变化？', '天平的示数（质量）不变；弹簧测力计的示数（重力）约变为地球上的 1/6。']],
+  },
+  {
+    id: 'gravity-dir', ch: 7, icon: '⬇️', title: '重力的方向和重心', sub: '铅垂线 · 悬挂法', lesson: '../chapter7/s3-gravity.html#k3',
+    goal: '通过实验知道重力的方向竖直向下及其应用；会用悬挂法找不规则薄板的重心。',
+    apparatus: ['铁架台', '细线和小球（铅垂线）', '盛水的水槽', '可调倾角的斜面', '不规则的硬纸板（钻有小孔）'],
+    steps: ['把盛水的水槽放在斜面上，改变倾角，观察水面和铅垂线的方向', '剪断细线，观察小球下落的方向', '用铅垂线检查墙壁是否竖直、用水平仪检查桌面是否水平', '把纸板从一个孔悬挂起来，静止后沿铅垂线画线；换一个孔再画一条线，两线的交点就是重心'],
+    widgets: ['gravity-direction', 'center-gravity'], titles: ['重力的方向', '找重心'],
+    think: [['为什么用悬挂法能找到薄板的重心？', '薄板静止时，重心在悬挂点的正下方，即在铅垂线上；两条铅垂线的交点就是重心。'], ['“竖直向下”和“垂直向下”一样吗？', '不一样。竖直向下是与水平面垂直向下，重力的方向总是竖直向下。']],
+  },
 ];
 var COMING = [];
-var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 物态变化', 4: '第4章 光现象', 5: '第5章 透镜及其应用', 6: '第6章 质量与密度' };
+var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 物态变化', 4: '第4章 光现象', 5: '第5章 透镜及其应用', 6: '第6章 质量与密度', 7: '第7章 力' };
 
 (function () {
   var h = PS.h;
@@ -422,7 +476,7 @@ var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 
     side.append(b);
   });
   side.append(h('h3', null, '后续章节（制作中）'));
-  if (!COMING.length) side.append(h('p', { class: 'small muted', style: { margin: '2px 10px 8px' } }, '第7章起的实验正在制作中……'));
+  if (!COMING.length) side.append(h('p', { class: 'small muted', style: { margin: '2px 10px 8px' } }, '第8章起的实验正在制作中……'));
   COMING.forEach(function (c) {
     side.append(h('div', { class: 'lab-item soon' }, h('span', { class: 'ico' }, c.icon), h('span', null, h('b', null, c.title), h('small', null, CH_NAMES[c.ch] + ' · 即将上线'))));
   });
