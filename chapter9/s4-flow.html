@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第4节 流体压强与流速的关系 · 看得见的物理</title>
+<meta name="description" content="八年级物理第九章第4节：吹纸条、两张纸、乒乓球、小船、硬币跳木块、喷雾器，粗细不同的水管，机翼的升力（流场与压强分布），站台安全线等生活中的现象。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="9">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第9章 压强</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、流体压强与流速</a>
+    <a href="#k2">二、飞机的升力</a>
+    <a href="#k3">三、生活中的流体压强</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#flow">🔬 实验：流体压强与流速的关系</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第9章 压强</a> › 第4节</div>
+      <h1>流体压强与流速的关系</h1>
+      <p>向两张纸中间吹气，纸为什么不分开反而靠拢？几百吨重的飞机怎样飞上天？候车时为什么要站在安全线以外？这一节研究流体的压强与流速的关系。</p>
+      <div class="hero-tags"><span>1 课时</span><span>5 个互动演示</span><span>1 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>知道什么是流体，知道流体压强与流速的关系</li><li>能用流体压强与流速的关系解释生活中的现象</li><li>了解飞机升力产生的原因</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>流体压强与流速的关系</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>用流体压强与流速的关系分析实际问题</li></ul></div>
+    </div>
+
+    <!-- ========== 一、流体压强与流速的关系 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>流体压强与流速的关系</h2></div>
+      <p>液体和气体都没有固定的形状，能够流动，物理学中把它们统称为<span class="def">流体</span>。流体流动时，压强会怎样？先做几个小实验。</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动手：吹一吹</h3><span class="badge o">动手</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选择一个小实验，先猜一猜会发生什么，再点“吹气”看看结果。</p>
+          <div data-widget="flow-demos"></div>
+        </div>
+      </div>
+
+      <div class="concept"><h3>流体压强与流速的关系</h3><p style="margin:0">在气体和液体中，<b>流速越大的位置，压强越小</b>；流速越小的位置，压强越大。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：粗细不同的水管</h3><span class="badge o">动画</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">打开水龙头，比较粗处和细处的水流速度，以及竖直细管中水柱的高度。关上水龙头再看看。</p>
+          <div data-widget="venturi"></div>
+        </div>
+      </div>
+
+      <div class="tip"><b>流速变大的几种情况：</b>①用力吹气或喷水；②物体高速运动，带动周围的空气流动（如行驶的列车）；③同一流体流过较窄的地方（如河道狭窄处）流速大；④同一流体在相同的时间内通过较长的路程（如机翼的上表面）。</div>
+    </section>
+
+    <!-- ========== 二、飞机的升力 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no">知识点 2</span><h2>飞机的升力</h2></div>
+      <p>沉重的飞机不像鸟那样扇动翅膀，为什么能飞上天？秘密在机翼的形状：机翼的横截面上方弯曲、下方近似平直。</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：机翼周围的气流</h3><span class="badge o">动画</span><span class="badge p">难点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">改变风速和迎角，观察机翼上下方气流的快慢和压强（蓝色压强小、红色压强大），以及 U 形管压强计两边的液面。换成对称的翼和赛车尾翼试试。</p>
+          <div data-widget="wing-lift"></div>
+        </div>
+      </div>
+
+      <div class="concept"><h3><span class="def">升力</span></h3><p style="margin:0">气流经过机翼时，上方的流速<b>大</b>、压强<b>小</b>，下方的流速小、压强大，机翼上下表面存在<b>压强差</b>，产生向上的升力。飞机的速度越大，升力越大；当升力大于重力时，飞机就起飞了。</p></div>
+      <div class="grid-2">
+        <div class="card"><h4>🐦 鸟的滑翔</h4><p class="small muted" style="margin:0">鸟的翅膀上方是曲面、下方近似平面，展开双翅不扇动也能滑翔：翅膀上方气流快、压强小，产生向上的升力。</p></div>
+        <div class="card"><h4>🏎️ 赛车的尾翼</h4><p class="small muted" style="margin:0">尾翼像倒装的机翼：下方流速大、压强小，产生<b>向下</b>的压力，增大车轮对地面的压力，高速行驶时更稳。</p></div>
+      </div>
+    </section>
+
+    <!-- ========== 三、生活中的现象 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no">知识点 3</span><h2>生活中的流体压强</h2></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：生活中的现象</h3><span class="badge o">动画</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选择一个现象，点“演示”，用流体压强与流速的关系解释它。</p>
+          <div data-widget="flow-life"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-exam"><b>解释现象的步骤：</b>①找出流速<b>大</b>的位置和流速<b>小</b>的位置；②流速大处压强小，流速小处压强大；③物体受到从压强大的一侧指向压强小的一侧的压力差，向压强小的一侧运动。</div>
+      <div class="table-wrap mb">
+        <table class="t">
+          <thead><tr><th>现象</th><th class="l">解释</th></tr></thead>
+          <tbody>
+            <tr><td>站台上设安全线</td><td class="l">列车附近空气流速大、压强小，人会被身后的空气推向列车</td></tr>
+            <tr><td>两船不能近距离并行</td><td class="l">两船之间水的流速大、压强小，外侧的水把两船推向一起</td></tr>
+            <tr><td>汽车驶过，路边的树叶飘向路中间</td><td class="l">汽车附近空气流速大、压强小</td></tr>
+            <tr><td>窗外刮风，窗帘飘向窗外</td><td class="l">窗外空气流速大、压强小</td></tr>
+            <tr><td>龙卷风掀翻屋顶</td><td class="l">屋顶上方空气流速大、压强小，屋内压强大</td></tr>
+            <tr><td>“香蕉球”“弧圈球”</td><td class="l">旋转的球两侧空气流速不同，压强不同，球在空中转弯</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>分一分：这是哪种压强？</h3><span class="badge o">练一练</span><span class="badge p">易错</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">本章学了液体压强、大气压和流体压强与流速的关系。判断每个现象用的是哪一个。</p>
+          <div data-widget="flow-sort"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>流体</h4><ul><li>液体和气体统称为流体</li><li>都能流动</li><li>流动时压强会改变</li></ul></div>
+        <div class="summary-item"><h4>流速与压强</h4><ul><li>流速越大，压强越小</li><li>流速越小，压强越大</li><li>粗细不同的水管：细处压强小</li></ul></div>
+        <div class="summary-item"><h4>升力</h4><ul><li>机翼上凸下平</li><li>上方流速大、压强小</li><li>压强差产生向上的升力</li></ul></div>
+        <div class="summary-item"><h4>生活中的现象</h4><ul><li>站台安全线、两船不能并行</li><li>窗帘飘向窗外、屋顶被掀</li><li>赛车尾翼产生向下的压力</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s3-atmosphere.html"><small>← 上一节</small><b>第3节 大气压强</b></a>
+      <a class="next" href="index.html"><small>返回 →</small><b>第9章 压强 · 概览</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版八年级物理下册第九章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'judge', q: '在气体和液体中，流速越大的位置，压强越大。', answer: false, explain: '流速越大的位置，压强越小。' },
+    { type: 'choice', q: '在两张自然下垂的纸中间向下吹气，两张纸会（　）', options: ['一起向左飘', '向两边分开', '向中间靠拢', '静止不动'], answer: 2, explain: '两纸中间空气流速大、压强小，外侧压强大，把两张纸压向中间。' },
+    { type: 'choice', q: '火车站台上设有安全线，乘客必须站在安全线以外候车，这是因为列车驶过时（　）', cols: 1, options: ['靠近列车的地方空气流速大、压强大', '靠近列车的地方空气流速小、压强小', '靠近列车的地方空气流速小、压强大', '靠近列车的地方空气流速大、压强小'], answer: 3, explain: '列车附近空气流速大、压强小，人身后的压强大，人会被推向列车。' },
+    { type: 'choice', q: '飞机机翼产生升力的原因是（　）', cols: 1, options: ['机翼上方空气流速大、压强小，下方流速小、压强大', '机翼下方空气流速大、压强小，上方流速小、压强大', '机翼上方和下方空气的流速、压强都相同', '机翼像鸟的翅膀一样上下扇动'], answer: 0, explain: '机翼上凸下平，上方流速大、压强小，上下表面的压强差产生向上的升力。' },
+    { type: 'choice', q: '沿纸条上方吹气，纸条会向上飘起，这说明（　）', cols: 1, options: ['吹气时纸条受到的重力变小了', '纸条被空气吸了上去', '气体流速大的地方压强小', '气体流速大的地方压强大'], answer: 2, explain: '纸条上方空气流速大、压强小，下方压强大，纸条被压向上方。' },
+    { type: 'judge', q: '窗外有风吹过时，打开的窗户上的窗帘会飘向窗外。', answer: true, explain: '窗外空气流速大、压强小，室内压强大。' },
+    { type: 'choice', q: '下列现象中，不能用“流体压强与流速的关系”解释的是（　）', cols: 1, options: ['踢出的“香蕉球”在空中转弯', '两艘船不能近距离并行', '汽车驶过后，路边的树叶飘向路中间', '用吸管把饮料吸进嘴里'], answer: 3, explain: '用吸管吸饮料利用的是大气压。' },
+    { type: 'choice', q: '水在粗细不同的水平管中流动，与细的地方相比，粗的地方的水（　）', options: ['流速大，压强小', '流速小，压强大', '流速小，压强小', '流速大，压强大'], answer: 1, explain: '同一水流在粗处流速小、压强大，在细处流速大、压强小。' },
+    { type: 'judge', q: '赛车尾部的尾翼做成上平下凸的形状，是为了高速行驶时增大车对地面的压力。', answer: true, explain: '尾翼下方流速大、压强小，产生向下的压力差，使车轮更紧地压在地面上。' },
+    { type: 'choice', q: '大风吹过屋顶时，屋顶可能被掀开，原因是（　）', cols: 1, options: ['屋顶上方空气流速大、压强小，屋内压强大', '屋顶上方空气流速小、压强大，屋内压强小', '屋内空气流速大、压强大', '风对屋顶有向上的吸力'], answer: 0, explain: '屋顶上方空气流速大、压强小，屋内空气压强大，屋顶受到向上的压力差。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/widgets/force.js"></script>
+<script src="../assets/js/widgets/dynamics.js"></script>
+<script src="../assets/js/widgets/pressure.js"></script>
+<script src="../assets/js/widgets/flow.js"></script>
+</body>
+</html>

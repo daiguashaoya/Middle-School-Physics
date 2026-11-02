@@ -654,6 +654,7 @@
     { no: 6, name: '质量与密度', dir: 'chapter6', icon: '⚖️' },
     { no: 7, name: '力', dir: 'chapter7', icon: '🏋️' },
     { no: 8, name: '运动和力', dir: 'chapter8', icon: '🛹' },
+    { no: 9, name: '压强', dir: 'chapter9', icon: '🏊' },
   ];
 
   function enhanceNav() {

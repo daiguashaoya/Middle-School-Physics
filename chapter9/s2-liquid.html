@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第2节 液体的压强 · 看得见的物理</title>
+<meta name="description" content="八年级物理第九章第2节：液体压强的产生、3D 压强计研究液体内部的压强、p = ρgh 的推导与深度、容器形状与帕斯卡裂桶、压强计算练习、连通器、3D 船闸。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="9">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第9章 压强</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、液体压强的产生</a>
+    <a href="#k2">二、研究液体内部的压强</a>
+    <a href="#k3">三、液体压强的大小</a>
+    <a href="#k4">四、连通器</a>
+    <a href="#k5">五、连通器的应用</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#liquid-pressure">🔬 实验：研究液体内部的压强</a>
+    <a href="../lab/index.html#connected">🔬 实验：连通器与船闸</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第9章 压强</a> › 第2节</div>
+      <h1>液体的压强</h1>
+      <p>潜水员为什么要穿特制的潜水服？拦河坝为什么修成上窄下宽？船怎样通过三峡大坝？这一节研究液体内部压强的特点和大小，认识连通器。</p>
+      <div class="hero-tags"><span>2 课时</span><span>9 个互动演示</span><span>2 个 3D 模型</span><span>2 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>知道液体内部存在压强及其产生原因</li><li>认识 U 形管压强计，通过实验探究液体内部压强的特点</li><li>会用 p = ρgh 进行简单计算</li><li>知道连通器的特点，能举出连通器的应用</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>探究液体内部压强的特点</li><li>连通器的特点和应用</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>影响液体压强大小的因素</li><li>深度的含义；液体对容器底的压力</li></ul></div>
+    </div>
+
+    <!-- ========== 一、液体压强的特点 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>液体压强的产生</h2></div>
+      <p>固体放在桌面上，对桌面有压强。液体也受到重力，它对容器有没有压强？液体能够流动，压强又有什么特点？</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：橡皮膜和侧壁的小孔</h3><span class="badge o">动画</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">向下端扎有橡皮膜的玻璃管中倒水；看侧壁蒙有橡皮膜的玻璃管；再拔掉塑料瓶侧壁小孔的塞子。</p>
+          <div data-widget="liquid-exist"></div>
+        </div>
+      </div>
+
+      <div class="concept"><h3>液体压强产生的原因</h3><p style="margin:0">液体受到<b>重力</b>，所以对容器<b>底部</b>有压强；液体具有<b>流动性</b>，所以对容器<b>侧壁</b>也有压强，液体内部向<b>各个方向</b>都有压强。</p></div>
+    </section>
+
+    <!-- ========== 二、研究液体内部的压强 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no exp">实验</span><h2>研究液体内部的压强</h2></div>
+      <div class="grid-2 mb">
+        <div class="card"><h4>🔧 压强计的构造</h4><p class="small muted" style="margin:0">U 形管、橡皮管（胶管）、探头（金属盒上蒙橡皮膜）。探头的橡皮膜受到压强时，U 形管两边液面出现<b>高度差</b>，高度差越大，压强越大（<b>转换法</b>）。</p></div>
+        <div class="card"><h4>✅ 使用前的检查</h4><p class="small muted" style="margin:0">①用手指按压橡皮膜，U 形管两边液面高度差变化明显，说明<b>不漏气</b>；②两边液面不相平时，要<b>拆下胶管重新安装</b>；③胶管不能弯折。</p></div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>3D 实验：用压强计研究液体内部的压强</h3><span class="badge t">3D 实验</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">先做好实验前的检查，再改变探头的深度、橡皮膜的朝向和液体的种类，记录 U 形管两边液面的高度差。</p>
+          <div data-widget="manometer-3d"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-good"><b>结论：</b>①液体内部向<b>各个方向</b>都有压强；②在液体内部的<b>同一深度</b>，向各个方向的压强都<b>相等</b>；③<b>深度越深</b>，压强越大；④液体内部压强的大小还跟液体的<b>密度</b>有关，深度相同时，液体的密度越大，压强越大。</div>
+      <div class="example">
+        <b>例</b>　用同一压强计把探头分别放入甲、乙两杯液体中的同一深度，放入乙杯时 U 形管两边液面的高度差更大。若两杯中分别装的是盐水和水，哪一杯是盐水？
+        <details class="reveal"><summary>看解答</summary><p>乙杯。深度相同时，液体的密度越大，压强越大，U 形管两边液面的高度差越大；ρ盐水 &gt; ρ水。</p></details>
+      </div>
+    </section>
+
+    <!-- ========== 三、液体压强的大小 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no">知识点 2</span><h2>液体压强的大小</h2></div>
+      <p>液体内部某处的压强有多大？设想在液面下深度为 h 处有一个水平放置的“平面”，计算它上方液柱对它的压强。</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：推导 p = ρgh</h3><span class="badge o">动画</span><span class="badge p">难点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">一步步点“下一步”看推导过程；拖动 A 点改变深度，换一种液体，看看压强怎样变化。切换到“深度 h 指什么？”，看看深度是怎样量的。</p>
+          <div data-widget="liquid-column"></div>
+        </div>
+      </div>
+
+      <div class="concept"><h3><span class="def">液体压强的公式</span></h3>
+        <div class="formula">p = ρgh</div>
+        <p style="margin:0">ρ 是液体的密度（kg/m³），g = 9.8 N/kg（计算时常取 10 N/kg），h 是<b>深度</b>（m），p 的单位是 Pa。液体内部的压强只与液体的<b>密度</b>和<b>深度</b>有关，与液体的质量、容器的形状和底面积<b>无关</b>。</p></div>
+      <div class="tip tip-warn"><b>易错：</b>深度 h 是从<b>自由液面</b>向下到该点的<b>竖直距离</b>，不是到容器底的距离（那是“高度”），也不是沿倾斜管子量的长度。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：容器的形状与帕斯卡裂桶</h3><span class="badge o">动画</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">三个底面积相同的容器装同样深的水，比较水对容器底的压力和水的重力；再看帕斯卡用几杯水压裂木桶的实验。</p>
+          <div data-widget="vessel-shapes"></div>
+        </div>
+      </div>
+
+      <div class="table-wrap mb">
+        <table class="t">
+          <thead><tr><th></th><th>液体对容器底</th><th>容器对水平桌面</th></tr></thead>
+          <tbody>
+            <tr><td>先求</td><td>压强 p = ρgh</td><td>压力 F′ = G液 + G容</td></tr>
+            <tr><td>再求</td><td>压力 F = pS</td><td>压强 p′ = F′/S</td></tr>
+            <tr><td>说明</td><td>只有柱形容器中 F = G液</td><td>与容器形状无关</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="example">
+        <b>例</b>　一种潜水服可以承受 5.5×10⁴ Pa 的压强，潜水员穿上它最多能潜入水中多深？（g 取 10 N/kg）
+        <details class="reveal"><summary>看解答</summary><p>由 p = ρgh 得：h = <span class="frac"><span>p</span><span>ρg</span></span> = <span class="frac"><span>5.5×10⁴ Pa</span><span>1.0×10³ kg/m³ × 10 N/kg</span></span> = <b>5.5 m</b>。</p></details>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：压强计算</h3><span class="badge o">随机出题</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">固体压强和液体压强的计算题随机出现，可以一直练下去。</p>
+          <div data-widget="p-quiz"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 四、连通器 ========== -->
+    <section class="kp" id="k4">
+      <div class="kp-title"><span class="kp-no">知识点 3</span><h2>连通器</h2></div>
+      <div class="concept"><h3><span class="def">连通器</span></h3><p style="margin:0"><b>上端开口、下端连通</b>的容器叫做连通器。连通器里装的是<b>同种液体</b>，当液体<b>不流动</b>时，连通器各部分中的液面高度总是<b>相同</b>的。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动手：连通器</h3><span class="badge o">动手</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">向任意一根管里加水，看水怎样流动；把底座垫斜；打开“液片 AB”看它两侧的压强。再看看 U 形管中装两种液体时会怎样。</p>
+          <div data-widget="connected-vessels"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-exam"><b>道理：</b>在连通器底部取一个液片 AB，液体不流动时液片两侧受到的压强相等，由 p = ρgh 可知，同种液体的深度相等，所以液面相平。<b>条件：</b>①只有一种液体；②液体不流动；③液面与大气相接触（上端开口）。</div>
+    </section>
+
+    <!-- ========== 五、连通器的应用 ========== -->
+    <section class="kp" id="k5">
+      <div class="kp-title"><span class="kp-no">知识点 4</span><h2>连通器的应用</h2></div>
+      <p>茶壶、锅炉水位计、下水管的“反水弯”、乳牛自动喂水器、过路涵洞、船闸……都是连通器。</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：生活中的连通器</h3><span class="badge o">动画</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选择不同的装置，操作一下，看看连通器是怎样工作的。</p>
+          <div data-widget="vessel-apps"></div>
+        </div>
+      </div>
+
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>3D 模型：船闸</h3><span class="badge t">3D 模型</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">按顺序打开、关闭阀门和闸门，让船通过船闸；也可以点“自动演示”。注意闸室水面与哪一边相平时才能打开闸门。</p>
+          <div data-widget="shiplock-3d"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-exam"><b>船闸（船从上游驶往下游）：</b>①打开上游阀门 A，闸室和上游构成连通器，闸室水面上升到与上游相平；②打开上游闸门，船驶入闸室；③关闭上游闸门和阀门 A，打开下游阀门 B，闸室和下游构成连通器，水面下降到与下游相平；④打开下游闸门，船驶向下游。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>分一分：是不是连通器？</h3><span class="badge o">练一练</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">判断每个装置是不是连通器。</p>
+          <div data-widget="vessel-sort"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>液体压强的特点</h4><ul><li>重力：对底部有压强</li><li>流动性：对侧壁、各个方向有压强</li><li>同一深度各方向相等</li></ul></div>
+        <div class="summary-item"><h4>影响因素</h4><ul><li>深度越深，压强越大</li><li>深度相同，密度越大，压强越大</li><li>与液体多少、容器形状无关</li></ul></div>
+        <div class="summary-item"><h4>p = ρgh</h4><ul><li>h 是到自由液面的竖直距离</li><li>液体对容器底：先 p 后 F = pS</li><li>只有柱形容器 F = G液</li></ul></div>
+        <div class="summary-item"><h4>连通器</h4><ul><li>上端开口、下端连通</li><li>同种液体不流动时液面相平</li><li>茶壶、锅炉水位计、船闸</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s1-pressure.html"><small>← 上一节</small><b>第1节 压强</b></a>
+      <a class="next" href="s3-atmosphere.html"><small>下一节 →</small><b>第3节 大气压强</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版八年级物理下册第九章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '关于液体内部的压强，下列说法中正确的是（　）', cols: 1, options: ['液体越多，产生的压强越大', '液体只对容器底部有压强', '液体内部同一深度，向各个方向的压强都相等', '液体压强与液体的密度无关'], answer: 2, explain: '液体对容器底和侧壁都有压强；液体压强与密度和深度有关，与液体的多少无关。' },
+    { type: 'judge', q: '压强计 U 形管两边液面的高度差越大，表示探头处受到液体的压强越大。', answer: true, explain: '用 U 形管两边液面的高度差反映压强的大小（转换法）。' },
+    { type: 'choice', q: '用压强计探究液体内部压强时，保持探头的深度不变，只改变探头的方向，是为了探究（　）', cols: 1, options: ['液体压强与容器形状的关系', '液体压强与深度的关系', '液体压强与液体密度的关系', '同一深度液体向各个方向的压强是否相等'], answer: 3, explain: '只改变方向，控制液体和深度不变，探究同一深度各个方向的压强关系。' },
+    { type: 'fill', q: '一种潜水服可以承受 5.5×10⁴ Pa 的压强，潜水员穿上它最多能潜入水中 ______ m 深。（g 取 10 N/kg）', answer: 5.5, unit: 'm', explain: 'h = p/(ρg) = 5.5×10⁴ Pa ÷ (1.0×10³ kg/m³ × 10 N/kg) = 5.5 m。' },
+    { type: 'fill', q: '水深 2 m 的水池底部受到水的压强为 ______ Pa。（g 取 10 N/kg）', answer: 20000, show: '2×10⁴', unit: 'Pa', explain: 'p = ρgh = 1.0×10³ kg/m³ × 10 N/kg × 2 m = 2×10⁴ Pa。' },
+    { type: 'choice', q: '把装有水的试管由竖直位置逐渐倾斜（水未溢出），水对试管底部的压强（　）', options: ['变大', '变小', '不变', '先变大后变小'], answer: 1, explain: '水柱长度不变，倾斜后试管底到水面的竖直距离（深度）变小，压强变小。' },
+    { type: 'choice', q: '底面积相同、形状不同的三个容器（柱形、口大底小、口小底大）中装有同样深的水，水对容器底的压力（　）', cols: 1, options: ['一样大', '柱形容器的最大', '口大底小的最大', '口小底大的最大'], answer: 0, explain: '水深相同，由 p = ρgh 知压强相同；底面积相同，F = pS 也相同。' },
+    { type: 'judge', q: '连通器里装同种液体，液体不流动时，各部分中的液面总是相平的。', answer: true, explain: '这是连通器的特点。' },
+    { type: 'choice', q: '下列装置中，不是利用连通器原理工作的是（　）', options: ['茶壶', '锅炉水位计', '船闸', '活塞式抽水机'], answer: 3, explain: '活塞式抽水机是利用大气压工作的。' },
+    { type: 'choice', q: '船从上游驶往下游通过船闸，闸室水面原来与下游相平，第一步应该（　）', cols: 1, options: ['同时打开上游阀门和下游阀门', '打开下游阀门，使闸室水面与下游相平', '打开上游阀门，使闸室水面与上游相平', '直接打开上游闸门'], answer: 2, explain: '先打开上游阀门，闸室和上游构成连通器，水面相平后才能打开上游闸门让船驶入。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/vendor/three.min.js"></script>
+<script src="../assets/vendor/OrbitControls.js"></script>
+<script src="../assets/js/widgets/force.js"></script>
+<script src="../assets/js/widgets/dynamics.js"></script>
+<script src="../assets/js/widgets/pressure.js"></script>
+<script src="../assets/js/widgets/liquid.js"></script>
+<script src="../assets/js/widgets/manometer3d.js"></script>
+<script src="../assets/js/widgets/shiplock3d.js"></script>
+</body>
+</html>

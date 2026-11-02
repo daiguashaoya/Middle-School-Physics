@@ -110,6 +110,14 @@
 <script src="../assets/js/widgets/twoforce3d.js"></script>
 <script src="../assets/js/widgets/friction.js"></script>
 <script src="../assets/js/widgets/bike3d.js"></script>
+<script src="../assets/js/widgets/pressure.js"></script>
+<script src="../assets/js/widgets/pressure1.js"></script>
+<script src="../assets/js/widgets/liquid.js"></script>
+<script src="../assets/js/widgets/manometer3d.js"></script>
+<script src="../assets/js/widgets/shiplock3d.js"></script>
+<script src="../assets/js/widgets/atmos.js"></script>
+<script src="../assets/js/widgets/torricelli3d.js"></script>
+<script src="../assets/js/widgets/flow.js"></script>
 <script>
 var EXPERIMENTS = [
   {
@@ -513,9 +521,65 @@ var EXPERIMENTS = [
     widgets: ['friction-methods', 'bike-3d'], titles: ['增大和减小摩擦的方法', '3D 自行车上的摩擦'],
     think: [['自行车刹车时用力捏闸，用的是什么方法？', '增大压力来增大摩擦。'], ['为什么给机器加润滑油能减小摩擦？', '润滑油在两个接触面之间形成油膜，使接触面彼此分离。']],
   },
+  {
+    id: 'press-effect', ch: 9, icon: '📦', title: '探究影响压力作用效果的因素', sub: '小桌 · 海绵 · 砝码', lesson: '../chapter9/s1-pressure.html#k2',
+    goal: '探究压力的作用效果跟压力的大小和受力面积的关系，体会控制变量法和转换法。',
+    apparatus: ['小桌', '海绵', '砝码（500 g）', '砖块'],
+    steps: ['把小桌正放在海绵上，观察海绵的凹陷程度', '在小桌上放一个砝码，再观察（受力面积不变，增大压力）', '把小桌倒放在海绵上，放上同样的砝码，观察（压力不变，增大受力面积）', '比较海绵的凹陷程度，得出结论', '把同一块砖平放、侧放、竖放在海绵上，比较压强'],
+    widgets: [['sponge-lab', { lab: true }], 'brick-pressure'], titles: ['探究影响压力作用效果的因素', '砖块的三种放法与切割'],
+    think: [['实验中为什么用海绵而不用木板？', '海绵容易发生形变，凹陷程度明显，便于观察压力的作用效果（转换法）；木板的形变太小，看不出来。'], ['压力和受力面积都不同时，怎样比较压力的作用效果？', '比较单位面积上受到的压力，即压力与受力面积之比——压强。']],
+  },
+  {
+    id: 'liquid-pressure', ch: 9, icon: '💧', title: '研究液体内部的压强', sub: '3D U 形管压强计', lesson: '../chapter9/s2-liquid.html#k2',
+    goal: '用压强计探究液体内部压强的特点：与方向、深度、液体密度的关系。',
+    apparatus: ['U 形管压强计', '烧杯', '水', '盐水', '酒精', '刻度尺'],
+    steps: ['检查压强计：两边液面是否相平，按压橡皮膜检查是否漏气', '把探头放进水中某一深度，改变橡皮膜的朝向，观察高度差', '保持朝向不变，增大探头的深度，观察高度差', '保持深度不变，换用盐水、酒精，观察高度差', '分析数据，得出液体内部压强的特点'],
+    widgets: [['manometer-3d', { lab: true }], 'liquid-exist'], titles: ['3D 研究液体内部的压强', '液体对容器底和侧壁的压强'],
+    think: [['实验前发现 U 形管两边液面不相平，应该怎样调节？', '拆下胶管重新安装，使 U 形管两边液面相平；不能往管里加液体或倒出液体。'], ['怎样检查压强计是否漏气？', '用手指按压橡皮膜，若 U 形管两边液面的高度差变化明显，说明不漏气。']],
+  },
+  {
+    id: 'connected', ch: 9, icon: '🚢', title: '连通器与船闸', sub: '液面相平 · 3D 船闸', lesson: '../chapter9/s2-liquid.html#k4',
+    goal: '认识连通器的特点，知道船闸是怎样利用连通器原理工作的。',
+    apparatus: ['形状不同的连通器', 'U 形管', '水', '煤油', '船闸模型'],
+    steps: ['向连通器的任意一管中加水，等水不流动时观察各管中的水面', '把连通器的底座垫斜，再观察各管中的水面', '在 U 形管的一边加入煤油，观察两边液面', '按顺序操作阀门和闸门，让船通过船闸'],
+    widgets: ['connected-vessels', 'shiplock-3d'], titles: ['连通器', '3D 船闸'],
+    think: [['连通器各部分液面相平需要什么条件？', '只有一种液体、液体不流动、液面与大气相接触（上端开口）。'], ['船闸的闸门为什么要等两侧水面相平才能打开？', '水面不相平时，闸门两侧水的压强不同，闸门受到很大的压力差，打不开；水面相平后两侧压力平衡，才能打开。']],
+  },
+  {
+    id: 'atm-exist', ch: 9, icon: '🎈', title: '大气压的存在', sub: '覆杯实验 · 马德堡半球', lesson: '../chapter9/s3-atmosphere.html#k1',
+    goal: '通过实验体验大气压的存在，会用大气压解释生活中的现象。',
+    apparatus: ['玻璃杯', '硬纸片', '塑料吸盘', '吸管和饮料瓶', '塑料瓶', '马德堡半球（模拟）'],
+    steps: ['杯中装满水，用纸片盖住杯口后倒过来，再朝向各个方向，观察纸片', '在杯底扎一个小孔再试一次', '把吸盘按在墙上并挂上物体；用吸管喝饮料，再塞紧瓶口试试', '把两个半球扣在一起抽气，看需要几匹马才能拉开'],
+    widgets: ['air-exist', 'magdeburg'], titles: ['感受大气压', '马德堡半球实验'],
+    think: [['覆杯实验中，杯底扎个小孔后纸片为什么会掉下来？', '空气从小孔进入杯中，水的上方也受到大气压，纸片上下受到的大气压抵消，纸片和水在重力作用下落下。'], ['塞紧瓶口后为什么喝不到饮料？', '喝掉一些饮料后瓶内气压减小，不足以把饮料压进嘴里，说明饮料是被大气压压上来的。']],
+  },
+  {
+    id: 'torricelli', ch: 9, icon: '📏', title: '测量大气压', sub: '3D 托里拆利实验 · 注射器估测', lesson: '../chapter9/s3-atmosphere.html#k2',
+    goal: '了解托里拆利实验的原理，知道标准大气压的值；会用注射器和弹簧测力计估测大气压。',
+    apparatus: ['长约 1 m、一端封闭的玻璃管', '水银', '水银槽', '刻度尺', '注射器（2 mL）', '弹簧测力计', '橡皮帽'],
+    steps: ['在玻璃管中灌满水银，用手指堵住管口，倒插在水银槽中，放开手指', '读出管内外水银面的竖直高度差', '把玻璃管倾斜、换粗管、改变插入深度，观察高度差是否改变', '用注射器：排尽空气、堵住小孔，水平拉动注射器筒，读出活塞刚开始滑动时的示数 F', '读出容积 V，量出全部刻度的长度 L，计算 p = FL/V'],
+    widgets: [['torricelli-3d', { lab: true }], ['syringe-atm', { lab: true }]], titles: ['3D 托里拆利实验', '用注射器估测大气压'],
+    think: [['托里拆利实验中，玻璃管上方为什么是真空？', '管内灌满了水银，倒插后水银下降，上方空出的部分没有空气进入，是真空。'], ['用注射器估测时，测量值往往偏小，可能的原因是什么？', '注射器筒内的空气没有排尽，筒内仍有气压，使测力计的示数偏小。']],
+  },
+  {
+    id: 'atm-change', ch: 9, icon: '⛰️', title: '大气压的变化与应用', sub: '高度 · 沸点 · 高压锅 · 抽水机', lesson: '../chapter9/s3-atmosphere.html#k4',
+    goal: '知道大气压随高度的变化，知道沸点与气压的关系，了解高压锅和抽水机的原理。',
+    apparatus: ['自制气压计（瓶子、细玻璃管、带颜色的水）', '高压锅（模拟）', '活塞式抽水机（模拟）'],
+    steps: ['登山时观察大气压和水的沸点的变化', '带着自制气压计坐电梯上楼，观察细管中水柱的高度', '用普通锅和高压锅加热，比较水的沸点；换不同质量的限压阀', '反复提起、压下活塞式抽水机的活塞，观察阀门的开闭'],
+    widgets: ['altitude-pressure', 'pressure-cooker', 'piston-pump'], titles: ['大气压与高度', '高压锅', '活塞式抽水机'],
+    think: [['带着自制气压计上楼，细管中的水柱为什么会升高？', '高度增加，外界大气压减小，瓶内气压大于外界大气压，把水压进细管，水柱升高。'], ['为什么高压锅能更快地把饭煮熟？', '高压锅密封好，锅内气压高，水的沸点高于 100 ℃，温度高，饭菜熟得快。']],
+  },
+  {
+    id: 'flow', ch: 9, icon: '✈️', title: '流体压强与流速的关系', sub: '吹气实验 · 机翼的升力', lesson: '../chapter9/s4-flow.html#k1',
+    goal: '探究流体压强与流速的关系，了解飞机升力产生的原因。',
+    apparatus: ['纸条', '两张纸', '乒乓球', '水槽和小船', '硬币和木块', '吸管', '机翼模型'],
+    steps: ['向纸条上方、两张纸中间、两个乒乓球中间吹气，观察现象', '用注射器向两只小船中间喷水，观察现象', '观察粗细不同的水管中，竖直细管里的水柱高度', '用风吹机翼模型，观察上下表面的压强差'],
+    widgets: ['flow-demos', 'venturi', 'wing-lift'], titles: ['吹一吹', '粗细不同的水管', '机翼的升力'],
+    think: [['向两张纸中间吹气，纸为什么会靠拢？', '中间空气流速大、压强小，两张纸外侧的空气压强大，把纸压向中间。'], ['机翼为什么能产生升力？', '机翼上凸下平，上方空气流速大、压强小，下方流速小、压强大，上下表面的压强差产生向上的升力。']],
+  },
 ];
 var COMING = [];
-var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 物态变化', 4: '第4章 光现象', 5: '第5章 透镜及其应用', 6: '第6章 质量与密度', 7: '第7章 力', 8: '第8章 运动和力' };
+var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 物态变化', 4: '第4章 光现象', 5: '第5章 透镜及其应用', 6: '第6章 质量与密度', 7: '第7章 力', 8: '第8章 运动和力', 9: '第9章 压强' };
 
 (function () {
   var h = PS.h;
@@ -531,7 +595,7 @@ var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 
     side.append(b);
   });
   side.append(h('h3', null, '后续章节（制作中）'));
-  if (!COMING.length) side.append(h('p', { class: 'small muted', style: { margin: '2px 10px 8px' } }, '第9章起的实验正在制作中……'));
+  if (!COMING.length) side.append(h('p', { class: 'small muted', style: { margin: '2px 10px 8px' } }, '第10章起的实验正在制作中……'));
   COMING.forEach(function (c) {
     side.append(h('div', { class: 'lab-item soon' }, h('span', { class: 'ico' }, c.icon), h('span', null, h('b', null, c.title), h('small', null, CH_NAMES[c.ch] + ' · 即将上线'))));
   });
