@@ -575,6 +575,7 @@
     { no: 1, name: '机械运动', dir: 'chapter1', icon: '🚄' },
     { no: 2, name: '声现象', dir: 'chapter2', icon: '🔊' },
     { no: 3, name: '物态变化', dir: 'chapter3', icon: '🌡️' },
+    { no: 4, name: '光现象', dir: 'chapter4', icon: '💡' },
   ];
 
   function enhanceNav() {
