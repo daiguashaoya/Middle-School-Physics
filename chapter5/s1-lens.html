@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第1节 透镜 · 看得见的物理</title>
+<meta name="description" content="八年级物理第五章第1节：凸透镜和凹透镜、主光轴与光心、透镜对光的会聚和发散作用、焦点和焦距（太阳光测焦距）、三条特殊光线与透镜作图。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="5">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第5章 透镜及其应用</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、凸透镜和凹透镜</a>
+    <a href="#k2">二、透镜对光的作用</a>
+    <a href="#k3">三、焦点和焦距</a>
+    <a href="#k4">四、三条特殊光线</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#lens-light">🔬 实验：透镜对光的作用</a>
+    <a href="../lab/index.html#focal">🔬 实验：测量凸透镜的焦距</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第5章 透镜及其应用</a> › 第1节</div>
+      <h1>透镜</h1>
+      <p>放大镜能把字放大，近视眼镜却让东西看起来小一些；用放大镜聚焦阳光甚至能点燃纸片。这些镜片都是透镜——它们是怎样改变光的传播方向的？</p>
+      <div class="hero-tags"><span>2 课时</span><span>7 个互动演示</span><span>2 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>认识凸透镜和凹透镜，知道主光轴、光心、焦点、焦距</li><li>知道凸透镜对光有会聚作用、凹透镜对光有发散作用</li><li>会测量凸透镜的焦距</li><li>会画三条特殊光线的光路图</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>透镜对光的作用；焦点和焦距</li><li>三条特殊光线</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>对“会聚”“发散”的理解；凹透镜的虚焦点</li></ul></div>
+    </div>
+
+    <!-- ========== 一、凸透镜和凹透镜 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>凸透镜和凹透镜</h2></div>
+      <div class="grid-2 mb">
+        <div class="concept"><h3><span class="def">凸透镜</span></h3><p style="margin:0">中间<b>厚</b>、边缘<b>薄</b>的透镜。如放大镜、老花镜（远视眼镜）的镜片、照相机的镜头。</p></div>
+        <div class="concept" style="border-left-color:var(--purple)"><h3 style="color:var(--purple)">凹透镜</h3><p style="margin:0">中间<b>薄</b>、边缘<b>厚</b>的透镜。如近视眼镜的镜片。</p></div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>互动：比一比中间和边缘的厚度</h3><span class="badge o">互动</span><span class="badge p">易错</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">点击上方的六块透镜，看看放大的截面，比较中间和边缘的厚度，判断它是凸透镜还是凹透镜。打开“让平行光通过”看看光的偏折。</p>
+          <div data-widget="lens-shapes"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-warn"><b>易错提醒：</b>判断凸透镜、凹透镜要比较<b>中间和边缘的厚度</b>，而不是看表面凸不凸。像透镜 E 那样，一面向外凸，但中间比边缘薄，仍是凹透镜。</div>
+      <div class="grid-3">
+        <div class="card"><h4>主光轴</h4><p class="small" style="margin:0">通过透镜两个球面球心的直线，简称主轴。</p></div>
+        <div class="card"><h4>光心 O</h4><p class="small" style="margin:0">主光轴上的一个特殊点，通过它的光传播方向<b>不变</b>。可以认为光心就在透镜的中心。</p></div>
+        <div class="card"><h4>辨认透镜的方法</h4><p class="small" style="margin:0">① 摸：比较中间和边缘的厚度；② 看：透过它看字，字变大的是凸透镜；③ 照：能把阳光会聚成小亮点的是凸透镜。</p></div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：凸透镜、凹透镜还是面镜</h3><span class="badge o">分类练习</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">判断下列物品相当于凸透镜、凹透镜，还是根本不是透镜。</p>
+          <div data-widget="lens-sort"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 二、透镜对光的作用 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no exp">知识点 2</span><h2>透镜对光的作用</h2></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>实验：烟室中的透镜</h3><span class="badge o">模拟实验</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">在烟雾中让光通过凸透镜和凹透镜，观察光的传播方向。换成点光源或会聚光，并和“不放透镜时的光路”（虚线）比较。</p>
+          <div data-widget="lens-action"></div>
+        </div>
+      </div>
+
+      <div class="grid-2 mb">
+        <div class="concept"><h3><span class="def">凸透镜对光有会聚作用</span></h3><p style="margin:0">也叫会聚透镜。平行光变得会聚、发散光变得平行或不那么发散、会聚光变得更会聚，都是会聚作用的体现。</p></div>
+        <div class="concept" style="border-left-color:var(--purple)"><h3 style="color:var(--purple)">凹透镜对光有发散作用</h3><p style="margin:0">也叫发散透镜。平行光变得发散、会聚光变得平行或交点推后、发散光变得更发散，都是发散作用的体现。</p></div>
+      </div>
+      <div class="tip tip-exam"><b>判断方法：</b>把折射光线和入射光线的<b>原来方向</b>（延长线）比较：折射光线比原来<b>靠近</b>主光轴——会聚；比原来<b>远离</b>主光轴——发散。不能只看折射光线是否相交。</div>
+    </section>
+
+    <!-- ========== 三、焦点和焦距 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no exp">知识点 3</span><h2>焦点和焦距</h2></div>
+      <div class="grid-2 mb">
+        <div class="concept"><h3><span class="def">焦点 F</span></h3><p style="margin:0">凸透镜能使平行于主光轴的光会聚在主光轴上的一点，这个点叫做焦点。凸透镜两侧各有一个焦点。</p></div>
+        <div class="concept"><h3><span class="def">焦距 f</span></h3><p style="margin:0">焦点到凸透镜光心的距离叫做焦距。透镜两侧的焦距相等。凹透镜的焦点是折射光线<b>反向延长线</b>的交点，叫做<b>虚焦点</b>。</p></div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>实验：用太阳光测凸透镜的焦距</h3><span class="badge o">模拟实验</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">让凸透镜正对太阳光，改变白纸到透镜的距离（拖动白纸或滑块），直到纸上的光斑最小、最亮。在焦点处多停留一会儿看看。再换成凹透镜试试。</p>
+          <div data-widget="lens-focus"></div>
+        </div>
+      </div>
+
+      <div class="tip"><b>测焦距的方法：</b>让凸透镜<b>正对</b>太阳光，在另一侧放白纸，改变透镜与纸的距离，直到纸上的光斑<b>最小、最亮</b>，用刻度尺量出光斑到透镜光心的距离，就是焦距。⚠️ 不要用凸透镜对着太阳看，也不要让会聚的阳光照到易燃物上。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>探究：焦距与凸起程度、材料的关系</h3><span class="badge o">控制变量</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选两块透镜比较它们的焦距。想一想：比较凸起程度要选哪两块？比较材料呢？</p>
+          <div data-widget="focal-factors"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-good"><b>结论：</b>材料相同时，凸透镜表面越<b>凸</b>，焦距越<b>小</b>，对光的会聚作用越强。凸透镜的焦距还与<b>材料</b>有关。</div>
+    </section>
+
+    <!-- ========== 四、三条特殊光线 ========== -->
+    <section class="kp" id="k4">
+      <div class="kp-title"><span class="kp-no">知识点 4</span><h2>三条特殊光线与透镜作图</h2></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：三条特殊光线</h3><span class="badge o">互动</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选择凸透镜或凹透镜和一条特殊光线，拖动起点 S 观察；打开“光路可逆”；再选“三条一起”。</p>
+          <div data-widget="special-rays"></div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th>入射光线</th><th class="l">凸透镜</th><th class="l">凹透镜</th></tr></thead>
+          <tbody>
+            <tr><td>平行于主光轴</td><td class="l">折射后<b>过焦点</b></td><td class="l">折射后发散，<b>反向延长线过同侧虚焦点</b></td></tr>
+            <tr><td>过光心</td><td class="l">传播方向<b>不变</b></td><td class="l">传播方向<b>不变</b></td></tr>
+            <tr><td>过焦点 / 射向异侧焦点</td><td class="l">过焦点的光，折射后<b>平行于主光轴</b></td><td class="l">延长线过异侧焦点的光，折射后<b>平行于主光轴</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>作图练习：画出折射光线或入射光线</h3><span class="badge o">作图</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">题目随机出现。拖动橙色圆点调整光线方向，再点“检查”自动判分。</p>
+          <div data-widget="lens-draw"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-warn"><b>作图规范：</b>① 实际光线画<b>实线</b>并标箭头；② 反向延长线、辅助线画<b>虚线</b>；③ 透镜对光的作用规律在两侧都成立，光路可逆。</div>
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>两种透镜</h4><ul><li>凸透镜：中间厚、边缘薄</li><li>凹透镜：中间薄、边缘厚</li><li>主光轴、光心（过光心的光方向不变）</li></ul></div>
+        <div class="summary-item"><h4>对光的作用</h4><ul><li>凸透镜：会聚作用（会聚透镜）</li><li>凹透镜：发散作用（发散透镜）</li><li>与原来的传播方向比较</li></ul></div>
+        <div class="summary-item"><h4>焦点和焦距</h4><ul><li>平行光经凸透镜会聚的点：焦点 F</li><li>焦点到光心的距离：焦距 f</li><li>凹透镜：虚焦点</li><li>越凸，焦距越小</li></ul></div>
+        <div class="summary-item"><h4>三条特殊光线</h4><ul><li>平行于主光轴 → 过焦点（凹：延长线过焦点）</li><li>过光心 → 方向不变</li><li>过焦点 → 平行于主光轴</li><li>光路可逆</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="index.html"><small>← 本章概览</small><b>第5章 透镜及其应用</b></a>
+      <a class="next" href="s2-lens-life.html"><small>下一节 →</small><b>第2节 生活中的透镜</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版八年级物理上册第五章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '中间厚、边缘薄的透镜叫做（　）', options: ['凸面镜', '凸透镜', '凹透镜', '平面镜'], answer: 1, explain: '中间厚、边缘薄的是凸透镜；中间薄、边缘厚的是凹透镜。' },
+    { type: 'choice', q: '近视眼镜的镜片是（　）', options: ['凹透镜', '平面镜', '凹面镜', '凸透镜'], answer: 0, explain: '近视眼镜的镜片中间薄、边缘厚，是凹透镜。' },
+    { type: 'choice', q: '关于透镜对光的作用，下列说法正确的是（　）', cols: 1, options: ['光通过凸透镜后一定会聚于一点', '凹透镜只能使平行光发散', '凸透镜只对平行光有会聚作用', '凹透镜对光有发散作用'], answer: 3, explain: '凸透镜对所有光都有会聚作用，但光通过后不一定相交于一点（如焦点以内的点光源）；凹透镜对所有光都有发散作用。' },
+    { type: 'fill', q: '让凸透镜正对太阳光，在透镜另一侧 12 cm 处的白纸上得到最小、最亮的光斑，这个凸透镜的焦距是 ______ cm。', answer: 12, unit: 'cm', explain: '最小、最亮的光斑就是焦点，焦点到光心的距离就是焦距，f = 12 cm。' },
+    { type: 'judge', q: '凸透镜有两个焦点，凹透镜没有焦点。', answer: false, explain: '凹透镜也有两个焦点，是折射光线反向延长线的交点，叫做<b>虚焦点</b>。' },
+    { type: 'choice', q: '通过凸透镜光心的光线，经凸透镜后（　）', options: ['经过焦点', '向主光轴偏折', '传播方向不变', '平行于主光轴'], answer: 2, explain: '通过光心的光线传播方向不变（凸透镜、凹透镜都是这样）。' },
+    { type: 'choice', q: '从凸透镜焦点发出的光，经凸透镜折射后（　）', options: ['会聚于另一侧焦点', '平行于主光轴射出', '传播方向不变', '更加发散'], answer: 1, explain: '平行于主光轴的光经凸透镜后过焦点；由光路可逆，从焦点发出的光经凸透镜后平行于主光轴。' },
+    { type: 'choice', q: '点光源 S 放在凸透镜的焦点以内，它发出的光经凸透镜后仍然是发散的。下列说法正确的是（　）', cols: 1, options: ['凸透镜只对平行于主光轴的光有会聚作用', '折射光线是发散的，所以凸透镜使光发散', '折射光线的发散程度比原来小，仍然是会聚作用的表现', '凸透镜对光起了发散作用'], answer: 2, explain: '和原来的传播方向相比，折射光线更靠拢了，这正是会聚作用。' },
+    { type: 'choice', q: '用相同材料制成的两个凸透镜，甲比乙更凸，则（　）', options: ['乙的焦距更小', '焦距相同', '无法比较', '甲的焦距更小'], answer: 3, explain: '材料相同时，凸透镜表面越凸，对光的会聚作用越强，焦距越小。' },
+    { type: 'judge', q: '一块镜片的一面向外凸，但中间比边缘薄，把它正对太阳光，能在白纸上会聚出很小很亮的光斑。', answer: false, explain: '中间薄、边缘厚的是<b>凹透镜</b>，对光有发散作用，不能会聚出亮点。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/widgets/optics.js"></script>
+<script src="../assets/js/widgets/lens.js"></script>
+<script src="../assets/js/widgets/lenses.js"></script>
+</body>
+</html>

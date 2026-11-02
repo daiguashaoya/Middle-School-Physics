@@ -576,6 +576,7 @@
     { no: 2, name: '声现象', dir: 'chapter2', icon: '🔊' },
     { no: 3, name: '物态变化', dir: 'chapter3', icon: '🌡️' },
     { no: 4, name: '光现象', dir: 'chapter4', icon: '💡' },
+    { no: 5, name: '透镜及其应用', dir: 'chapter5', icon: '🔍' },
   ];
 
   function enhanceNav() {
