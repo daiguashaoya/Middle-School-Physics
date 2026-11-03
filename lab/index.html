@@ -125,6 +125,14 @@
 <script src="../assets/js/widgets/archimedes3d.js"></script>
 <script src="../assets/js/widgets/floating.js"></script>
 <script src="../assets/js/widgets/submarine3d.js"></script>
+<script src="../assets/js/widgets/energy.js"></script>
+<script src="../assets/js/widgets/work.js"></script>
+<script src="../assets/js/widgets/power.js"></script>
+<script src="../assets/js/widgets/kinpot.js"></script>
+<script src="../assets/js/widgets/kinetic3d.js"></script>
+<script src="../assets/js/widgets/mechanical.js"></script>
+<script src="../assets/js/widgets/pendulum3d.js"></script>
+<script src="../assets/js/widgets/coaster3d.js"></script>
 <script>
 var EXPERIMENTS = [
   {
@@ -632,9 +640,57 @@ var EXPERIMENTS = [
     widgets: ['ship', 'submarine-3d', 'balloon'], titles: ['轮船', '3D 潜水艇', '热气球'],
     think: [['轮船从河里驶入海里，浮力和船身浸入水中的体积怎样变化？', '轮船漂浮，浮力等于重力不变；海水的密度大，排开水的体积变小，船身上浮一些。'], ['潜水艇在水下从海里驶入江里，要保持悬浮应该怎样做？', '江水密度小，浮力变小，要用压缩空气排出水舱中的一部分水，减小自身的重力。']],
   },
+  {
+    id: 'work', ch: 11, icon: '🏋️', title: '力对物体做功了吗', sub: '做功的两个必要因素 · W = Gh', lesson: '../chapter11/s1-work.html#k1',
+    goal: '通过实例认识做功的两个必要因素，判断力是否对物体做功；知道把物体举高时做的功 W = Gh 只与竖直高度有关。',
+    apparatus: ['叉车、小车、杠铃、石头、滑板、足球等场景（动画）', '箱子', '高台', '楼梯'],
+    steps: ['逐个观察七个场景，找出物体受到的力 F 和移动的距离 s', '判断力 F 是否做功；不做功的，指出属于哪种情况', '用四种方法把箱子搬到 1.2 m 高的台上，比较手对箱子做的功', '改变箱子的重力，再算一算 W = Gh'],
+    widgets: ['work-scenes', 'lift-path'], titles: ['力对物体做功了吗', '把箱子搬到高台上'],
+    think: [['提着水桶在水平地面上匀速行走，手的拉力为什么不做功？', '拉力竖直向上，水桶沿水平方向移动，没有在拉力的方向上移动距离。'], ['沿楼梯把箱子搬上楼，和竖直提上去相比，手对箱子做的功哪个多？', '一样多。匀速搬运时手对箱子的力竖直向上，等于重力，只有竖直方向上升的高度对应的功：W = Gh。']],
+  },
+  {
+    id: 'stair-power', ch: 11, icon: '⚡', title: '估测上楼的功率', sub: '体重计 · 卷尺 · 秒表', lesson: '../chapter11/s2-power.html#k3',
+    goal: '用体重计、卷尺、秒表估测人上楼的功率，理解功率是表示做功快慢的物理量。',
+    apparatus: ['体重计（磅秤）', '卷尺（刻度尺）', '秒表'],
+    steps: ['用体重计测出人的质量 m', '用卷尺测出一级台阶的高度 h₁，数出台阶数 n，算出上楼的高度 h = nh₁', '用秒表测出上楼所用的时间 t', '计算上楼的功率 P = mgh/t', '换不同的同学、走或跑上楼，比较功率的大小'],
+    widgets: [['stair-power', { lab: true }], 'climb-race'], titles: ['估测上楼的功率', '比较做功的快慢'],
+    think: [['估测上楼的功率时，为什么不需要测楼梯的长度？', '上楼时克服重力做功 W = mgh，只与竖直方向上升的高度有关。'], ['同一个人走上楼和跑上楼，做的功和功率有什么不同？', '做的功相同（W = mgh）；跑上楼用的时间短，功率大。']],
+  },
+  {
+    id: 'kinetic', ch: 11, icon: '🎯', title: '探究物体的动能跟哪些因素有关', sub: '3D 斜槽 · 钢球 · 木块', lesson: '../chapter11/s3-energy.html#k2',
+    goal: '通过钢球撞击木块的实验，探究物体的动能跟质量、速度的关系，学习控制变量法和转换法。',
+    apparatus: ['斜槽', '水平木板', '质量不同的钢球（50 g、100 g）', '木块', '刻度尺'],
+    steps: ['让同一个钢球分别从斜槽的不同高度由静止滚下，撞击水平面上的木块，测出木块被撞出的距离', '让质量不同的钢球从斜槽的同一高度由静止滚下，测出木块被撞出的距离', '记录数据，分析动能与速度、质量的关系'],
+    widgets: [['kinetic-3d', { lab: true }], 'ke-compare'], titles: ['3D 探究物体的动能跟哪些因素有关', '为什么要限速'],
+    think: [['为什么要让钢球从斜槽上由静止滚下，而不是用手推？', '由静止从同一高度滚下的钢球到达水平面时速度相同，便于控制速度；用手推无法控制速度。'], ['实验中怎样判断钢球动能的大小？', '看木块被撞出的距离：木块被撞得越远，说明钢球对木块做的功越多，钢球的动能越大（转换法）。']],
+  },
+  {
+    id: 'potential', ch: 11, icon: '⏬', title: '探究势能的大小跟哪些因素有关', sub: '小桌陷沙 · 弓与弹簧', lesson: '../chapter11/s3-energy.html#k3',
+    goal: '通过重物撞击沙子上的小桌，探究重力势能跟质量、高度的关系；通过拉弓、压弹簧认识弹性势能。',
+    apparatus: ['沙箱', '小桌', '质量不同的重物（100 g、200 g、400 g）', '刻度尺', '弓', '弹簧和小球'],
+    steps: ['让同一个重物从不同高度由静止落下，撞击沙子上的小桌，比较桌腿陷入沙中的深度', '让质量不同的重物从同一高度落下，比较桌腿陷入的深度', '每次实验后抹平沙子', '改变弓、弹簧的形变程度，比较箭射出的远近和小球弹起的高度'],
+    widgets: [['gpe-lab', { lab: true }], 'elastic-pe'], titles: ['探究重力势能跟哪些因素有关', '弹性势能'],
+    think: [['每次实验前为什么要把沙子抹平？', '保证每次实验的初始条件相同，比较桌腿陷入的深度才有意义。'], ['“被举得越高的物体，重力势能越大”这句话对吗？', '不对。重力势能跟质量和高度都有关，只有质量相同时，才能说被举得越高，重力势能越大。']],
+  },
+  {
+    id: 'pendulum', ch: 11, icon: '🎡', title: '动能和势能的相互转化', sub: '3D 滚摆 · 单摆 · 铁锁', lesson: '../chapter11/s4-mechanical.html#k2',
+    goal: '观察滚摆、单摆、铁锁的运动，分析动能和势能的相互转化，知道有阻力时机械能会减小。',
+    apparatus: ['滚摆', '单摆（细线、小球）', '铁锁', '铁架台'],
+    steps: ['把滚摆的细绳绕在轴上，使它升到最高点后松手，观察它的上下运动', '把单摆的小球拉到 A 点后松手，观察它在 A、B、C 之间的摆动', '把铁锁拉到鼻子前，稳定后松手，观察铁锁摆回时会不会打到鼻子', '关掉空气阻力和摩擦，再观察一次，比较能量柱的变化'],
+    widgets: ['pendulum-3d', 'energy-scenes'], titles: ['3D 滚摆、单摆和铁锁', '蹦床、斜抛、卫星和皮球'],
+    think: [['滚摆为什么每次上升的高度都比上一次低？', '滚摆运动时要克服空气阻力和摩擦，一部分机械能转化为内能，机械能逐渐减小。'], ['单摆的小球在什么位置动能最大？在什么位置重力势能最大？', '在最低点 B 动能最大；在最高点 A、C 重力势能最大，动能为零。']],
+  },
+  {
+    id: 'coaster', ch: 11, icon: '🎢', title: '机械能守恒与过山车', sub: '3D 过山车 · 水能和风能', lesson: '../chapter11/s4-mechanical.html#k3',
+    goal: '通过过山车认识机械能守恒的条件；了解水能和风能的利用。',
+    apparatus: ['过山车模型（3D）', '水电站模型', '风力发电机模型'],
+    steps: ['让过山车从不同高度由静止出发，观察它能否冲过后面的坡顶', '打开“有摩擦和空气阻力”，再从同一高度出发，比较', '改变水电站的水位差和水量，观察发电功率', '改变风速，观察风力发电机的功率'],
+    widgets: ['coaster-3d', 'hydro-wind'], titles: ['3D 过山车', '水力发电和风力发电'],
+    think: [['不计摩擦和空气阻力时，过山车能冲上比出发点更高的坡顶吗？', '不能。只有动能和势能相互转化时机械能守恒，过山车最高只能回到与出发点同样的高度。'], ['修建水电站时为什么要筑拦河坝？', '提高上游的水位，增大水的重力势能，水流下时能转化成更多的动能，带动水轮机发电。']],
+  },
 ];
 var COMING = [];
-var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 物态变化', 4: '第4章 光现象', 5: '第5章 透镜及其应用', 6: '第6章 质量与密度', 7: '第7章 力', 8: '第8章 运动和力', 9: '第9章 压强', 10: '第10章 浮力' };
+var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 物态变化', 4: '第4章 光现象', 5: '第5章 透镜及其应用', 6: '第6章 质量与密度', 7: '第7章 力', 8: '第8章 运动和力', 9: '第9章 压强', 10: '第10章 浮力', 11: '第11章 功和机械能' };
 
 (function () {
   var h = PS.h;
@@ -650,7 +706,7 @@ var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 
     side.append(b);
   });
   side.append(h('h3', null, '后续章节（制作中）'));
-  if (!COMING.length) side.append(h('p', { class: 'small muted', style: { margin: '2px 10px 8px' } }, '第11章起的实验正在制作中……'));
+  if (!COMING.length) side.append(h('p', { class: 'small muted', style: { margin: '2px 10px 8px' } }, '第12章起的实验正在制作中……'));
   COMING.forEach(function (c) {
     side.append(h('div', { class: 'lab-item soon' }, h('span', { class: 'ico' }, c.icon), h('span', null, h('b', null, c.title), h('small', null, CH_NAMES[c.ch] + ' · 即将上线'))));
   });

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第3节 动能和势能 · 看得见的物理</title>
+<meta name="description" content="八年级物理第十一章第3节：能量、动能及其影响因素（3D 钢球撞木块实验）、限速与动能、重力势能及其影响因素、弹性势能。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="11">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第11章 功和机械能</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、能量</a>
+    <a href="#k2">二、动能</a>
+    <a href="#k3">三、势能</a>
+    <a href="#k4">四、判断具有哪种能</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#kinetic">🔬 实验：探究动能的大小</a>
+    <a href="../lab/index.html#potential">🔬 实验：探究势能的大小</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第11章 功和机械能</a> › 第3节</div>
+      <h1>动能和势能</h1>
+      <p>飞行的子弹能击穿木板，高处的重锤能把木桩打进地里，拉弯的弓能把箭射出去——它们都具有能量。这一节从做功认识能量，探究动能和重力势能的大小跟哪些因素有关。</p>
+      <div class="hero-tags"><span>1 课时</span><span>6 个互动演示</span><span>2 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>能从做功的角度认识能量，知道能量的单位</li><li>知道动能、重力势能、弹性势能的概念，能用它们解释简单的现象</li><li>通过实验探究，知道动能和重力势能的大小跟哪些因素有关</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>动能和势能的概念</li><li>探究动能、势能的影响因素</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>探究动能、势能的影响因素（控制变量法、转换法）</li></ul></div>
+    </div>
+
+    <!-- ========== 一、能量 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>能量</h2></div>
+      <p>举高的重锤落下能把木桩打进地里，拉弯的弓能把箭射出去，流动的水能推动水车……它们都能对别的物体做功。</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：它能做功吗？</h3><span class="badge o">动画</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选择一个场景，点“让它做功”，看看它对别的物体做了什么。</p>
+          <div data-widget="energy-work"></div>
+        </div>
+      </div>
+
+      <div class="concept"><h3><span class="def">能量</span></h3><p style="margin:0">物体<b>能够对外做功</b>，我们就说这个物体具有<b>能量</b>，简称<b>能</b>。物体能够做的功越多，它具有的能量就越大。能量的单位与功的单位相同，也是<b>焦耳（J）</b>。</p></div>
+      <div class="tip tip-warn"><b>易错：</b>“能够做功”不等于“正在做功”。举高后静止的重锤虽然没有做功，但它<b>能够</b>做功，所以具有能量。</div>
+    </section>
+
+    <!-- ========== 二、动能 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no">知识点 2</span><h2>动能</h2></div>
+      <div class="concept"><h3><span class="def">动能</span></h3><p style="margin:0">物体由于<b>运动</b>而具有的能，叫做动能。一切运动的物体都具有动能。</p></div>
+      <p>运动的钢球撞击木块，能把木块推开一段距离——钢球对木块做了功。物体的动能跟哪些因素有关呢？猜想：可能跟物体的<b>质量</b>和<b>速度</b>有关。</p>
+      <div class="grid-3 mb">
+        <div class="card"><h4>🔍 转换法</h4><p class="small muted" style="margin:0">动能的大小看不见，用钢球把木块<b>撞出的距离</b>来表示：木块被撞得越远，钢球的动能越大。</p></div>
+        <div class="card"><h4>🎚️ 控制速度</h4><p class="small muted" style="margin:0">让钢球从斜槽的<b>同一高度</b>由静止滚下，到达水平面时速度相同；从<b>不同高度</b>滚下，速度不同，越高越快。</p></div>
+        <div class="card"><h4>🎛️ 控制变量法</h4><p class="small muted" style="margin:0">研究速度的影响时用同一个钢球；研究质量的影响时让质量不同的钢球从同一高度滚下。</p></div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>3D 实验：探究物体的动能跟哪些因素有关</h3><span class="badge t">3D 实验</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选择钢球和释放的位置，由静止释放钢球，测出木块被撞出的距离并记录。每次只改变一个因素。</p>
+          <div data-widget="kinetic-3d"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-good"><b>结论：</b>质量相同的物体，运动的<b>速度越大</b>，它的动能越大；运动速度相同的物体，<b>质量越大</b>，它的动能也越大。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：为什么要限速？</h3><span class="badge o">动画</span><span class="badge g">联系生活</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选择车型和车速，比较它们的动能；点“紧急刹车”看看刹车距离。</p>
+          <div data-widget="ke-compare"></div>
+        </div>
+      </div>
+
+      <div class="example">
+        <b>想一想</b>　某段道路的标志牌显示：小型客车最高行驶速度不得超过 100 km/h；大型客车、载货汽车最高行驶速度不得超过 80 km/h。为什么要限制机动车的最高速度？为什么对不同车型的限速不一样？
+        <details class="reveal"><summary>看解答</summary><p>速度越大，动能越大，发生事故时破坏越大，所以要限速。车型不同，质量不同：速度相同时，质量大的车动能大，危险性大，所以大型客车、货车的最高限速比小型客车低。</p></details>
+      </div>
+      <div class="example">
+        <b>想一想</b>　在平直公路上匀速行驶的洒水车，一边行驶一边洒水，它的动能怎样变化？
+        <details class="reveal"><summary>看解答</summary><p>速度不变，但洒水时洒水车的<b>质量减小</b>，所以动能<b>减小</b>。判断动能的变化要同时看质量和速度。</p></details>
+      </div>
+    </section>
+
+    <!-- ========== 三、势能 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no">知识点 3</span><h2>势能</h2></div>
+      <div class="concept"><h3><span class="def">重力势能</span></h3><p style="margin:0">物体由于受到<b>重力</b>并处在<b>一定高度</b>时所具有的能，叫做重力势能。打桩机的重锤被举高后落下，能把木桩打进地里，说明高处的重锤具有能量。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>实验：探究重力势能跟哪些因素有关</h3><span class="badge o">实验</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">把重物从一定高度由静止释放，撞击沙子上的小桌，比较桌腿陷入沙中的深度。改变质量或高度（每次只改变一个），记录并分析。</p>
+          <div data-widget="gpe-lab"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-good"><b>结论：</b>质量相同的物体，被举得<b>越高</b>，重力势能越大；被举高的高度相同的物体，<b>质量越大</b>，重力势能越大。水力发电站修筑拦河坝<b>提高水位</b>，就是为了增大水的重力势能。</div>
+      <div class="tip tip-warn"><b>易错：</b>“物体被举得越高，重力势能越大”是正确的（说的是同一个物体）；“被举得越高的物体，重力势能越大”是错误的（不同物体的质量可能不同）。分析重力势能的变化，要同时考虑<b>质量</b>和<b>高度</b>。</div>
+      <div class="concept"><h3><span class="def">弹性势能</span></h3><p style="margin:0">物体由于发生<b>弹性形变</b>而具有的能，叫做弹性势能。物体的弹性形变越大，它具有的弹性势能就越大。拉弯的弓、被压缩的弹簧、上紧的发条都具有弹性势能。<br><b>重力势能和弹性势能是常见的两种势能。</b></p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：弓和弹簧</h3><span class="badge o">动画</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">改变弓（弹簧）的形变程度，松手后比较箭射出的远近（小球弹起的高度）；记号会保留下来方便比较。</p>
+          <div data-widget="elastic-pe"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 四、分一分 ========== -->
+    <section class="kp" id="k4">
+      <div class="kp-title"><span class="kp-no">知识点 4</span><h2>判断物体具有哪种能</h2></div>
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th></th><th>动能</th><th>重力势能</th><th>弹性势能</th></tr></thead>
+          <tbody>
+            <tr><td>怎样判断</td><td>物体在运动</td><td>物体被举高（处在一定高度）</td><td>物体发生了弹性形变</td></tr>
+            <tr><td>影响因素</td><td>质量、速度</td><td>质量、高度</td><td>弹性形变的大小</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>分一分：具有哪种能</h3><span class="badge o">练一练</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">判断每个物体具有哪种机械能（高度以地面为准）。</p>
+          <div data-widget="energy-sort"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>能量</h4><ul><li>物体能够对外做功，就具有能量</li><li>单位：焦耳 J</li></ul></div>
+        <div class="summary-item"><h4>动能</h4><ul><li>物体由于运动而具有的能</li><li>质量越大、速度越大，动能越大</li></ul></div>
+        <div class="summary-item"><h4>重力势能</h4><ul><li>物体由于受到重力并处在一定高度而具有的能</li><li>质量越大、位置越高，重力势能越大</li></ul></div>
+        <div class="summary-item"><h4>弹性势能</h4><ul><li>物体由于发生弹性形变而具有的能</li><li>弹性形变越大，弹性势能越大</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s2-power.html"><small>← 上一节</small><b>第2节 功率</b></a>
+      <a class="next" href="s4-mechanical.html"><small>下一节 →</small><b>第4节 机械能及其转化</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版八年级物理下册第十一章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '下列物体中，具有动能的是（　）', cols: 1, options: ['举重运动员举着的杠铃', '在水平路面上行驶的汽车', '静止在高山上的石头', '被拉开的弓'], answer: 1, explain: '运动的物体具有动能；静止的石头、举着的杠铃具有重力势能，拉开的弓具有弹性势能。' },
+    { type: 'choice', q: '下列说法中正确的是（　）', cols: 1, options: ['在平直公路上匀速行驶的洒水车，洒水时动能不变', '速度大的球一定比速度小的球动能大', '同一辆车运动的速度越大，动能就越大', '子弹的速度比火车的速度大，所以子弹的动能比火车的大'], answer: 2, explain: '动能跟质量和速度都有关：同一辆车质量不变，速度越大动能越大；洒水车质量减小，动能减小。' },
+    { type: 'choice', q: '下列物体中，具有重力势能的是（　）', cols: 1, options: ['放在地面上被压缩的弹簧', '停在水平路面上的汽车', '被捏成娃娃的橡皮泥', '腾空的跳高运动员'], answer: 3, explain: '腾空的运动员处在一定高度，具有重力势能；橡皮泥发生的是塑性形变，没有弹性势能。' },
+    { type: 'judge', q: '被举得越高的物体，重力势能一定越大。', answer: false, explain: '重力势能跟质量和高度都有关，不同物体的质量可能不同，不能只比较高度。' },
+    { type: 'choice', q: '在“探究物体的动能跟哪些因素有关”的实验中，让同一个钢球从斜槽的不同高度由静止滚下，目的是（　）', cols: 1, options: ['使钢球到达水平面时的速度不同', '使钢球的质量不同', '使木块被撞出的距离相同', '使钢球到达水平面时的速度相同'], answer: 0, explain: '从不同高度滚下，钢球到达水平面时的速度不同，可以研究动能与速度的关系。' },
+    { type: 'choice', q: '上述实验中，通过木块被撞出的距离来判断钢球动能的大小，这种研究方法叫（　）', options: ['类比法', '控制变量法', '转换法', '等效替代法'], answer: 2, explain: '用容易观察的木块移动的距离来表示看不见的动能大小，是转换法。' },
+    { type: 'choice', q: '在同样的道路上，对大型客车、载货汽车的最高限速比小型客车低，这是因为（　）', cols: 1, options: ['大型车的重力势能大', '大型车受到的摩擦力小', '大型车的速度表不准', '大型车的质量大，速度相同时动能大，危险性大'], answer: 3, explain: '速度相同时，质量越大，动能越大，发生事故时破坏越大。' },
+    { type: 'choice', q: '射箭时，弓拉得越弯，箭射得越远，这说明（　）', cols: 1, options: ['弓的重力势能越大', '弓的弹性形变越大，弹性势能越大', '弓的弹性形变越大，弹性势能越小', '箭的质量越大，射得越远'], answer: 1, explain: '物体的弹性形变越大，弹性势能越大，对箭做的功越多，箭获得的动能越大。' },
+    { type: 'judge', q: '一个物体能够对外做功，我们就说这个物体具有能量。', answer: true, explain: '能量的单位与功的单位相同，都是焦耳。' },
+    { type: 'choice', q: '水力发电站要修筑拦河坝，其主要目的是（　）', cols: 1, options: ['提高上游水位，增大水的重力势能', '增大水的流速', '减少水的流量', '储存水的弹性势能'], answer: 0, explain: '水位越高，水的重力势能越大，流下时能转化成更多的动能，用来发电。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/vendor/three.min.js"></script>
+<script src="../assets/vendor/OrbitControls.js"></script>
+<script src="../assets/js/widgets/force.js"></script>
+<script src="../assets/js/widgets/dynamics.js"></script>
+<script src="../assets/js/widgets/energy.js"></script>
+<script src="../assets/js/widgets/kinpot.js"></script>
+<script src="../assets/js/widgets/kinetic3d.js"></script>
+</body>
+</html>
