@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第2节 阿基米德原理 · 看得见的物理</title>
+<meta name="description" content="八年级物理第十章第2节：阿基米德的故事（王冠之谜）、3D 探究浮力的大小跟排开液体所受重力的关系、阿基米德原理 F浮 = ρ液gV排、浮力的三种计算方法与图像题。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="10">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第10章 浮力</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、阿基米德的灵感</a>
+    <a href="#k2">二、探究浮力与排开液体的重力</a>
+    <a href="#k3">三、阿基米德原理</a>
+    <a href="#k4">四、浮力的三种计算方法</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#archimedes">🔬 实验：探究浮力与排开液体的重力</a>
+    <a href="../lab/index.html#buoy-density">🔬 实验：利用浮力测密度</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第10章 浮力</a> › 第2节</div>
+      <h1>阿基米德原理</h1>
+      <p>两千多年前，阿基米德用一盆水揭穿了金匠的秘密。浮力的大小究竟等于什么？这一节用溢水杯做实验，得出阿基米德原理，并学会用三种方法计算浮力。</p>
+      <div class="hero-tags"><span>2 课时</span><span>7 个互动演示</span><span>2 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>知道浮力的大小与物体排开液体所受重力的关系</li><li>经历探究阿基米德原理的实验过程</li><li>会用阿基米德原理计算浮力、体积和密度</li><li>知道浮力的三种计算方法</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>阿基米德原理的实验探究及其应用</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>正确理解 V排 与 V物</li><li>综合运用三种方法计算浮力</li></ul></div>
+    </div>
+
+    <!-- ========== 一、阿基米德的灵感 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>阿基米德的灵感</h2></div>
+      <p>传说国王让金匠做了一顶金王冠，却怀疑金匠掺了白银。王冠和原来的金子一样重，外表也看不出差别。阿基米德在洗澡时看到水从澡盆中溢出，想到了办法：把王冠和同样重的金块分别放进装满水的容器，比较溢出的水。</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>故事：王冠之谜</h3><span class="badge o">动画</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">用两种方法检验王冠：比较溢出的水，或者把它们挂在等臂杠杆两端浸入水中。做出判断后看看真相。</p>
+          <div data-widget="crown"></div>
+        </div>
+      </div>
+
+      <div class="concept"><h3>排开液体的体积</h3><p style="margin:0">物体浸在液体中，就会<b>排开</b>一部分液体：<b>V排 = V浸</b>。物体浸没时 V排 = V物；部分浸入时 V排 &lt; V物。上一节的结论可以说成：物体<b>排开液体的体积越大</b>、液体的<b>密度越大</b>，浮力越大。而 m排 = ρ液V排——浮力的大小可能跟<b>排开液体所受的重力</b>有关。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>想想做做：把饮料罐按入装满水的烧杯</h3><span class="badge o">动手</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">把空饮料罐慢慢按入装满水的烧杯，溢出的水流进小烧杯。比较饮料罐受到的浮力和溢出的水的重力。</p>
+          <div data-widget="can-press" data-opts='{"mode":"full"}'></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 二、实验 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no exp">实验</span><h2>探究浮力的大小跟排开液体所受重力的关系</h2></div>
+      <div class="grid-3 mb">
+        <div class="card"><h4>🧰 器材</h4><p class="small muted" style="margin:0">弹簧测力计、溢水杯、小桶、几个不同的物体、细线、水和其他液体。</p></div>
+        <div class="card"><h4>📏 测浮力</h4><p class="small muted" style="margin:0">称重法：先测物重 G物，再把物体浸在装满液体的溢水杯中读出示数 F′，F浮 = G物 − F′。</p></div>
+        <div class="card"><h4>💧 测 G排</h4><p class="small muted" style="margin:0">用小桶接住溢出的液体。先测<b>空桶</b>重 G桶，再测桶和液体的总重 G总，G排 = G总 − G桶。</p></div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>3D 实验：溢水杯与小桶</h3><span class="badge t">3D 实验</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选好物体和液体，按①②③④的顺序测量，数据自动记录。换不同的物体、液体，或者只浸入一半，多做几次；也试试“溢水杯没装满”会怎样。</p>
+          <div data-widget="archimedes-3d"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-good"><b>结论：</b>浸在液体中的物体受到的浮力，大小等于它<b>排开的液体所受的重力</b>：F浮 = G排。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：四次测量与误差分析</h3><span class="badge o">练一练</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">先回答图中实验的问题，再选择下面的“操作不当”，看看对 F浮 和 G排 有什么影响。</p>
+          <div data-widget="archi-steps"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-warn"><b>实验注意：</b>①溢水杯中的液体要<b>装满</b>（到溢水口），否则 G排 偏小；②要先测<b>空小桶</b>的重力，若最后才测，桶内沾有水，G排 偏小；③物体不能碰到杯底，否则 F浮 偏大；④要换用<b>不同的物体和液体</b>多做几次，使结论具有<b>普遍性</b>。</div>
+    </section>
+
+    <!-- ========== 三、阿基米德原理 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no">知识点 2</span><h2>阿基米德原理</h2></div>
+      <div class="concept"><h3><span class="def">阿基米德原理</span></h3><p>浸在液体中的物体受到<b>向上的浮力</b>，浮力的大小等于它<b>排开的液体所受的重力</b>。</p>
+        <div class="formula">F浮 = G排 = m排g = ρ液gV排</div>
+        <p style="margin:0">ρ液 是液体的密度（kg/m³），V排 是物体排开液体的体积（m³）。阿基米德原理同样适用于<b>气体</b>：F浮 = ρ气gV排。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：V排 与 F浮 = ρ液gV排</h3><span class="badge o">动画</span><span class="badge p">难点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">改变物体浸入液体的深度，看看 V排 和被排开的液体；换液体、换材料（体积都是 200 cm³），看看浮力变不变。</p>
+          <div data-widget="vpai"></div>
+        </div>
+      </div>
+
+      <div class="tip"><b>理解：</b>①浮力的大小<b>只</b>跟液体的密度 ρ液 和排开液体的体积 V排 有关，跟物体的密度、形状、浸没的深度、在液体中是否运动等<b>无关</b>；②浸没时 V排 = V物，部分浸入时 V排 = V浸 &lt; V物；③计算时体积要换算成 m³：1 cm³ = 10⁻⁶ m³，1 dm³ = 10⁻³ m³。</div>
+      <div class="example">
+        <b>例 1</b>　一个体积为 300 cm³ 的物体浮在水面上，它有 2/3 的体积露出水面，它受到的浮力是多少？（g 取 10 N/kg）
+        <details class="reveal"><summary>看解答</summary><p>浸在水中的体积 V排 = (1 − 2/3) × 300 cm³ = 100 cm³ = 1×10⁻⁴ m³。<br>F浮 = ρ水gV排 = 1.0×10³ kg/m³ × 10 N/kg × 1×10⁻⁴ m³ = <b>1 N</b>。</p></details>
+      </div>
+      <div class="example">
+        <b>例 2</b>　在空气中用弹簧测力计测得某石块重 5 N，浸没在水中称量时示数为 2 N。求石块的密度。（g 取 10 N/kg）
+        <details class="reveal"><summary>看解答</summary><p>F浮 = G − F示 = 5 N − 2 N = 3 N；<br>石块浸没，V石 = V排 = <span class="frac"><span>F浮</span><span>ρ水g</span></span> = <span class="frac"><span>3 N</span><span>1.0×10³ kg/m³ × 10 N/kg</span></span> = 3×10⁻⁴ m³；<br>m = G/g = 0.5 kg，ρ石 = m/V石 = 0.5 kg ÷ 3×10⁻⁴ m³ ≈ <b>1.67×10³ kg/m³</b>。</p></details>
+      </div>
+    </section>
+
+    <!-- ========== 四、浮力的计算 ========== -->
+    <section class="kp" id="k4">
+      <div class="kp-title"><span class="kp-no">知识点 3</span><h2>浮力的三种计算方法</h2></div>
+      <div class="table-wrap mb">
+        <table class="t">
+          <thead><tr><th>方法</th><th>公式</th><th>什么时候用</th></tr></thead>
+          <tbody>
+            <tr><td>称重法</td><td>F浮 = G − F示</td><td>用弹簧测力计测量（已知物重和浸在液体中时的示数）</td></tr>
+            <tr><td>压力差法</td><td>F浮 = F向上 − F向下</td><td>已知上、下表面受到液体的压力（形状规则的物体）</td></tr>
+            <tr><td>阿基米德原理法</td><td>F浮 = G排 = ρ液gV排</td><td>已知液体的密度和排开液体的体积（或排开液体的重力）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>图像题：圆柱体慢慢浸入水中</h3><span class="badge o">练一练</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">点“开始下降”，圆柱体从水面上方匀速下降，画出测力计示数 F 与下降高度 h 的关系图像；再根据图像回答问题。</p>
+          <div data-widget="buoy-graph"></div>
+        </div>
+      </div>
+
+      <div class="example">
+        <b>例 3</b>　用一根细绳拴住体积为 0.6 dm³、重为 4 N 的木块，使它浸没在水中（绳的另一端固定在容器底），此时绳的拉力为多大？（g 取 10 N/kg）
+        <details class="reveal"><summary>看解答</summary><p>木块浸没：F浮 = ρ水gV排 = 1.0×10³ kg/m³ × 10 N/kg × 0.6×10⁻³ m³ = 6 N。<br>木块受竖直向上的浮力、竖直向下的重力和拉力而平衡：F浮 = G + F拉，所以 F拉 = F浮 − G = 6 N − 4 N = <b>2 N</b>。</p></details>
+      </div>
+      <div class="tip tip-exam"><b>解题步骤：</b>①确定研究对象，分析受力，画出受力示意图；②判断物体是浸没还是部分浸入，确定 V排；③列出力的平衡关系；④选用合适的方法求浮力，再求其他量。<br><b>用浮力测密度：</b>物体浸没在水中时，ρ物 = <span class="frac"><span>G</span><span>G − F示</span></span>·ρ水；同一物体浸没在水和某液体中，ρ液 = <span class="frac"><span>G − F液</span><span>G − F水</span></span>·ρ水。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：浮力的计算</h3><span class="badge o">随机出题</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">题目随机生成，可以一直练下去。</p>
+          <div data-widget="buoy-quiz" data-opts='{"set":"s2"}'></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>排开液体</h4><ul><li>V排 = V浸</li><li>浸没时 V排 = V物</li><li>部分浸入时 V排 < V物</li></ul></div>
+        <div class="summary-item"><h4>实验</h4><ul><li>F浮 = G物 − F′</li><li>G排 = G总 − G桶</li><li>溢水杯装满、先测空桶</li></ul></div>
+        <div class="summary-item"><h4>阿基米德原理</h4><ul><li>F浮 = G排 = ρ液gV排</li><li>只与 ρ液、V排 有关</li><li>也适用于气体</li></ul></div>
+        <div class="summary-item"><h4>三种计算方法</h4><ul><li>称重法 F浮 = G − F示</li><li>压力差法 F浮 = F向上 − F向下</li><li>原理法 F浮 = ρ液gV排</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s1-buoyancy.html"><small>← 上一节</small><b>第1节 浮力</b></a>
+      <a class="next" href="s3-float-sink.html"><small>下一节 →</small><b>第3节 物体的浮沉条件及应用</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版八年级物理下册第十章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '根据阿基米德原理，浸在液体中的物体受到的浮力，大小等于（　）', options: ['容器中液体所受的重力', '物体浸在液体中的体积', '物体所受的重力', '物体排开的液体所受的重力'], answer: 3, explain: 'F浮 = G排，浮力等于物体排开的液体所受的重力。' },
+    { type: 'fill', q: '体积为 100 cm³ 的铁块全部浸入水中，它受到的浮力为 ______ N。（g 取 10 N/kg）', answer: 1, unit: 'N', explain: 'V排 = 100 cm³ = 1×10⁻⁴ m³，F浮 = ρ水gV排 = 1.0×10³ × 10 × 1×10⁻⁴ N = 1 N。' },
+    { type: 'fill', q: '把上题中的铁块全部浸入酒精中（ρ酒精 = 0.8×10³ kg/m³），它受到的浮力为 ______ N。', answer: 0.8, unit: 'N', explain: 'F浮 = ρ酒精gV排 = 0.8×10³ × 10 × 1×10⁻⁴ N = 0.8 N。' },
+    { type: 'choice', q: '在“探究浮力的大小跟排开液体所受重力的关系”实验中，如果溢水杯中的水没有装满，会使测得的（　）', options: ['排开水的重力偏小', '排开水的重力偏大', '浮力偏小', '浮力偏大'], answer: 0, explain: '水没装满时，物体浸入后水面要先升到溢水口才溢出，流进小桶的水偏少，G排 偏小；浮力用称重法测，不受影响。' },
+    { type: 'fill', q: '一个石块在空气中重 5 N，浸没在水中称时弹簧测力计的示数为 2 N，石块的体积是 ______ cm³。（g 取 10 N/kg）', answer: 300, unit: 'cm³', explain: 'F浮 = 5 N − 2 N = 3 N，V = V排 = F浮/(ρ水g) = 3×10⁻⁴ m³ = 300 cm³。' },
+    { type: 'fill', q: '上题中石块的密度约为 ______ kg/m³。', answer: 1667, tol: 15, show: '1.67×10³', unit: 'kg/m³', explain: 'm = G/g = 0.5 kg，ρ = m/V = 0.5 kg ÷ 3×10⁻⁴ m³ ≈ 1.67×10³ kg/m³。' },
+    { type: 'judge', q: '物体排开液体的体积一定等于物体的体积。', answer: false, explain: '只有浸没时 V排 = V物；部分浸入时 V排 小于 V物。' },
+    { type: 'choice', q: '体积相同的实心铁块和铝块都浸没在水中，它们受到的浮力（　）', options: ['铁块大', '铝块大', '一样大', '无法确定'], answer: 2, explain: '浮力只跟 ρ液 和 V排 有关，两者 V排 相同，浮力一样大。' },
+    { type: 'fill', q: '用细绳把体积为 0.6 dm³、重为 4 N 的木块拴在容器底，使它浸没在水中，绳对木块的拉力为 ______ N。（g 取 10 N/kg）', answer: 2, unit: 'N', explain: 'F浮 = ρ水gV排 = 6 N，F浮 = G + F拉，F拉 = 6 N − 4 N = 2 N。' },
+    { type: 'choice', q: '一个体积为 300 cm³ 的物体浮在水面上，它有 2/3 的体积露出水面，它受到的浮力是（g 取 10 N/kg）（　）', options: ['3 N', '2 N', '1 N', '0.1 N'], answer: 2, explain: 'V排 = 300 cm³ × 1/3 = 100 cm³ = 1×10⁻⁴ m³，F浮 = ρ水gV排 = 1 N。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/vendor/three.min.js"></script>
+<script src="../assets/vendor/OrbitControls.js"></script>
+<script src="../assets/js/widgets/force.js"></script>
+<script src="../assets/js/widgets/dynamics.js"></script>
+<script src="../assets/js/widgets/pressure.js"></script>
+<script src="../assets/js/widgets/buoyancy.js"></script>
+<script src="../assets/js/widgets/buoyancy1.js"></script>
+<script src="../assets/js/widgets/archimedes.js"></script>
+<script src="../assets/js/widgets/archimedes3d.js"></script>
+</body>
+</html>

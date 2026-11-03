@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第10章 浮力 · 看得见的物理</title>
+<meta name="description" content="八年级物理第十章 浮力：浮力、阿基米德原理、物体的浮沉条件及应用。知识导图、互动动画、3D 浮力实验、3D 溢水杯实验、3D 潜水艇、虚拟实验与章末练习。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="10">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第10章 浮力</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本章目录</div>
+    <a href="#map">知识导图</a>
+    <a href="#sections">三节内容</a>
+    <a href="#core">核心知识与方法</a>
+    <a href="#labs">配套实验</a>
+    <a href="#test">章末练习</a>
+    <hr>
+    <a class="toc-sub" href="s1-buoyancy.html">第1节 浮力</a>
+    <a class="toc-sub" href="s2-archimedes.html">第2节 阿基米德原理</a>
+    <a class="toc-sub" href="s3-float-sink.html">第3节 物体的浮沉条件及应用</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="../index.html">首页</a> › 八年级下册</div>
+      <h1>第十章　浮力</h1>
+      <p>木块为什么能浮在水面上？沉下去的石块受不受浮力？万吨巨轮为什么不会沉？潜水艇怎样潜入深海又浮上来？本章从生活中的浮力现象出发，学会测量浮力，探究浮力的大小跟什么有关，得出阿基米德原理，再研究物体的浮沉条件和浮力的应用。</p>
+      <div class="hero-tags"><span>3 节 · 5 课时</span><span>22 个互动演示</span><span>3 个 3D 模型</span><span>6 个虚拟实验</span></div>
+    </section>
+
+    <section class="kp" id="map">
+      <div class="kp-title"><span class="kp-no sum">导图</span><h2>本章知识导图</h2></div>
+      <div class="mindmap" id="mindmap"></div>
+    </section>
+
+    <section class="kp" id="sections">
+      <div class="kp-title"><span class="kp-no">内容</span><h2>三节内容</h2></div>
+      <div class="section-cards">
+        <a class="section-card" href="s1-buoyancy.html">
+          <div class="no">第 1 节 · 1 课时</div>
+          <h3>🛟 浮力</h3>
+          <ul><li>浮力的方向和施力物体</li><li>称重法 F浮 = G − F示</li><li>浮力产生的原因、影响浮力大小的因素</li></ul>
+          <div class="demos"><span class="badge t">3D 探究浮力的大小</span><span class="badge o">浮力在哪里</span><span class="badge o">压力差</span></div>
+        </a>
+        <a class="section-card" href="s2-archimedes.html">
+          <div class="no">第 2 节 · 2 课时</div>
+          <h3>👑 阿基米德原理</h3>
+          <ul><li>排开液体的体积</li><li>F浮 = G排 = ρ液gV排</li><li>浮力的三种计算方法</li></ul>
+          <div class="demos"><span class="badge t">3D 溢水杯实验</span><span class="badge o">王冠之谜</span><span class="badge o">F–h 图像题</span></div>
+        </a>
+        <a class="section-card" href="s3-float-sink.html">
+          <div class="no">第 3 节 · 2 课时</div>
+          <h3>🚢 物体的浮沉条件及应用</h3>
+          <ul><li>浮沉条件与密度</li><li>轮船、潜水艇、气球和飞艇</li><li>密度计</li></ul>
+          <div class="demos"><span class="badge t">3D 潜水艇</span><span class="badge o">小瓶的浮沉</span><span class="badge o">冰熔化后的液面</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="kp" id="core">
+      <div class="kp-title"><span class="kp-no">核心</span><h2>核心知识与方法</h2></div>
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th>求浮力的方法</th><th>公式</th><th>适用情况</th></tr></thead>
+          <tbody>
+            <tr><td>称重法</td><td>F浮 = G − F示</td><td>用弹簧测力计称量</td></tr>
+            <tr><td>压力差法</td><td>F浮 = F向上 − F向下</td><td>已知上、下表面受到的压力</td></tr>
+            <tr><td>阿基米德原理法</td><td>F浮 = G排 = ρ液gV排</td><td>已知 ρ液 和 V排（任何情况）</td></tr>
+            <tr><td>平衡法</td><td>F浮 = G</td><td>漂浮、悬浮</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th></th><th>上浮</th><th>下沉</th><th>悬浮</th><th>漂浮</th><th>沉底</th></tr></thead>
+          <tbody>
+            <tr><td>受力</td><td>F浮 &gt; G</td><td>F浮 &lt; G</td><td>F浮 = G</td><td>F浮 = G</td><td>F浮 + F支 = G</td></tr>
+            <tr><td>密度（实心）</td><td>ρ物 &lt; ρ液</td><td>ρ物 &gt; ρ液</td><td>ρ物 = ρ液</td><td>ρ物 &lt; ρ液</td><td>ρ物 &gt; ρ液</td></tr>
+            <tr><td>V排</td><td>= V物</td><td>= V物</td><td>= V物</td><td>&lt; V物</td><td>= V物</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid-2 mb">
+        <div class="tip tip-exam" style="margin:0"><b>要记住：</b>浮力的方向竖直向上；F浮 = G排 = ρ液gV排，只与 ρ液 和 V排 有关；漂浮时 V排/V物 = ρ物/ρ液；排水量是轮船满载时排开水的质量；潜水艇靠改变自身重力上浮和下潜；密度计的刻度上小下大、上疏下密。</div>
+        <div class="tip tip-warn" style="margin:0"><b>易错：</b>下沉的物体也受浮力；下表面与容器底紧密接触的物体（桥墩）不受浮力；浸没后浮力与深度无关；V排 不一定等于 V物；求浮力先判断物体的状态；轮船从河里驶入海里浮力不变；漂浮的冰熔化后液面不变。</div>
+      </div>
+      <div class="grid-3">
+        <div class="card"><h4>🎛️ 控制变量法</h4><p class="small muted" style="margin:0">探究浮力的大小跟浸在液体中的体积、液体的密度、浸没的深度、物体的密度的关系。</p></div>
+        <div class="card"><h4>🔍 转换法与称重法</h4><p class="small muted" style="margin:0">用测力计示数的减小量表示浮力；用橡皮膜的凹陷程度显示液体的压力；用溢出的液体表示 V排。</p></div>
+        <div class="card"><h4>🧠 推理与模型</h4><p class="small muted" style="margin:0">用液体压强推出浮力是上、下表面的压力差；用浮沉条件推出冰熔化后液面的变化。</p></div>
+      </div>
+    </section>
+
+    <section class="kp" id="labs">
+      <div class="kp-title"><span class="kp-no exp">实验</span><h2>配套虚拟实验</h2></div>
+      <div class="grid-3">
+        <a class="card" href="../lab/index.html#buoyancy" style="color:inherit"><h4>🛟 认识浮力</h4><p class="small muted">称重法测浮力；压力差、橡皮膜圆筒、不会上浮的乒乓球。</p></a>
+        <a class="card" href="../lab/index.html#buoy-factors" style="color:inherit"><h4>🔬 浮力的大小跟哪些因素有关</h4><p class="small muted">3D 弹簧测力计与圆柱体：深度、V排、液体密度、物体密度。</p></a>
+        <a class="card" href="../lab/index.html#archimedes" style="color:inherit"><h4>👑 浮力与排开液体的重力</h4><p class="small muted">3D 溢水杯与小桶，四步测量；实验顺序与误差分析。</p></a>
+        <a class="card" href="../lab/index.html#float-sink" style="color:inherit"><h4>🧴 探究物体的浮沉条件</h4><p class="small muted">小瓶的浮沉、鸡蛋与盐水、六个实心球。</p></a>
+        <a class="card" href="../lab/index.html#buoy-density" style="color:inherit"><h4>🧪 利用浮力测密度</h4><p class="small muted">王冠之谜、F–h 图像题、密度计与自制密度计。</p></a>
+        <a class="card" href="../lab/index.html#buoy-apps" style="color:inherit"><h4>🚢 浮力的应用</h4><p class="small muted">橡皮泥小船与轮船、3D 潜水艇、热气球。</p></a>
+      </div>
+    </section>
+
+    <section class="kp" id="test">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>章末综合练习</h2></div>
+      <div data-quiz="ch10"></div>
+    </section>
+
+    <section class="kp" id="judge">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>综合练习：浮力的计算</h2></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：浮力的计算</h3><span class="badge o">随机出题</span><span class="badge p">常考</span></div>
+        <div class="demo-body"><p class="demo-desc">称重法、压力差法、阿基米德原理、平衡法、浮沉判断、排水量……题目随机生成，可以一直练下去。</p><div data-widget="buoy-quiz"></div></div>
+      </div>
+    </section>
+
+    <nav class="pager">
+      <a href="../chapter9/index.html"><small>← 上一章</small><b>第9章 压强</b></a>
+      <a class="next" href="s1-buoyancy.html"><small>开始学习 →</small><b>第1节 浮力</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版八年级物理下册第十章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  ch10: [
+    { type: 'choice', q: '下列物体中，不受浮力的是（　）', cols: 1, options: ['底部深陷在河底淤泥中、与淤泥紧密接触的木桩', '浮在水面上的木块', '在水中下沉的石块', '空中上升的氢气球'], answer: 0, explain: '木桩的下表面没有水，不受水向上的压力，不受浮力；下沉的石块、空中的氢气球、漂浮的木块都受浮力。' },
+    { type: 'fill', q: '用弹簧测力计在空气中称得一物体重 8 N，把它浸入水中时测力计的示数为 3 N，物体受到的浮力为 ______ N。', answer: 5, unit: 'N', explain: 'F浮 = G − F示 = 8 N − 3 N = 5 N。' },
+    { type: 'choice', q: '物体在液体中受到的浮力大小跟下列哪个因素有关（　）', options: ['物体的密度', '物体浸没的深度', '液体的密度', '物体的形状'], answer: 2, explain: 'F浮 = ρ液gV排，浮力只跟液体的密度和排开液体的体积有关。' },
+    { type: 'fill', q: '体积为 2×10⁻⁴ m³ 的物体浸没在水中，受到的浮力为 ______ N。（g 取 10 N/kg）', answer: 2, unit: 'N', explain: 'F浮 = ρ水gV排 = 1.0×10³ kg/m³ × 10 N/kg × 2×10⁻⁴ m³ = 2 N。' },
+    { type: 'choice', q: '一块橡皮泥放入水中会下沉，把它捏成小船后能漂浮在水面上，这是通过（　）实现的', options: ['增大水的密度', '减小排开水的体积', '减小自身的重力', '增大排开水的体积'], answer: 3, explain: '做成空心的小船，排开水的体积变大，浮力变大，可以等于重力而漂浮。' },
+    { type: 'judge', q: '潜水艇浸没在水中后继续下潜的过程中，受到的浮力不变。', answer: true, explain: '浸没后 V排 不变，液体密度不变，浮力不变。' },
+    { type: 'choice', q: '鸡蛋放入清水中会下沉，向水中加盐并搅拌后，鸡蛋慢慢上浮，这是因为（　）', cols: 1, options: ['鸡蛋排开液体的体积变大了', '液体的密度变大，鸡蛋受到的浮力变大了', '鸡蛋的密度变小了', '鸡蛋的重力变小了'], answer: 1, explain: '加盐后液体的密度变大，V排 不变，浮力变大，大于重力时鸡蛋上浮。' },
+    { type: 'fill', q: '把一个质量为 60 g、体积为 100 cm³ 的实心物体轻轻放入足够深的水中，静止时它受到的浮力为 ______ N。（g 取 10 N/kg）', answer: 0.6, unit: 'N', explain: 'ρ物 = 0.6 g/cm³ < ρ水，物体漂浮，F浮 = G = mg = 0.06 kg × 10 N/kg = 0.6 N（不是用 ρ水gV物 = 1 N）。' },
+    { type: 'choice', q: '热气球能够升空，是因为（　）', cols: 1, options: ['球内热空气的密度小于球外空气的密度，浮力大于总重力', '球内热空气的密度大于球外空气的密度', '热气球不受重力', '热空气对球有向上的推力，与浮力无关'], answer: 0, explain: '加热后球内空气的密度变小，热气球（含球内的空气）的总重力小于它受到的空气的浮力，所以上升。' },
+    { type: 'choice', q: '用同一支密度计测甲、乙两种液体的密度，密度计在甲液体中浸入得较深，则（　）', cols: 1, options: ['ρ甲 = ρ乙，密度计在两种液体中受到的浮力相等', 'ρ甲 < ρ乙，密度计在乙中受到的浮力大', 'ρ甲 > ρ乙，密度计在甲中受到的浮力大', 'ρ甲 < ρ乙，密度计在两种液体中受到的浮力相等'], answer: 3, explain: '密度计都漂浮，F浮 = G 相等；在甲中浸入得深，V排 大，由 F浮 = ρ液gV排 可知 ρ甲 < ρ乙。' },
+  ],
+};
+
+// 知识导图（三个分支：左一右二）
+(function () {
+  var branches = [
+    { t: '浮力', c: '#3b5bdb', href: 's1-buoyancy.html', side: -1, y: 225, leaves: ['方向竖直向上，施力物体是液体', '称重法 F浮 = G − F示', '原因：上、下表面的压力差', '与 V排、ρ液 有关，与深度无关'] },
+    { t: '阿基米德原理', c: '#0c8599', href: 's2-archimedes.html', side: 1, y: 110, leaves: ['F浮 = G排 = ρ液gV排', '溢水杯、小桶、测力计', '也适用于气体', '三种计算方法'] },
+    { t: '浮沉条件及应用', c: '#e8590c', href: 's3-float-sink.html', side: 1, y: 340, leaves: ['比较 F浮 与 G（ρ物 与 ρ液）', '漂浮、悬浮：F浮 = G', '轮船、潜水艇', '气球和飞艇、密度计'] },
+  ];
+  var W = 1100, H = 450, cx = W / 2, cy = H / 2;
+  var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" font-family="PingFang SC, Microsoft YaHei, sans-serif">';
+  branches.forEach(function (b) {
+    var bx = cx + b.side * 220;
+    s += '<path d="M' + cx + ' ' + cy + ' C ' + (cx + b.side * 110) + ' ' + cy + ', ' + (bx - b.side * 90) + ' ' + b.y + ', ' + (bx - b.side * 80) + ' ' + b.y + '" stroke="' + b.c + '" stroke-width="4" fill="none" opacity=".75"/>';
+    var n = b.leaves.length, lx = bx + b.side * 110;
+    b.leaves.forEach(function (lf, i) {
+      var ly = b.y + (i - (n - 1) / 2) * 30;
+      s += '<path d="M' + (bx + b.side * 80) + ' ' + b.y + ' C ' + (bx + b.side * 100) + ' ' + b.y + ', ' + (lx - b.side * 20) + ' ' + ly + ', ' + lx + ' ' + ly + '" stroke="' + b.c + '" stroke-width="1.6" fill="none" opacity=".5"/>';
+      s += '<text x="' + (lx + b.side * 6) + '" y="' + (ly + 4.5) + '" font-size="13" fill="#3a4458" text-anchor="' + (b.side > 0 ? 'start' : 'end') + '">' + lf + '</text>';
+      s += '<circle cx="' + lx + '" cy="' + ly + '" r="3" fill="' + b.c + '"/>';
+    });
+    s += '<a href="' + b.href + '"><rect x="' + (bx - 80) + '" y="' + (b.y - 20) + '" width="160" height="40" rx="20" fill="' + b.c + '"/>';
+    s += '<text x="' + bx + '" y="' + (b.y + 5.5) + '" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">' + b.t + '</text></a>';
+  });
+  s += '<circle cx="' + cx + '" cy="' + cy + '" r="62" fill="#1b2333"/><text x="' + cx + '" y="' + (cy + 4) + '" font-size="22" font-weight="800" fill="#fff" text-anchor="middle">浮力</text><text x="' + cx + '" y="' + (cy + 26) + '" font-size="12" fill="#adb5bd" text-anchor="middle">第十章</text>';
+  s += '</svg>';
+  document.getElementById('mindmap').innerHTML = s;
+})();
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/widgets/force.js"></script>
+<script src="../assets/js/widgets/dynamics.js"></script>
+<script src="../assets/js/widgets/pressure.js"></script>
+<script src="../assets/js/widgets/buoyancy.js"></script>
+<script src="../assets/js/widgets/archimedes.js"></script>
+</body>
+</html>

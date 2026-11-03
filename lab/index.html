@@ -118,6 +118,13 @@
 <script src="../assets/js/widgets/atmos.js"></script>
 <script src="../assets/js/widgets/torricelli3d.js"></script>
 <script src="../assets/js/widgets/flow.js"></script>
+<script src="../assets/js/widgets/buoyancy.js"></script>
+<script src="../assets/js/widgets/buoyancy1.js"></script>
+<script src="../assets/js/widgets/buoyfactors3d.js"></script>
+<script src="../assets/js/widgets/archimedes.js"></script>
+<script src="../assets/js/widgets/archimedes3d.js"></script>
+<script src="../assets/js/widgets/floating.js"></script>
+<script src="../assets/js/widgets/submarine3d.js"></script>
 <script>
 var EXPERIMENTS = [
   {
@@ -577,9 +584,57 @@ var EXPERIMENTS = [
     widgets: ['flow-demos', 'venturi', 'wing-lift'], titles: ['吹一吹', '粗细不同的水管', '机翼的升力'],
     think: [['向两张纸中间吹气，纸为什么会靠拢？', '中间空气流速大、压强小，两张纸外侧的空气压强大，把纸压向中间。'], ['机翼为什么能产生升力？', '机翼上凸下平，上方空气流速大、压强小，下方流速小、压强大，上下表面的压强差产生向上的升力。']],
   },
+  {
+    id: 'buoyancy', ch: 10, icon: '⚓', title: '认识浮力', sub: '称重法 · 压力差', lesson: '../chapter10/s1-buoyancy.html#k2',
+    goal: '用弹簧测力计测量浮力（称重法），通过实验认识浮力产生的原因。',
+    apparatus: ['弹簧测力计', '铝块', '烧杯', '水', '盐水', '酒精', '两端蒙橡皮膜的圆筒', '去底的饮料瓶', '乒乓球'],
+    steps: ['用弹簧测力计测出铝块在空气中的重力 G', '把铝块慢慢浸入水中，观察测力计示数的变化，读出浸没时的示数 F示', '计算浮力 F浮 = G − F示', '把两端蒙有橡皮膜的圆筒水平、竖直放入水中，比较两端橡皮膜的凹陷程度', '做“不会上浮的乒乓球”实验，再用手堵住瓶口'],
+    widgets: ['weigh-method', 'buoy-cause'], titles: ['称重法测浮力', '浮力产生的原因'],
+    think: [['物体浸入水中后，弹簧测力计的示数为什么变小？', '物体受到水竖直向上的浮力，G = F浮 + F示，所以 F示 = G − F浮 变小。'], ['乒乓球堵在瓶口时为什么不上浮？', '乒乓球下面没有水，只受到水向下的压力，没有向上的压力，不受浮力；堵住瓶口后下面有了水，就受到浮力而上浮。']],
+  },
+  {
+    id: 'buoy-factors', ch: 10, icon: '🔬', title: '探究浮力的大小跟哪些因素有关', sub: '3D 弹簧测力计 · 圆柱体', lesson: '../chapter10/s1-buoyancy.html#k4',
+    goal: '用称重法和控制变量法，探究浮力的大小跟浸在液体中的体积、液体的密度、浸没的深度、物体的密度的关系。',
+    apparatus: ['弹簧测力计', '铁架台', '体积相同的铝圆柱体和铁圆柱体（100 cm³）', '烧杯', '水', '酒精', '盐水', '细线'],
+    steps: ['测出圆柱体的重力 G', '把圆柱体逐渐浸入水中，记录不同深度时的示数，算出浮力', '圆柱体浸没后继续增大深度，比较浮力', '把圆柱体浸没在酒精、盐水中，比较浮力', '换用体积相同的铁圆柱体，浸没在同种液体中，比较浮力'],
+    widgets: [['buoy-factors-3d', { lab: true }], 'can-press'], titles: ['3D 探究浮力的大小跟哪些因素有关', '把空饮料罐按入水中'],
+    think: [['为什么物体浸没后，深度增加浮力不变？', '浸没后上、下表面受到的压力都增大，但压力差不变；也可以说排开液体的体积不变。'], ['实验中为什么要用体积相同的铝块和铁块？', '控制排开液体的体积相同，只改变物体的密度，看浮力是否与物体的密度有关。']],
+  },
+  {
+    id: 'archimedes', ch: 10, icon: '👑', title: '探究浮力的大小跟排开液体所受重力的关系', sub: '3D 溢水杯 · 小桶', lesson: '../chapter10/s2-archimedes.html#k2',
+    goal: '通过实验探究浮力的大小跟物体排开液体所受重力的关系，得出阿基米德原理。',
+    apparatus: ['弹簧测力计', '溢水杯', '小桶', '铝块、石块、铜块', '水', '盐水', '酒精', '细线'],
+    steps: ['用弹簧测力计测出空小桶的重力 G桶', '测出物体的重力 G物', '把物体浸没在装满液体的溢水杯中，读出示数 F′，用小桶接住溢出的液体', '测出小桶和溢出液体的总重 G总', '计算 F浮 = G物 − F′ 和 G排 = G总 − G桶，比较二者；换用不同的物体和液体多做几次'],
+    widgets: [['archimedes-3d', { lab: true }], 'archi-steps'], titles: ['3D 溢水杯实验', '实验顺序与误差分析'],
+    think: [['溢水杯中的水没有装满，会对结果有什么影响？', '物体浸入后水面要先升到溢水口才开始溢出，流进小桶的水偏少，测得的 G排 偏小。'], ['为什么要换用不同的物体和液体多做几次？', '使实验结论具有普遍性，避免偶然性。']],
+  },
+  {
+    id: 'float-sink', ch: 10, icon: '🥚', title: '探究物体的浮沉条件', sub: '小瓶 · 鸡蛋 · 实心球', lesson: '../chapter10/s3-float-sink.html#k1',
+    goal: '通过改变物体的重力或浮力，探究物体的浮沉条件，知道浮沉与密度的关系。',
+    apparatus: ['带盖的小瓶', '水槽', '水', '盐水', '酒精', '鸡蛋', '食盐', '体积相同的实心球'],
+    steps: ['把盖上盖子的空小瓶浸没在水中，松手后观察', '在小瓶中装满水，浸没后松手，观察', '调节小瓶中的水量，使它悬浮在水中', '鸡蛋放入清水中，再逐渐加盐，观察鸡蛋的浮沉', '比较不同密度的实心球在不同液体中的浮沉'],
+    widgets: [['float-sink', { lab: true }], 'egg-salt', 'density-float'], titles: ['小瓶的浮沉', '让鸡蛋浮起来', '浮沉与密度'],
+    think: [['怎样使下沉的小瓶浮起来？', '减小小瓶的重力（倒出一些水），或换用密度更大的液体增大浮力。'], ['悬浮和漂浮有什么不同？', '都是 F浮 = G；悬浮时物体浸没在液体中，V排 = V物，漂浮时物体有一部分露出液面，V排 < V物。']],
+  },
+  {
+    id: 'buoy-density', ch: 10, icon: '⚗️', title: '利用浮力测密度', sub: '王冠之谜 · 图像题 · 密度计', lesson: '../chapter10/s2-archimedes.html#k4',
+    goal: '利用阿基米德原理和浮沉条件测量固体和液体的密度。',
+    apparatus: ['溢水杯', '量筒', '等臂杠杆', '弹簧测力计（力传感器）', '圆柱体', '密度计', '吸管和铜丝'],
+    steps: ['用溢水法比较王冠和金块的体积，判断王冠是不是纯金的', '圆柱体匀速浸入水中，画出示数—下降高度图像，求出重力、浮力、体积和密度', '用密度计测几种液体的密度', '用吸管和铜丝自制密度计，测出待测液体的密度'],
+    widgets: ['crown', 'buoy-graph', 'hydrometer'], titles: ['王冠之谜', 'F–h 图像题', '密度计'],
+    think: [['怎样用弹簧测力计和水测出石块的密度？', '测出石块的重力 G 和浸没在水中时的示数 F示，V = (G − F示)/(ρ水g)，ρ = G/(gV) = G·ρ水/(G − F示)。'], ['密度计的刻度为什么上小下大？', '密度计漂浮，浮力等于重力不变；液体的密度越大，排开液体的体积越小，密度计露出越多，所以下面的刻度值大。']],
+  },
+  {
+    id: 'buoy-apps', ch: 10, icon: '🚢', title: '浮力的应用', sub: '轮船 · 潜水艇 · 热气球', lesson: '../chapter10/s3-float-sink.html#k3',
+    goal: '了解轮船、潜水艇、气球和飞艇的浮沉原理。',
+    apparatus: ['橡皮泥', '硬币', '水槽', '潜水艇模型', '热气球（模拟）'],
+    steps: ['把橡皮泥捏成小船，放入硬币，看看最多能装多少', '让轮船从河里驶入海里，观察船身的变化', '向潜水艇的水舱充水、排水，观察它的浮沉；设法让它悬浮', '给热气球加热，观察它的升降'],
+    widgets: ['ship', 'submarine-3d', 'balloon'], titles: ['轮船', '3D 潜水艇', '热气球'],
+    think: [['轮船从河里驶入海里，浮力和船身浸入水中的体积怎样变化？', '轮船漂浮，浮力等于重力不变；海水的密度大，排开水的体积变小，船身上浮一些。'], ['潜水艇在水下从海里驶入江里，要保持悬浮应该怎样做？', '江水密度小，浮力变小，要用压缩空气排出水舱中的一部分水，减小自身的重力。']],
+  },
 ];
 var COMING = [];
-var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 物态变化', 4: '第4章 光现象', 5: '第5章 透镜及其应用', 6: '第6章 质量与密度', 7: '第7章 力', 8: '第8章 运动和力', 9: '第9章 压强' };
+var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 物态变化', 4: '第4章 光现象', 5: '第5章 透镜及其应用', 6: '第6章 质量与密度', 7: '第7章 力', 8: '第8章 运动和力', 9: '第9章 压强', 10: '第10章 浮力' };
 
 (function () {
   var h = PS.h;
@@ -595,7 +650,7 @@ var CH_NAMES = { 1: '第1章 机械运动', 2: '第2章 声现象', 3: '第3章 
     side.append(b);
   });
   side.append(h('h3', null, '后续章节（制作中）'));
-  if (!COMING.length) side.append(h('p', { class: 'small muted', style: { margin: '2px 10px 8px' } }, '第10章起的实验正在制作中……'));
+  if (!COMING.length) side.append(h('p', { class: 'small muted', style: { margin: '2px 10px 8px' } }, '第11章起的实验正在制作中……'));
   COMING.forEach(function (c) {
     side.append(h('div', { class: 'lab-item soon' }, h('span', { class: 'ico' }, c.icon), h('span', null, h('b', null, c.title), h('small', null, CH_NAMES[c.ch] + ' · 即将上线'))));
   });

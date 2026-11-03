@@ -655,6 +655,7 @@
     { no: 7, name: '力', dir: 'chapter7', icon: '🏋️' },
     { no: 8, name: '运动和力', dir: 'chapter8', icon: '🛹' },
     { no: 9, name: '压强', dir: 'chapter9', icon: '🏊' },
+    { no: 10, name: '浮力', dir: 'chapter10', icon: '🚢' },
   ];
 
   function enhanceNav() {
