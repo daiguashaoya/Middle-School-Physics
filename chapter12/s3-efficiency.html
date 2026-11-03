@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第3节 机械效率 · 看得见的物理</title>
+<meta name="description" content="八年级物理第十二章第3节：有用功、额外功和总功，机械效率 η = W有/W总，测量滑轮组的机械效率（3D 实验），测量斜面的机械效率，提高机械效率的方法。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="12">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第12章 简单机械</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、有用功、额外功和总功</a>
+    <a href="#k2">二、机械效率</a>
+    <a href="#k3">三、测量滑轮组的机械效率</a>
+    <a href="#k4">四、测量斜面的机械效率</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#pulley-eta">🔬 实验：测量滑轮组的机械效率</a>
+    <a href="../lab/index.html#incline-eta">🔬 实验：测量斜面的机械效率</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第12章 简单机械</a> › 第3节</div>
+      <h1>机械效率</h1>
+      <p>使用机械可以省力，可是能省功吗？用动滑轮提升重物时，人不仅要提起重物，还要提起动滑轮、克服摩擦——做的功总比直接提重物多。这一节认识有用功、额外功和总功，学习机械效率，并动手测量滑轮组和斜面的机械效率。</p>
+      <div class="hero-tags"><span>2 课时</span><span>6 个互动演示</span><span>2 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>知道有用功、额外功和总功的含义及三者的关系</li><li>理解机械效率的概念，会计算机械效率，知道机械效率总小于 1</li><li>会测量滑轮组和斜面的机械效率，知道提高机械效率的方法</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>机械效率的概念和计算</li><li>测量滑轮组的机械效率</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>在实例中判断有用功、额外功和总功</li><li>影响机械效率的因素</li></ul></div>
+    </div>
+
+    <!-- ========== 一、有用功、额外功和总功 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>有用功、额外功和总功</h2></div>
+      <p>要把 100 N 的沙子运上三楼，可以提着桶走上去，也可以用动滑轮把桶或口袋拉上去。三种方法对沙子做的功一样多，可是人做的功却差别很大——多做的功做到哪里去了？</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：三种方法把沙子运上三楼</h3><span class="badge o">动画</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">三种方法都试一试，比较有用功、额外功和总功。</p>
+          <div data-widget="work-kinds"></div>
+        </div>
+      </div>
+
+      <div class="grid-3 mb">
+        <div class="card"><h4>✅ 有用功 W有</h4><p class="small muted" style="margin:0">为了达到目的<b>必须要做</b>的功，如对沙子做的功。</p></div>
+        <div class="card"><h4>➕ 额外功 W额</h4><p class="small muted" style="margin:0">对人们没有用、但又<b>不得不做</b>的功，如克服机械自身部件的重力（桶、动滑轮）和摩擦做的功。</p></div>
+        <div class="card"><h4>Σ 总功 W总</h4><p class="small muted" style="margin:0">有用功与额外功之和，也就是动力（拉力）做的功：<b>W总 = W有 + W额</b>。</p></div>
+      </div>
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th>机械</th><th>有用功 W有</th><th>总功 W总</th><th>额外功 W额</th></tr></thead>
+          <tbody>
+            <tr><td>滑轮组竖直提升重物</td><td>Gh</td><td>Fs（s = nh）</td><td>克服动滑轮重和摩擦做的功</td></tr>
+            <tr><td>滑轮组水平拉动物体</td><td>fs物（克服摩擦力）</td><td>Fs绳（s绳 = ns物）</td><td>克服绳与轮之间的摩擦做的功</td></tr>
+            <tr><td>斜面</td><td>Gh</td><td>FL（L 为斜面长）</td><td>克服斜面摩擦力做的功 fL</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="example">
+        <b>想一想</b>　用水桶从井里提水，对水做的功是有用功还是额外功？如果水桶掉进井里，把水桶捞上来时，桶里带了一些水，对水做的功又是什么功？
+        <details class="reveal"><summary>看解答</summary><p>提水时目的是水：对水做的功是<b>有用功</b>，对桶做的功是额外功。捞桶时目的是桶：对桶做的功是<b>有用功</b>，对水做的功是<b>额外功</b>。有用功和额外功是相对的，要看做功的目的。</p></details>
+      </div>
+    </section>
+
+    <!-- ========== 二、机械效率 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no">知识点 2</span><h2>机械效率</h2></div>
+      <div class="concept"><h3><span class="def">机械效率</span></h3><p>物理学中，将<b>有用功跟总功的比值</b>叫做机械效率，用 η 表示：</p>
+        <div class="formula">η = <span class="frac"><span>W有</span><span>W总</span></span> × 100%</div>
+        <p style="margin:0">机械效率是一个比值，<b>没有单位</b>，通常用百分数表示。使用任何机械都不可避免地要做额外功，有用功总小于总功，所以<b>机械效率总小于 1</b>。机械效率越高，有用功在总功中所占的比例越大，机械的性能越好。</p></div>
+      <div class="grid-3 mb">
+        <div class="card"><h4>🏗️ 起重机</h4><p class="small muted" style="margin:0">约 40%～50%</p></div>
+        <div class="card"><h4>⚙️ 滑轮组</h4><p class="small muted" style="margin:0">约 50%～70%</p></div>
+        <div class="card"><h4>💧 抽水机</h4><p class="small muted" style="margin:0">约 60%～80%</p></div>
+      </div>
+      <div class="example">
+        <b>例</b>　起重机把重 3 600 N 的货物匀速提高 4 m，如果额外功是 9 600 J，起重机做的有用功是多少？总功是多少？机械效率是多少？起重机在哪些方面消耗了额外功？
+        <details class="reveal"><summary>看解答</summary><p>起重机提升货物的力 F = G = 3 600 N，<br>有用功 W有 = Gh = 3 600 N × 4 m = 1.44×10⁴ J；<br>总功 W总 = W有 + W额 = 14 400 J + 9 600 J = 2.4×10⁴ J；<br>机械效率 η = <span class="frac"><span>W有</span><span>W总</span></span> = <span class="frac"><span>1.44×10⁴ J</span><span>2.4×10⁴ J</span></span> = <b>60%</b>。<br>额外功消耗在：克服吊钩、钢绳等机械部件的重力做功，克服各部件之间的摩擦做功。</p></details>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>计算器：η = W有/W总</h3><span class="badge o">工具</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选择要求的量，填入已知量后计算；也可以点下面的例子。</p>
+          <div data-widget="eta-calc"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-warn"><b>易错：</b>①机械效率高，只说明有用功占总功的比例大，<b>不等于</b>做功快（功率大），也不等于做的有用功多、更省力；②同一机械在不同的做功过程中（如提升的物重不同），机械效率可以不同，机械效率<b>不是固定不变</b>的。</div>
+    </section>
+
+    <!-- ========== 三、测量滑轮组的机械效率 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no exp">知识点 3</span><h2>测量滑轮组的机械效率</h2></div>
+      <div class="grid-2 mb">
+        <div class="card"><h4>📐 实验原理</h4><p class="small muted" style="margin:0">η = <span class="frac"><span>W有</span><span>W总</span></span> = <span class="frac"><span>Gh</span><span>Fs</span></span>。需要测量：钩码的重 G、钩码上升的高度 h、拉力 F、绳端移动的距离 s。</p></div>
+        <div class="card"><h4>🔧 实验器材</h4><p class="small muted" style="margin:0">铁架台、两个滑轮组（甲、乙）、钩码、弹簧测力计、刻度尺、细绳。</p></div>
+      </div>
+      <p><b>实验步骤：</b>①用弹簧测力计测出钩码的重 G；②记下钩码和绳端（弹簧测力计）的位置；③<b>竖直向上匀速</b>拉动弹簧测力计，使钩码升高，读出拉力 F，用刻度尺测出钩码上升的高度 h 和绳端移动的距离 s；④算出有用功、总功和机械效率；⑤改变钩码的重、换另一个滑轮组，再做几次。</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>3D 实验：测量滑轮组的机械效率</h3><span class="badge t">3D 模型</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选择滑轮组和钩码，拉动弹簧测力计，读出 G、h、F、s，算出机械效率填进去，检查正确后记录。改变钩码的重、提升的高度和滑轮组，再试试“静止时读数”。</p>
+          <div data-widget="eta-3d"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-warn"><b>实验中的注意事项：</b>①要<b>竖直向上匀速</b>拉动弹簧测力计，边拉边读数；若在弹簧测力计<b>静止时读数</b>，没有测出摩擦的影响，拉力偏小，测得的机械效率<b>偏大</b>。②由 η = <span class="frac"><span>Gh</span><span>Fs</span></span> = <span class="frac"><span>Gh</span><span>F·nh</span></span> = <span class="frac"><span>G</span><span>nF</span></span> 可知，没有刻度尺也能测出滑轮组的机械效率。</div>
+      <div class="tip tip-good"><b>结论：</b>①同一滑轮组，提升的物体越重，机械效率越高；②提升相同的物体，动滑轮越多（越重），额外功越多，机械效率越低；③机械效率与物体被提升的高度、绳子的绕法无关。<br><b>提高滑轮组机械效率的方法：</b>增加物重、减小动滑轮的重、减小摩擦（如给滑轮的轴加润滑油）。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>图像：机械效率与物重、动滑轮重的关系</h3><span class="badge o">图像</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">拖动滑块改变物重，切换动滑轮的重和有无摩擦，观察机械效率的变化。</p>
+          <div data-widget="eta-graph"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-exam"><b>不计绳重和摩擦时：</b>额外功只是克服动滑轮重做的功 W额 = G动h，η = <span class="frac"><span>Gh</span><span>Gh + G动h</span></span> = <span class="frac"><span>G</span><span>G + G动</span></span>。</div>
+    </section>
+
+    <!-- ========== 四、测量斜面的机械效率 ========== -->
+    <section class="kp" id="k4">
+      <div class="kp-title"><span class="kp-no exp">知识点 4</span><h2>测量斜面的机械效率</h2></div>
+      <p>沿斜面把木块匀速拉到顶端，有用功是把木块提高 h 所做的功 <b>W有 = Gh</b>，总功是拉力做的功 <b>W总 = Fs</b>（s 为斜面长），额外功是克服摩擦力做的功。</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>实验：测量斜面的机械效率</h3><span class="badge o">动手</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">改变斜面的倾斜程度、接触面和木块的重，沿斜面匀速拉动木块，读出拉力，算出机械效率后记录，分析机械效率跟哪些因素有关。</p>
+          <div data-widget="incline-eta" data-opts='{"lab":true}'></div>
+        </div>
+      </div>
+
+      <div class="tip tip-good"><b>结论：</b>斜面的机械效率跟斜面的<b>倾斜程度</b>和<b>粗糙程度</b>有关：接触面相同时，斜面越陡，机械效率越高（但越费力）；倾斜程度相同时，接触面越光滑，机械效率越高。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：机械效率的计算</h3><span class="badge o">随机出题</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">起重机、滑轮组（竖直和水平）、斜面，题目随机生成。机械效率填百分数中的数字。</p>
+          <div data-widget="machine-quiz" data-opts='{"set":"eta"}'></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>三种功</h4><ul><li>有用功：必须要做的功</li><li>额外功：不需要但又不得不做的功</li><li>W总 = W有 + W额</li></ul></div>
+        <div class="summary-item"><h4>机械效率</h4><ul><li>η = W有/W总，没有单位，用百分数表示</li><li>机械效率总小于 1</li><li>不是固定不变的</li></ul></div>
+        <div class="summary-item"><h4>滑轮组</h4><ul><li>η = Gh/(Fs) = G/(nF)</li><li>不计绳重和摩擦：η = G/(G + G动)</li><li>竖直向上匀速拉动弹簧测力计</li></ul></div>
+        <div class="summary-item"><h4>提高机械效率</h4><ul><li>滑轮组：增加物重、减轻动滑轮重、减小摩擦</li><li>斜面：增大倾斜程度、减小粗糙程度</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s2-pulley.html"><small>← 上一节</small><b>第2节 滑轮</b></a>
+      <a class="next" href="index.html"><small>回到本章 →</small><b>第12章 简单机械 · 概览</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版八年级物理下册第十二章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '某机械的机械效率是 75%，这说明使用这一装置做功时（　）', cols: 1, options: ['有用功是额外功的 3 倍', '总功是有用功的 3 倍', '额外功占总功的四分之三', '总功是额外功的 3 倍'], answer: 0, explain: 'η = 75% 表示有用功占总功的 3/4，额外功占 1/4，所以有用功是额外功的 3 倍。' },
+    { type: 'judge', q: '机械效率越高的机械，做功越快。', answer: false, explain: '做功的快慢用功率表示；机械效率表示有用功在总功中所占的比例，两者没有必然联系。' },
+    { type: 'judge', q: '使用任何机械，机械效率都小于 1。', answer: true, explain: '使用机械时不可避免地要做额外功，有用功总小于总功。' },
+    { type: 'fill', q: '起重机把重 3 600 N 的货物匀速提高 4 m，额外功是 9 600 J，起重机的机械效率为 ______ %。', answer: 60, unit: '%', explain: 'W有 = Gh = 14 400 J，W总 = 14 400 J + 9 600 J = 24 000 J，η = 14 400 J ÷ 24 000 J = 60%。' },
+    { type: 'fill', q: '用动滑轮上有 3 段绳子的滑轮组匀速提升重 240 N 的物体，绳子自由端的拉力为 100 N，滑轮组的机械效率为 ______ %。', answer: 80, unit: '%', explain: 'η = Gh/(Fs) = G/(nF) = 240 N ÷ (3 × 100 N) = 80%。' },
+    { type: 'fill', q: '用滑轮组匀速提升重 80 N 的物体，动滑轮重 20 N，不计绳重和摩擦，滑轮组的机械效率为 ______ %。', answer: 80, unit: '%', explain: 'η = G/(G + G动) = 80 N ÷ 100 N = 80%。' },
+    { type: 'choice', q: '用同一个滑轮组提升不同的重物（不计绳重和摩擦），下列说法中正确的是（　）', cols: 1, options: ['机械效率总等于 100%', '物重越大，机械效率越低', '物重越大，机械效率越高', '机械效率与物重无关'], answer: 2, explain: '额外功（克服动滑轮重做的功）不变，物重越大，有用功在总功中所占的比例越大，机械效率越高。' },
+    { type: 'choice', q: '测量滑轮组的机械效率时，若在弹簧测力计静止时读数，测得的机械效率将（　）', options: ['偏小', '不变', '无法确定', '偏大'], answer: 3, explain: '静止时没有摩擦的影响，拉力的读数偏小，总功偏小，算出的机械效率偏大。' },
+    { type: 'fill', q: '沿长 5 m、高 1 m 的斜面，用 250 N 的力把重 1 000 N 的物体从底端匀速拉到顶端，斜面的机械效率为 ______ %。', answer: 80, unit: '%', explain: 'W有 = Gh = 1 000 J，W总 = Fs = 1 250 J，η = 1 000 J ÷ 1 250 J = 80%。' },
+    { type: 'choice', q: '下列方法中，不能提高滑轮组机械效率的是（　）', options: ['给滑轮的轴加润滑油', '增加重物提升的高度', '增加提升的物重', '减轻动滑轮的重'], answer: 1, explain: '滑轮组的机械效率与物体被提升的高度无关；增加物重、减轻动滑轮重、减小摩擦都能提高机械效率。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/vendor/three.min.js"></script>
+<script src="../assets/vendor/OrbitControls.js"></script>
+<script src="../assets/js/widgets/force.js"></script>
+<script src="../assets/js/widgets/dynamics.js"></script>
+<script src="../assets/js/widgets/energy.js"></script>
+<script src="../assets/js/widgets/machine.js"></script>
+<script src="../assets/js/widgets/efficiency.js"></script>
+<script src="../assets/js/widgets/pulley3d.js"></script>
+</body>
+</html>

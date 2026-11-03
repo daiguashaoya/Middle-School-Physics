@@ -657,6 +657,7 @@
     { no: 9, name: '压强', dir: 'chapter9', icon: '🏊' },
     { no: 10, name: '浮力', dir: 'chapter10', icon: '🚢' },
     { no: 11, name: '功和机械能', dir: 'chapter11', icon: '🎢' },
+    { no: 12, name: '简单机械', dir: 'chapter12', icon: '⚙️' },
   ];
 
   function enhanceNav() {

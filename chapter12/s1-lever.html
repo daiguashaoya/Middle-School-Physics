@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第1节 杠杆 · 看得见的物理</title>
+<meta name="description" content="八年级物理第十二章第1节：杠杆及其五要素、力臂的画法、杠杆的平衡条件（3D 实验）、省力杠杆和费力杠杆、最小动力。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="12">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第12章 简单机械</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、杠杆及其五要素</a>
+    <a href="#k2">二、力臂的画法</a>
+    <a href="#k3">三、杠杆的平衡条件</a>
+    <a href="#k4">四、生活中的杠杆</a>
+    <a href="#k5">五、最小动力</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#lever">🔬 实验：探究杠杆的平衡条件</a>
+    <a href="../lab/index.html#lever-life">🔬 实验：省力杠杆和费力杠杆</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第12章 简单机械</a> › 第1节</div>
+      <h1>杠杆</h1>
+      <p>阿基米德说：“给我一个支点，我就能撬动地球。”用一根撬棒就能撬起很重的石头，用一把小小的镊子却要费更大的力——这是为什么？这一节认识杠杆，探究杠杆的平衡条件，学会区分省力杠杆和费力杠杆。</p>
+      <div class="hero-tags"><span>2 课时</span><span>8 个互动演示</span><span>2 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>知道什么是杠杆，能从常见工具中辨认出杠杆，能找出杠杆的五要素</li><li>会画力臂</li><li>通过实验探究杠杆的平衡条件，并能进行简单计算</li><li>知道杠杆的种类和特点，会判断省力杠杆和费力杠杆</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>杠杆的平衡条件</li><li>三类杠杆的特点</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>力臂的概念和画法</li><li>最小动力的作图</li></ul></div>
+    </div>
+
+    <!-- ========== 一、杠杆及其五要素 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>杠杆及其五要素</h2></div>
+      <p>用羊角锤拔钉子、用撬棒撬石头、推独轮车、钓鱼……这些工具形状各不相同，但用起来有一个共同点：都是一根<b>硬棒</b>，在力的作用下绕着一个<b>固定的点</b>转动。</p>
+      <div class="concept"><h3><span class="def">杠杆</span></h3><p style="margin:0">一根硬棒，在力的作用下能绕着固定点 O 转动，这根硬棒就是杠杆。杠杆可以是直的，也可以是弯的，只要是“硬”的就行，跟形状无关。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：认识杠杆和它的五要素</h3><span class="badge o">动画</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选一种工具，点“用一用”看它绕哪个点转动；再一个一个点亮下面的五要素。打开“只看杠杆示意图”，把工具抽象成一根杠杆。</p>
+          <div data-widget="lever-tools"></div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th>要素</th><th>符号</th><th>含义</th></tr></thead>
+          <tbody>
+            <tr><td>支点</td><td>O</td><td>杠杆绕着转动的点</td></tr>
+            <tr><td>动力</td><td>F₁</td><td>使杠杆转动的力</td></tr>
+            <tr><td>阻力</td><td>F₂</td><td>阻碍杠杆转动的力</td></tr>
+            <tr><td>动力臂</td><td>l₁</td><td>从支点到<b>动力作用线</b>的距离</td></tr>
+            <tr><td>阻力臂</td><td>l₂</td><td>从支点到<b>阻力作用线</b>的距离</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip tip-warn"><b>理解五要素：</b>①支点、动力作用点、阻力作用点都在杠杆上，支点不一定在杠杆的中间；②动力和阻力的受力物体都是<b>杠杆</b>，它们使杠杆转动的方向<b>相反</b>，但力的方向不一定相反（撬棒两端的力都向下）；③力臂是到力的<b>作用线</b>的距离，不是到作用点的距离，力臂可能在杠杆上，也可能不在杠杆上；④力的作用线通过支点时，力臂为零。</div>
+    </section>
+
+    <!-- ========== 二、力臂的画法 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no">知识点 2</span><h2>力臂的画法</h2></div>
+      <div class="grid-2 mb">
+        <div class="card"><h4>① 找支点</h4><p class="small muted" style="margin:0">确定杠杆绕着转动的点 O。</p></div>
+        <div class="card"><h4>② 画作用线</h4><p class="small muted" style="margin:0">沿力的方向画出力的作用线（虚线），作用线太短时要<b>延长</b>或<b>反向延长</b>。</p></div>
+        <div class="card"><h4>③ 作垂线</h4><p class="small muted" style="margin:0">从支点 O 向力的作用线作<b>垂线</b>，垂足处画直角符号。</p></div>
+        <div class="card"><h4>④ 标力臂</h4><p class="small muted" style="margin:0">支点到垂足的垂线段就是力臂，用大括号或双箭头标出，写上 l₁ 或 l₂。</p></div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>作图练习：画力臂</h3><span class="badge o">练一练</span><span class="badge p">难点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">拖动蓝色圆点沿力的作用线移动，使它与支点 O 的连线垂直于作用线，再点“检查”。六道题，注意有的作用线要延长或反向延长。</p>
+          <div data-widget="arm-draw"></div>
+        </div>
+      </div>
+
+      <div class="example">
+        <b>例</b>　用羊角锤拔钉子时，在锤柄末端施加一个水平向左的力 F，画出 F 的力臂，并说出支点的位置。
+        <details class="reveal"><summary>看解答</summary><p>拔钉子时，羊角锤绕锤头与木板接触的点转动，这一点就是支点 O。沿 F 的方向画出它的作用线（虚线，向左延长），从 O 向作用线作垂线，垂线段的长就是 F 的力臂 l。<br><span class="muted">易错：把 O 与 F 的作用点连起来当作力臂。</span></p></details>
+      </div>
+      <div class="tip tip-exam"><b>作图规范：</b>力的作用线、延长线用<b>虚线</b>；力臂用实线（或大括号）并标出符号；垂足处画<b>直角符号</b>。力臂的长短可以用来比较力的大小。</div>
+    </section>
+
+    <!-- ========== 三、杠杆的平衡条件 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no exp">知识点 3</span><h2>杠杆的平衡条件</h2></div>
+      <p>杠杆在动力和阻力的作用下<b>静止</b>或<b>匀速转动</b>，就说杠杆处于平衡状态。杠杆平衡时，动力、动力臂、阻力、阻力臂之间有什么关系呢？</p>
+      <div class="grid-2 mb">
+        <div class="card"><h4>🔧 实验器材</h4><p class="small muted" style="margin:0">带刻度的杠杆和支架、钩码（每个重 0.5 N）、弹簧测力计。</p></div>
+        <div class="card"><h4>📋 实验步骤</h4><p class="small muted" style="margin:0">①调节平衡螺母，使杠杆在水平位置平衡；②两侧挂上钩码，移动钩码的位置，使杠杆<b>重新在水平位置平衡</b>，记录 F₁、l₁、F₂、l₂；③改变钩码的个数和位置，多做几次；④用弹簧测力计竖直拉杠杆，再做几次。</p></div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>3D 实验：探究杠杆的平衡条件</h3><span class="badge t">3D 模型</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">先调节平衡螺母使杠杆在水平位置平衡，再在两侧挂钩码（或用弹簧测力计拉），使杠杆重新在水平位置平衡后记录。至少做 3 次，再试试斜着拉弹簧测力计。</p>
+          <div data-widget="lever-3d"></div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th>次数</th><th>动力 F₁/N</th><th>动力臂 l₁/m</th><th>阻力 F₂/N</th><th>阻力臂 l₂/m</th><th>F₁l₁/(N·m)</th><th>F₂l₂/(N·m)</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>0.5</td><td>0.2</td><td>1.0</td><td>0.1</td><td>0.1</td><td>0.1</td></tr>
+            <tr><td>2</td><td>1.5</td><td>0.2</td><td>1.0</td><td>0.3</td><td>0.3</td><td>0.3</td></tr>
+            <tr><td>3</td><td>2.0</td><td>0.2</td><td>4.0</td><td>0.1</td><td>0.4</td><td>0.4</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="concept"><h3>杠杆的平衡条件</h3><p>动力 × 动力臂 = 阻力 × 阻力臂</p>
+        <div class="formula">F₁l₁ = F₂l₂　或　<span class="frac"><span>F₁</span><span>F₂</span></span> = <span class="frac"><span>l₂</span><span>l₁</span></span></div>
+        <p style="margin:0">杠杆平衡时，动力臂是阻力臂的几倍，动力就是阻力的几分之一。</p></div>
+      <div class="tip tip-warn"><b>实验中的“为什么”：</b>①实验前调节平衡螺母使杠杆在水平位置平衡，是为了<b>消除杠杆自重的影响</b>；调节方法是“哪端高，螺母往哪端调”；②实验中让杠杆在<b>水平位置</b>平衡，并且竖直拉弹簧测力计，是为了<b>便于从杠杆上直接读出力臂</b>；③挂上钩码后<b>不能再调节平衡螺母</b>；④多次实验是为了<b>寻找普遍规律</b>，避免偶然性；⑤弹簧测力计斜着拉时，力臂变短，示数变大。</div>
+      <div class="example">
+        <b>例</b>　杠杆平衡时，动力 F₁ 的大小为 10 N，动力臂 l₁ 为 0.2 m，阻力臂 l₂ 为 0.5 m，求阻力 F₂ 的大小。
+        <details class="reveal"><summary>看解答</summary><p>由杠杆的平衡条件 F₁l₁ = F₂l₂ 得<br>F₂ = <span class="frac"><span>F₁l₁</span><span>l₂</span></span> = <span class="frac"><span>10 N × 0.2 m</span><span>0.5 m</span></span> = <b>4 N</b>。</p></details>
+      </div>
+      <div class="example">
+        <b>例</b>　用一根自重不计的撬棒撬石块，撬棒上依次有 A、B、C、D 四点，AB = 1.5 m，BC = 0.3 m，CD = 0.2 m，石块压在 C 点，对撬棒的压力为 1 500 N。可以以 B 为支点向下压 A 端，也可以以 D 为支点（D 端顶在地面上）向上抬 A 端。撬动石块所用的力最小是多少？
+        <details class="reveal"><summary>看解答</summary><p>以 B 为支点：l₁ = AB = 1.5 m，l₂ = BC = 0.3 m，F = 1 500 N × 0.3 m ÷ 1.5 m = 300 N。<br>以 D 为支点：l₁ = AD = 2.0 m，l₂ = CD = 0.2 m，F = 1 500 N × 0.2 m ÷ 2.0 m = 150 N。<br>所以最小的力是 <b>150 N</b>（动力臂越长、阻力臂越短越省力）。</p></details>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>应用：杆秤</h3><span class="badge o">动手</span><span class="badge g">生活</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">选一个物体挂在秤钩上，拖动秤砣使秤杆水平平衡，读出物体的质量。再看看秤砣磨损后会怎样。</p>
+          <div data-widget="steelyard"></div>
+        </div>
+      </div>
+
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：杠杆平衡条件的计算</h3><span class="badge o">随机出题</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">题目随机生成：求阻力、动力、力臂，跷跷板和杆秤。</p>
+          <div data-widget="machine-quiz" data-opts='{"set":"lever"}'></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 四、生活中的杠杆 ========== -->
+    <section class="kp" id="k4">
+      <div class="kp-title"><span class="kp-no">知识点 4</span><h2>生活中的杠杆</h2></div>
+      <p>根据杠杆的平衡条件，比较动力臂和阻力臂的大小，就能知道使用杠杆是省力还是费力。</p>
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th>类别</th><th>力臂关系</th><th>力的关系</th><th>特点</th><th>应用</th></tr></thead>
+          <tbody>
+            <tr><td><b>省力杠杆</b></td><td>l₁ &gt; l₂</td><td>F₁ &lt; F₂</td><td>省力，费距离</td><td>撬棒、羊角锤、瓶起子、钢丝钳、独轮车、核桃夹</td></tr>
+            <tr><td><b>费力杠杆</b></td><td>l₁ &lt; l₂</td><td>F₁ &gt; F₂</td><td>费力，省距离</td><td>镊子、筷子、钓鱼竿、理发剪刀、船桨、人的前臂</td></tr>
+            <tr><td><b>等臂杠杆</b></td><td>l₁ = l₂</td><td>F₁ = F₂</td><td>不省力，也不省距离</td><td>托盘天平、跷跷板（两边力臂相等时）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：省力杠杆和费力杠杆</h3><span class="badge o">动画</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">拖动支点 O、手（动力作用点）和重物，比较动力臂和阻力臂；点“把重物提起来”，比较手和重物移动的距离。也可以点上面的例子。</p>
+          <div data-widget="lever-types"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-good"><b>结论：</b>省力的杠杆必然费距离，费力的杠杆必然省距离，<b>既省力又省距离的杠杆是不存在的</b>。使用费力杠杆是为了省距离、操作方便（如用镊子夹取细小的物体）。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>分一分：省力、费力还是等臂</h3><span class="badge o">练一练</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">想一想支点在哪里、动力和阻力作用在哪里，比较两个力臂。</p>
+          <div data-widget="lever-sort"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-exam"><b>判断方法：</b>先找支点，再找动力和阻力的作用点，比较动力臂和阻力臂的长短。常见的判断技巧：支点在一端、动力在中间（如镊子、钓鱼竿）——费力；支点在一端、阻力在中间（如独轮车、核桃夹）——省力。</div>
+    </section>
+
+    <!-- ========== 五、最小动力 ========== -->
+    <section class="kp" id="k5">
+      <div class="kp-title"><span class="kp-no">知识点 5</span><h2>杠杆中的最小动力</h2></div>
+      <p>由 F₁l₁ = F₂l₂ 可知：阻力和阻力臂一定时，<b>动力臂越长，动力越小</b>。怎样找到最长的动力臂呢？</p>
+      <div class="concept"><h3>作最小动力的方法</h3><p style="margin:0">①在杠杆上找一个<b>离支点最远</b>的点作为动力作用点；②连接支点和这一点，这条连线就是最长的动力臂；③过动力作用点作这条连线的<b>垂线</b>，就是动力的作用线；④根据动力和阻力使杠杆转动的方向<b>相反</b>，确定动力的方向。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>找一找：最小的动力</h3><span class="badge o">动手</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">拖动橙色圆点改变动力的作用点，拖动箭头前面的小圆改变动力的方向，使需要的动力最小。三种杠杆都试一试。</p>
+          <div data-widget="min-force"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-warn"><b>易错：</b>弯折的杠杆、推木箱时，离支点最远的点不在“杠杆的末端”所在的直线上，最长的力臂是支点到这一点的<b>连线</b>，不一定沿着杠杆。</div>
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>杠杆</h4><ul><li>在力的作用下能绕固定点转动的硬棒</li><li>五要素：支点 O、动力 F₁、阻力 F₂、动力臂 l₁、阻力臂 l₂</li><li>力臂：支点到力的作用线的距离</li></ul></div>
+        <div class="summary-item"><h4>平衡条件</h4><ul><li>F₁l₁ = F₂l₂</li><li>实验前调平衡螺母使杠杆在水平位置平衡</li><li>多次实验寻找普遍规律</li></ul></div>
+        <div class="summary-item"><h4>三类杠杆</h4><ul><li>省力杠杆：l₁ > l₂，省力费距离</li><li>费力杠杆：l₁ < l₂，费力省距离</li><li>等臂杠杆：l₁ = l₂</li></ul></div>
+        <div class="summary-item"><h4>最小动力</h4><ul><li>动力作用点离支点最远</li><li>动力方向与支点到作用点的连线垂直</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="index.html"><small>← 返回</small><b>第12章 简单机械 · 概览</b></a>
+      <a class="next" href="s2-pulley.html"><small>下一节 →</small><b>第2节 滑轮</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版八年级物理下册第十二章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '关于杠杆，下列说法中正确的是（　）', cols: 1, options: ['作用在杠杆上的动力和阻力方向一定相反', '杠杆一定是一根直的硬棒', '杠杆的支点一定在杠杆的中间', '力臂可能在杠杆上，也可能不在杠杆上'], answer: 3, explain: '杠杆可以是弯的；支点可以在杠杆的任意位置；动力和阻力使杠杆转动的方向相反，但力的方向不一定相反。' },
+    { type: 'judge', q: '力臂是从支点到力的作用点的距离。', answer: false, explain: '力臂是从支点到力的作用线的距离。' },
+    { type: 'choice', q: '下列工具在使用时，属于费力杠杆的是（　）', options: ['镊子', '瓶起子', '羊角锤', '钢丝钳'], answer: 0, explain: '镊子的动力臂小于阻力臂，是费力杠杆；其余三种都是省力杠杆。' },
+    { type: 'fill', q: '杠杆平衡时，动力 F₁ = 10 N，动力臂 l₁ = 0.2 m，阻力臂 l₂ = 0.5 m，则阻力 F₂ = ______ N。', answer: 4, unit: 'N', explain: 'F₂ = F₁l₁/l₂ = 10 N × 0.2 m ÷ 0.5 m = 4 N。' },
+    { type: 'fill', q: '用撬棒撬石头，动力臂是阻力臂的 5 倍，石头对撬棒的阻力为 1 000 N，不计撬棒重，至少要用 ______ N 的力。', answer: 200, unit: 'N', explain: '动力臂是阻力臂的 5 倍，动力就是阻力的 1/5：1 000 N ÷ 5 = 200 N。' },
+    { type: 'choice', q: '探究杠杆的平衡条件时，实验前发现杠杆左端下沉，应该（　）', options: ['把支点向左移', '把平衡螺母向左调', '把平衡螺母向右调', '在右端挂上钩码'], answer: 2, explain: '左端下沉说明右端高，平衡螺母应向右（高的一端）调。实验前不能用挂钩码的方法调平。' },
+    { type: 'judge', q: '实验中挂上钩码后，发现杠杆不在水平位置平衡，可以调节平衡螺母使它平衡。', answer: false, explain: '挂上钩码后不能再调节平衡螺母，应该改变钩码的个数或位置。' },
+    { type: 'choice', q: '杠杆在水平位置平衡后，在左侧离支点 2 格处挂 3 个相同的钩码，要使杠杆重新在水平位置平衡，应在右侧离支点 3 格处挂（　）', options: ['1 个钩码', '2 个钩码', '3 个钩码', '4 个钩码'], answer: 1, explain: '3 × 2 格 = n × 3 格，n = 2。' },
+    { type: 'choice', q: '用弹簧测力计在杠杆上拉，使杠杆在水平位置平衡。当弹簧测力计由竖直方向逐渐向外倾斜时，它的示数将（　）', options: ['变小', '不变', '先变小后变大', '变大'], answer: 3, explain: '阻力和阻力臂不变，测力计倾斜后动力臂变短，所以动力（示数）变大。' },
+    { type: 'choice', q: '下列关于杠杆的说法中，正确的是（　）', cols: 1, options: ['费力杠杆既费力又费距离', '既省力又省距离的杠杆是不存在的', '等臂杠杆可以省力', '省力杠杆一定省距离'], answer: 1, explain: '省力杠杆费距离，费力杠杆省距离，等臂杠杆既不省力也不省距离。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/vendor/three.min.js"></script>
+<script src="../assets/vendor/OrbitControls.js"></script>
+<script src="../assets/js/widgets/force.js"></script>
+<script src="../assets/js/widgets/dynamics.js"></script>
+<script src="../assets/js/widgets/energy.js"></script>
+<script src="../assets/js/widgets/machine.js"></script>
+<script src="../assets/js/widgets/lever.js"></script>
+<script src="../assets/js/widgets/lever3d.js"></script>
+</body>
+</html>
