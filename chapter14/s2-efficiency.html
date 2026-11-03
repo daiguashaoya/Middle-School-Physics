@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第2节 热机的效率 · 看得见的物理</title>
+<meta name="description" content="九年级物理第十四章第2节：3D 比较不同燃料的热值、燃料的热值表与 Q = mq、热机的能量流向与效率、测量燃气灶烧水的效率、提高热机效率的途径、热值和效率的计算、热机与环境保护。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="14">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第14章 内能的利用</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、燃料的热值</a>
+    <a href="#k2">二、热机的效率</a>
+    <a href="#k3">三、效率的计算</a>
+    <a href="#k4">四、热机与环境保护</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#fuel-value">🔬 实验：比较不同燃料的热值</a>
+    <a href="../lab/index.html#stove-eff">🔬 实验：测量燃气灶烧水的效率</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第14章 内能的利用</a> › 第2节</div>
+      <h1>热机的效率</h1>
+      <p>同样烧开一壶水，用干木柴要好几百克，用天然气只要几十升；同样跑一百千米，有的汽车更省油……不同燃料放热的本领不同，热机利用能量的本领也不同。这一节认识燃料的热值和热机的效率。</p>
+      <div class="hero-tags"><span>1 课时</span><span>6 个互动演示</span><span>2 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>知道燃料的热值，会用 Q放 = mq（Vq）进行计算</li><li>知道热机的效率，知道燃料释放的能量的主要流向</li><li>知道提高热机效率的途径，会计算炉子和热机的效率</li><li>了解热机的使用对环境的影响</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>燃料热值的概念</li><li>热机效率的理解</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>热机中的能量转化与损失</li><li>热机效率的计算</li></ul></div>
+    </div>
+
+    <!-- ========== 一、燃料的热值 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no exp">知识点 1</span><h2>燃料的热值</h2></div>
+      <p>生活中常用的燃料有固体燃料（木柴、煤）、液体燃料（汽油、柴油、酒精）和气体燃料（天然气、煤气）。燃料燃烧时，<b>化学能转化为内能</b>。质量相同的不同燃料，完全燃烧时放出的热量相同吗？</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>3D 实验：比较质量相等的不同燃料燃烧放出的热量</h3><span class="badge t">3D 模型</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">在两个燃烧皿中放入质量相等的两种燃料，同时点燃，给两杯相同的水加热。等燃料完全燃尽后，比较两杯水升高的温度。数据自动记录。</p>
+          <div data-widget="fuel-3d"></div>
+        </div>
+      </div>
+
+      <div class="grid-2 mb">
+        <div class="tip tip-exam" style="margin:0"><b>实验方法：</b><b>控制变量法</b>——两种燃料的质量相等，两杯水的质量和初温相等，装置相同；<b>转换法</b>——用水<b>升高的温度</b>反映燃料放出热量的多少。</div>
+        <div class="tip tip-good" style="margin:0"><b>结论：</b>质量相等的不同燃料，完全燃烧放出的热量一般<b>不同</b>。为了描述燃料的这种特性，物理学中引入了“热值”。</div>
+      </div>
+      <div class="concept"><h3><span class="def">热值</span></h3><p>某种燃料<b>完全燃烧</b>放出的热量与其<b>质量</b>之比，叫做这种燃料的热值，用符号 <b>q</b> 表示。热值在数值上等于 1 kg 某种燃料完全燃烧放出的热量。</p>
+        <div class="formula"><span class="big">q</span> = <span class="frac"><span>Q放</span><span>m</span></span>　　单位：J/kg（气体燃料常用 J/m³）</div>
+        <div class="formula">固体、液体燃料：<span class="big">Q放 = mq</span>　　气体燃料：<span class="big">Q放 = Vq</span></div>
+        <p style="margin:0">酒精的热值是 3.0×10⁷ J/kg，它表示：<b>1 kg 酒精完全燃烧放出的热量是 3.0×10⁷ J</b>。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>互动：一些燃料的热值</h3><span class="badge o">互动</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">点击一种燃料，看它的热值表示什么；拖动滑块计算完全燃烧放出的热量，比较烧开一壶水需要多少燃料。点上面的按钮看看表中的规律。</p>
+          <div data-widget="fuel-table"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-good"><b>热值是燃料本身的一种特性。</b>它只与燃料的<b>种类</b>有关，与燃料的质量、体积、是否完全燃烧、放出热量的多少都无关。热值反映了燃料燃烧时把化学能转化为内能的本领大小。</div>
+      <div class="example">
+        <b>跟进训练</b>　关于燃料的热值，下列说法中正确的是（　　）<br>A．燃料的热值与燃料的燃烧情况有关<br>B．容易燃烧的燃料，热值一定大<br>C．煤的热值比干木柴的大，煤燃烧放出的热量一定比干木柴放出的热量多<br>D．0.5 kg 煤油和 1.5 kg 煤油的热值一样大
+        <details class="reveal"><summary>看解答</summary><p><b>D</b>。热值只与燃料的种类有关，与燃烧情况、是否容易燃烧、质量都无关。燃料燃烧放出热量的多少，还跟燃料的质量、是否完全燃烧有关，所以 C 的说法不对。</p></details>
+      </div>
+      <div class="tip tip-warn"><b>易错：</b>热值定义中的“<b>完全燃烧</b>”不能丢；燃料没有完全燃烧时，放出的热量小于 mq，但它的热值不变。运载火箭用液态氢作燃料，是因为氢的<b>热值大</b>（不是比热容大）。</div>
+    </section>
+
+    <!-- ========== 二、热机的效率 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no">知识点 2</span><h2>热机的效率</h2></div>
+      <p>用煤气灶烧水时，煤气燃烧放出的热量能被水全部吸收吗？热机工作时，燃料燃烧放出的能量都用来做有用功了吗？</p>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>互动：热机的能量流向</h3><span class="badge o">互动</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">看燃料完全燃烧放出的能量都到哪里去了；点“怎样提高效率”的按钮，看效率怎样变化。下面还有一道识图计算题。</p>
+          <div data-widget="energy-flow"></div>
+        </div>
+      </div>
+
+      <div class="concept"><h3><span class="def">热机的效率</span></h3><p>热机工作时，用来做<b>有用功</b>的那部分能量，与燃料<b>完全燃烧放出的能量</b>之比，叫做热机的效率。</p>
+        <div class="formula"><span class="big">η</span> = <span class="frac"><span>W有</span><span>Q放</span></span> × 100%　　炉子（燃气灶、热水器）的效率：<span class="big">η</span> = <span class="frac"><span>Q吸</span><span>Q放</span></span> × 100%</div>
+        <p style="margin:0">热机的效率是热机性能的重要指标。蒸汽机的效率只有 6%～15%，汽油机为 20%～30%，柴油机为 30%～45%。</p></div>
+      <div class="grid-2 mb">
+        <div class="tip tip-warn" style="margin:0"><b>热机的效率不可能达到 100%：</b>燃料不可能完全燃烧；废气带走大量的能量（<b>最多</b>）；机器本身散热；克服机械部件间的摩擦要消耗能量。</div>
+        <div class="tip tip-good" style="margin:0"><b>提高热机效率的途径：</b>① 使燃料充分燃烧；② 尽量减少各种热损失，设法<b>利用废气的能量</b>；③ 保持良好的润滑，减小摩擦。提高热机效率可以节约能源、减少污染。</div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>分一分：能提高热机的效率吗</h3><span class="badge o">练一练</span><span class="badge p">易错</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">判断每一种做法能不能提高热机的效率。</p>
+          <div data-widget="eff-sort"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-exam"><b>效率、功率、热值的区别：</b>效率表示燃料放出的能量中被有效利用的比例；功率表示做功的<b>快慢</b>；热值表示燃料放热的本领。功率大或热值大，效率不一定高。</div>
+    </section>
+
+    <!-- ========== 三、效率的计算 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no exp">知识点 3</span><h2>效率的计算</h2></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>实验：测量燃气灶烧水的效率</h3><span class="badge o">实验</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">读燃气表和温度计的示数，按步骤算出水吸收的热量、天然气完全燃烧放出的热量和燃气灶烧水的效率。每一步答对了才能进入下一步。</p>
+          <div data-widget="stove-eff"></div>
+        </div>
+      </div>
+
+      <div class="example">
+        <b>例题 1</b>　一辆汽车的发动机消耗柴油 40 kg，做有用功 4.3×10⁸ J。这辆汽车发动机的效率是多少？（柴油的热值 q = 4.3×10⁷ J/kg）
+        <details class="reveal"><summary>看解答</summary><p>柴油完全燃烧放出的热量：Q放 = mq = 40 kg × 4.3×10⁷ J/kg = 1.72×10⁹ J<br>发动机的效率：η = <span class="frac"><span>W有</span><span>Q放</span></span> × 100% = <span class="frac"><span>4.3×10⁸ J</span><span>1.72×10⁹ J</span></span> × 100% = 25%</p></details>
+      </div>
+      <div class="example">
+        <b>例题 2</b>　用天然气灶将 2 kg、20 ℃ 的水加热到 100 ℃，消耗了 0.02 m³ 的天然气。天然气灶烧水的效率是多少？［c水 = 4.2×10³ J/(kg·℃)，天然气的热值取 8.0×10⁷ J/m³］
+        <details class="reveal"><summary>看解答</summary><p>水吸收的热量：Q吸 = cm(t − t₀) = 4.2×10³ J/(kg·℃) × 2 kg × (100 ℃ − 20 ℃) = 6.72×10⁵ J<br>天然气完全燃烧放出的热量：Q放 = Vq = 0.02 m³ × 8.0×10⁷ J/m³ = 1.6×10⁶ J<br>效率：η = <span class="frac"><span>Q吸</span><span>Q放</span></span> × 100% = <span class="frac"><span>6.72×10⁵ J</span><span>1.6×10⁶ J</span></span> × 100% = 42%</p></details>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：热值和效率的计算</h3><span class="badge o">随机出题</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">Q放 = mq、Q放 = Vq、燃气灶和热水器的效率、发动机和汽车的效率……题目随机生成，可以一直练下去。</p>
+          <div data-widget="eff-quiz"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-exam"><b>解题步骤：</b>① 找出有用的能量（W有 = Fs、Q吸 = cmΔt）；② 求燃料完全燃烧放出的总能量（Q放 = mq 或 Vq）；③ η = 有用的能量 ÷ 总能量。注意单位统一：质量用 kg，体积用 m³，路程用 m。</div>
+    </section>
+
+    <!-- ========== 四、热机与环境保护 ========== -->
+    <section class="kp" id="k4">
+      <div class="kp-title"><span class="kp-no">知识点 4</span><h2>热机与环境保护</h2></div>
+      <p>热机为人类的发展做出了重大贡献，但燃料燃烧和热机工作也给环境带来了污染。</p>
+      <div class="grid-3 mb">
+        <div class="card"><h4>💨 大气污染</h4><p class="small muted" style="margin:0">燃料燃烧排出的废气中有二氧化硫、氮氧化物、一氧化碳和烟尘，会形成酸雨、雾霾；大量排放的二氧化碳加剧了温室效应。</p></div>
+        <div class="card"><h4>🔊 噪声污染</h4><p class="small muted" style="margin:0">汽车、飞机的发动机工作时发出很大的噪声，影响人们的生活和健康。</p></div>
+        <div class="card"><h4>🌱 保护环境</h4><p class="small muted" style="margin:0">改进燃烧设备、提高热机效率；加装尾气净化装置和消声器；集中供热；推广天然气等清洁燃料和新能源汽车。</p></div>
+      </div>
+      <div class="tip tip-good"><b>提高热机的效率</b>，就是用同样多的燃料做更多的有用功——既能<b>节约能源</b>，又能<b>减少污染</b>。</div>
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>燃料的热值</h4><ul><li>q = Q放/m，单位 J/kg（气体 J/m³）</li><li>只与燃料的种类有关</li><li>Q放 = mq 或 Q放 = Vq</li></ul></div>
+        <div class="summary-item"><h4>热机的效率</h4><ul><li>η = W有/Q放 × 100%</li><li>废气带走的能量最多</li><li>热机的效率总小于 100%</li></ul></div>
+        <div class="summary-item"><h4>提高效率</h4><ul><li>使燃料充分燃烧</li><li>减少热损失，利用废气的能量</li><li>保持良好的润滑，减小摩擦</li></ul></div>
+        <div class="summary-item"><h4>环境保护</h4><ul><li>废气污染大气，发动机产生噪声</li><li>提高效率可以节约能源、减少污染</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s1-heat-engine.html"><small>← 上一节</small><b>第1节 热机</b></a>
+      <a class="next" href="s3-conservation.html"><small>下一节 →</small><b>第3节 能量的转化和守恒</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版九年级物理全一册第十四章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '关于燃料的热值，下列说法中正确的是（　）', cols: 1, options: ['燃料燃烧放出的热量越多，热值越大', '燃料燃烧越充分，热值越大', '容易燃烧的燃料，热值一定大', '燃料的热值与燃料的质量无关'], answer: 3, explain: '热值只与燃料的种类有关，与质量、燃烧情况、放出热量的多少都无关。' },
+    { type: 'fill', q: '完全燃烧 0.5 kg 酒精（q = 3.0×10⁷ J/kg）放出的热量是 ______ ×10⁷ J。', answer: 1.5, tol: 0.001, unit: '×10⁷ J', explain: 'Q放 = mq = 0.5 kg × 3.0×10⁷ J/kg = 1.5×10⁷ J。' },
+    { type: 'choice', q: '运载火箭用液态氢作燃料，主要是因为氢（　）', options: ['热值大', '密度大', '沸点低', '比热容大'], answer: 0, explain: '氢的热值大，完全燃烧相同质量的燃料，氢放出的热量最多。' },
+    { type: 'judge', q: '只要技术足够先进，热机的效率可以达到 100%。', answer: false, explain: '燃料不能完全燃烧，废气带走能量，机器散热，克服摩擦也要消耗能量，热机的效率总小于 100%。' },
+    { type: 'choice', q: '在热机的各种能量损失中，带走能量最多的是（　）', options: ['机械散热', '燃料没有完全燃烧', '废气', '克服摩擦'], answer: 2, explain: '废气带走的能量最多，设法利用废气的能量是提高燃料利用率的重要措施。' },
+    { type: 'choice', q: '下列措施中，不能提高热机效率的是（　）', options: ['减少热量的损失', '使燃料充分燃烧', '保持良好的润滑', '换用热值更大的燃料'], answer: 3, explain: '热值大只说明相同质量的燃料完全燃烧放出的热量多，被有效利用的比例不一定提高。' },
+    { type: 'fill', q: '某柴油机消耗 2 kg 柴油（q = 4.3×10⁷ J/kg），做了 2.58×10⁷ J 的有用功，这台柴油机的效率是 ______ %。', answer: 30, tol: 0.1, unit: '%', explain: 'Q放 = mq = 2 kg × 4.3×10⁷ J/kg = 8.6×10⁷ J，η = W有/Q放 = 2.58×10⁷ J ÷ 8.6×10⁷ J = 30%。' },
+    { type: 'fill', q: '用天然气灶将 2 kg、20 ℃ 的水加热到 70 ℃，消耗了 0.015 m³ 的天然气（q = 8.0×10⁷ J/m³）。天然气灶烧水的效率是 ______ %。［c水 = 4.2×10³ J/(kg·℃)］', answer: 35, tol: 0.1, unit: '%', explain: 'Q吸 = cm(t − t₀) = 4.2×10³ × 2 × 50 J = 4.2×10⁵ J，Q放 = Vq = 0.015 × 8.0×10⁷ J = 1.2×10⁶ J，η = Q吸/Q放 = 35%。' },
+    { type: 'judge', q: '热机的功率越大，它的效率就越高。', answer: false, explain: '功率表示做功的快慢，效率表示能量被有效利用的比例，两者没有必然联系。' },
+    { type: 'choice', q: '甲热机的效率比乙热机的效率高，这说明（　）', cols: 1, options: ['甲消耗的燃料比乙少', '做相同的有用功，甲消耗的燃料比乙少', '甲做功比乙快', '甲做的有用功比乙多'], answer: 1, explain: '效率高说明燃料放出的能量中用来做有用功的比例大，做相同的有用功时消耗的燃料少。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/vendor/three.min.js"></script>
+<script src="../assets/vendor/OrbitControls.js"></script>
+<script src="../assets/js/widgets/heat.js"></script>
+<script src="../assets/js/widgets/energy.js"></script>
+<script src="../assets/js/widgets/thermal.js"></script>
+<script src="../assets/js/widgets/fuel.js"></script>
+<script src="../assets/js/widgets/fuel3d.js"></script>
+</body>
+</html>

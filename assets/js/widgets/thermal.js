@@ -12,6 +12,7 @@
  * PS.th.wave(ctx, x, y, w, t, o)     热辐射的波纹 / 热气
  * PS.th.c3(c)                比热容的教材写法（0.39×10³）
  * PS.th.three(view, o)       three.js 场景的公共部分（渲染器、摄像机、OrbitControls、灯光、标签 label / place、摄像机缓动 fly、ResizeObserver）
+ * PS.FUEL / PS.FUEL_ORDER    教材“一些燃料的热值”表（第14章）：{ 键: { n 名称, q 热值, gas 气体（单位 J/m³）, approx 约, range 范围文字, col 颜色, ico 图标 } }
  * 组件 heat-quiz             Q = cmΔt、热平衡的计算随机练习（opts.set = 'basic' 只出前 6 类）
  * 共用样式 .th-msg（.ok / .bad / .info）、.th-pair、.th-chips、.th-read、.th-q、.th-ans
  * 依赖 core.js、heat.js（温度计、烧杯、酒精灯、温度—时间图像）、energy.js（PS.EC、PS.en.bars / stage / parse / txt）
@@ -40,6 +41,24 @@
     hg: { n: '水银', c: 0.14e3, col: '#adb5bd', s: '液' },
   };
   PS.CAP_ORDER = ['water', 'alcohol', 'kerosene', 'ice', 'oil', 'castor', 'sand', 'al', 'soil', 'iron', 'cu', 'hg'];
+
+  /* 一些燃料的热值 q（人教版九年级教材表）：固体、液体 J/kg，气体 J/m³ */
+  PS.FUEL = {
+    wood: { n: '干木柴', q: 1.2e7, approx: true, col: '#b08050', ico: '🌲' },
+    bitum: { n: '烟煤', q: 2.9e7, approx: true, col: '#495057', ico: '⚫' },
+    anthra: { n: '无烟煤', q: 3.4e7, approx: true, col: '#343a40', ico: '⚫' },
+    coke: { n: '焦炭', q: 3.0e7, col: '#5c5f66', ico: '⚫' },
+    charcoal: { n: '木炭', q: 3.4e7, col: '#3d3d3d', ico: '⚫' },
+    alcohol: { n: '酒精', q: 3.0e7, col: '#74c0fc', ico: '🍶' },
+    diesel: { n: '柴油', q: 4.3e7, col: '#e9b949', ico: '🛢️' },
+    kerosene: { n: '煤油', q: 4.6e7, col: '#ffd43b', ico: '🛢️' },
+    petrol: { n: '汽油', q: 4.6e7, col: '#ff922b', ico: '⛽' },
+    h2: { n: '氢', q: 1.4e8, col: '#4dabf7', ico: '🚀' },
+    coalgas: { n: '煤气', q: 3.9e7, gas: true, approx: true, col: '#91a7ff', ico: '🔥' },
+    biogas: { n: '沼气', q: 1.9e7, gas: true, approx: true, col: '#8ce99a', ico: '🔥' },
+    natgas: { n: '天然气', q: 8.0e7, gas: true, approx: true, range: '(7.1～8.8)×10⁷', col: '#748ffc', ico: '🔥' },
+  };
+  PS.FUEL_ORDER = ['wood', 'bitum', 'anthra', 'coke', 'charcoal', 'alcohol', 'diesel', 'kerosene', 'petrol', 'h2', 'coalgas', 'biogas', 'natgas'];
 
   const TH = (PS.th = {});
   TH.parse = (s) => PS.en.parse(String(s).replace(/，/g, ''));
