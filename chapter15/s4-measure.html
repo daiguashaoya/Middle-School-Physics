@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第4节 电流的测量 · 看得见的物理</title>
+<meta name="description" content="九年级物理第十五章第4节：电流的强弱与单位、常见的电流、认识电流表、电流表读数练习、电流表的使用（接反、并联、超量程、试触）、用电流表测电流。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="15">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第15章 电流和电路</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、电流的强弱</a>
+    <a href="#k2">二、认识电流表</a>
+    <a href="#k3">三、电流表的使用</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#ammeter">🔬 实验：练习使用电流表</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第15章 电流和电路</a> › 第4节</div>
+      <h1>电流的测量</h1>
+      <p>同一个灯泡，有时亮、有时暗，说明通过它的电流有强有弱。电流的大小怎样表示？怎样用电流表测量电流？</p>
+      <div class="hero-tags"><span>1 课时</span><span>5 个互动演示</span><span>1 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>知道电流有强弱，知道电流的单位及换算</li><li>认识电流表，会正确读出电流表的示数</li><li>会正确使用电流表测量电流</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>电流表的读数</li><li>电流表的使用规则</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>把电流表正确连入电路</li><li>选择合适的量程</li></ul></div>
+    </div>
+
+    <!-- ========== 一、电流的强弱 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>电流的强弱</h2></div>
+      <div class="concept"><h3><span class="def">电流</span>（<span class="var">I</span>）</h3><p style="margin:0">电流有强弱之分，用字母 <span class="var">I</span> 表示。电流的单位是<b>安培</b>，简称安，符号 <b>A</b>。常用的单位还有毫安（mA）和微安（μA）。</p>
+        <div class="formula">1 A = 10³ mA = 10⁶ μA</div>
+        <p class="small muted" style="margin:6px 0 0">拓展：电流的大小等于 1 s 内通过导体横截面的电荷量，即 <span class="var">I</span> = <span class="frac"><span>Q</span><span>t</span></span>。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：电流的强弱与常见的电流</h3><span class="badge o">动画</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">“灯泡的亮暗”：换用不同节数的干电池，比较灯泡的亮暗；“常见的电流”：点一点图标，看看生活中各种电流的大小。</p>
+          <div data-widget="current-strength"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-good"><b>转换法：</b>电流看不见、摸不着，但它有各种<b>效应</b>：热效应（灯丝发热发光）、磁效应（通电线圈有磁性）、化学效应等。我们通过电流的效应来认识电流的强弱，这是<b>转换法</b>。</div>
+    </section>
+
+    <!-- ========== 二、认识电流表 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no">知识点 2</span><h2>认识电流表</h2></div>
+      <div class="concept"><h3><span class="def">电流表</span></h3><p style="margin:0">测量电流的仪表叫电流表，在电路图中的符号是 Ⓐ。实验室常用的电流表有<b>三个接线柱</b>：一个公共的“−”接线柱和“0.6”“3”两个“+”接线柱，有<b>两个量程</b>：</p></div>
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th>使用的接线柱</th><th>量程</th><th>读哪一排刻度</th><th>分度值（每小格）</th></tr></thead>
+          <tbody>
+            <tr><td>“−”和“0.6”</td><td>0~0.6 A</td><td>下排（0、0.2、0.4、0.6）</td><td><b>0.02 A</b></td></tr>
+            <tr><td>“−”和“3”</td><td>0~3 A</td><td>上排（0、1、2、3）</td><td><b>0.1 A</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：电流表的读数</h3><span class="badge o">随机出题</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">看清接的是哪两个接线柱，读出电流表的示数。读错了会提示你错在哪里（看错量程、差了一格……）。</p>
+          <div data-widget="ammeter-read"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-exam"><b>读数方法：</b>一看<b>量程</b>，二看<b>分度值</b>，三看指针偏过了几大格、几小格。电流表读数<b>不需要估读</b>，指针离哪条刻度线近就按哪条读。同一指针位置，大量程的读数是小量程的 <b>5 倍</b>。</div>
+    </section>
+
+    <!-- ========== 三、电流表的使用 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no exp">知识点 3</span><h2>电流表的使用</h2></div>
+      <div class="concept"><h3>使用电流表的规则</h3>
+        <ol style="margin:0;padding-left:1.4em">
+          <li>电流表必须与被测用电器<b>串联</b>；</li>
+          <li>电流必须从“<b>+</b>”接线柱流入，从“<b>−</b>”接线柱流出；</li>
+          <li>被测电流<b>不能超过</b>电流表的量程；</li>
+          <li><b>绝对不允许</b>不经过用电器而把电流表直接连到电源的两极上。</li>
+        </ol></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>实验：电流表的使用</h3><span class="badge o">实验</span><span class="badge p">难点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">换几种接法试一试：正确串联、接反了、与灯泡并联、直接接在电源两极；把灯泡换成电流较大的小电动机，比较两个量程。不知道电流大小时先用大量程“试触”。</p>
+          <div data-widget="ammeter-use"></div>
+        </div>
+      </div>
+
+      <div class="grid-2 mb">
+        <div class="tip tip-warn" style="margin:0"><b>错误接法的后果：</b>接反了 → 指针<b>反向偏转</b>，可能打弯指针；超过量程 → 指针<b>打到头</b>；与用电器并联或直接接在电源两极 → 电流表相当于导线，造成<b>短路</b>，烧坏电流表和电源。</div>
+        <div class="tip tip-good" style="margin:0"><b>选择量程：</b>先估计被测电流的大小；不能估计时，先用<b>大量程</b>迅速<b>试触</b>：若示数小于 0.6 A，改用 0~0.6 A 量程。能用小量程时尽量用<b>小量程</b>——指针偏转角度大，读数更精确。</div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>电路搭建台：用电流表测电流</h3><span class="badge o">动手</span><span class="badge t">模拟</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">闭合开关，读出电流表的示数（右边有放大的表盘）。试试把电流表的两端调换、把电流表接到灯泡两端，或者在“示例”中选“并联电路中的电流”。</p>
+          <div data-widget="circuit-builder" data-opts='{"preset":"ammeter","hideNum":true}'></div>
+        </div>
+      </div>
+
+      <div class="example">
+        <b>例题</b>　某同学连接的电路中，电流从电池正极出发，先经过电流表，再分成两路分别经过 L1 和 L2，汇合后回到负极；开关 S2 与 L2 串联。电流表测量的是哪部分电路的电流？S2 控制哪盏灯？
+        <details class="reveal"><summary>看解答</summary><p>电流表在分支之前，测的是<b>干路</b>的电流；S2 与 L2 在同一条支路上，只控制 <b>L2</b>。判断电流表测谁的电流，就看它与谁<b>串联</b>。</p></details>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：电流的单位换算与读数</h3><span class="badge o">随机出题</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">单位换算、看表盘计算、找出看错量程的数据……题目随机生成。</p>
+          <div data-widget="current-quiz" data-opts='{"set":"measure"}'></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>电流</h4><ul><li>用 I 表示，单位安培（A）</li><li>1 A = 10³ mA = 10⁶ μA</li><li>通过电流的效应认识电流（转换法）</li></ul></div>
+        <div class="summary-item"><h4>电流表</h4><ul><li>三个接线柱，两个量程</li><li>0~0.6 A：分度值 0.02 A</li><li>0~3 A：分度值 0.1 A，读数不估读</li></ul></div>
+        <div class="summary-item"><h4>使用规则</h4><ul><li>与被测用电器串联</li><li>电流从“+”流入、“−”流出</li><li>不超过量程；不能直接接在电源两极</li></ul></div>
+        <div class="summary-item"><h4>选量程</h4><ul><li>先估计；不能估计时用大量程试触</li><li>能用小量程就用小量程</li><li>同一位置：大量程读数是小量程的 5 倍</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s3-series-parallel.html"><small>← 上一节</small><b>第3节 串联和并联</b></a>
+      <a class="next" href="s5-current-law.html"><small>下一节 →</small><b>第5节 串、并联电路中电流的规律</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版九年级物理全一册第十五章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '0.25 A = （　）', options: ['2.5 mA', '25 mA', '250 mA', '2 500 mA'], answer: 2, explain: '1 A = 10³ mA，0.25 A = 250 mA。' },
+    { type: 'choice', q: '家用电冰箱正常工作时的电流约为（　）', options: ['1 mA', '1 A', '10 A', '100 A'], answer: 1, explain: '家用电冰箱的电流约为 1.1～1.7 A。' },
+    { type: 'choice', q: '关于电流表的使用，下列说法中正确的是（　）', cols: 1, options: ['电流要从“−”接线柱流入', '被测电流不能超过电流表的量程', '可以把电流表直接接在电源的两极上', '电流表要与被测用电器并联'], answer: 1, explain: '电流表要与被测用电器串联，电流从“+”接线柱流入；绝对不允许直接接在电源两极上。' },
+    { type: 'choice', q: '电流表接“−”和“0.6”两个接线柱，指针偏过 2 个大格又 6 个小格，示数是（　）', options: ['0.46 A', '0.52 A', '2.6 A', '2.60 A'], answer: 1, explain: '0~0.6 A 量程每大格 0.2 A、每小格 0.02 A：2 × 0.2 A + 6 × 0.02 A = 0.52 A。' },
+    { type: 'judge', q: '电流表读数时要估读到分度值的下一位。', answer: false, explain: '电流表读数不需要估读，指针离哪条刻度线近就按哪条读。' },
+    { type: 'choice', q: '不知道被测电流的大小时，应该（　）', options: ['不用试触，直接读数', '先用小量程试触', '先用大量程试触', '直接用小量程测量'], answer: 2, explain: '先用大量程试触，如果示数小于小量程的最大值，再改用小量程。' },
+    { type: 'choice', q: '闭合开关后，电流表的指针向零刻度线的左侧偏转，原因是（　）', options: ['电流表与用电器并联了', '量程选大了', '量程选小了', '正、负接线柱接反了'], answer: 3, explain: '电流从“−”接线柱流入、从“+”接线柱流出时，指针会反向偏转。' },
+    { type: 'fill', q: '电流表 0~3 A 量程的分度值是 ______ A。', answer: 0.1, tol: 0.0001, unit: 'A', explain: '0~3 A 量程有 30 小格，每小格 0.1 A。' },
+    { type: 'choice', q: '用电流表测电流时，指针偏转的角度很小，说明（　）', cols: 1, options: ['量程选大了，应换用小量程', '量程选小了，应换用大量程', '正、负接线柱接反了', '电流表坏了'], answer: 0, explain: '指针偏转角度很小，说明量程选大了，读数不精确，应换用小量程。' },
+    { type: 'judge', q: '电流表的电阻很小，如果把它与用电器并联，会把用电器短路。', answer: true, explain: '电流表相当于一根导线，与用电器并联时用电器被短路，电流很大，会烧坏电流表。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/widgets/energy.js"></script>
+<script src="../assets/js/widgets/circuit.js"></script>
+<script src="../assets/js/widgets/ammeter.js"></script>
+<script src="../assets/js/widgets/builder.js"></script>
+</body>
+</html>

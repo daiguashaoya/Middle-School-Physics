@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第2节 电流和电路 · 看得见的物理</title>
+<meta name="description" content="九年级物理第十五章第2节：电流的形成与方向、发光二极管、电路的组成、元件符号、看实物图选电路图、按电路图连接实物、通路断路短路、电路状态判断、电路搭建台。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="15">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第15章 电流和电路</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、电流</a>
+    <a href="#k2">二、电路的构成</a>
+    <a href="#k3">三、电路图</a>
+    <a href="#k4">四、通路、断路、短路</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#circuit-basic">🔬 实验：连接简单电路</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第15章 电流和电路</a> › 第2节</div>
+      <h1>电流和电路</h1>
+      <p>手电筒、电子门铃、玩具车……它们里面都有一个电路。电流是怎样形成的？一个完整的电路由哪些部分组成？怎样用电路图把电路表示出来？</p>
+      <div class="hero-tags"><span>2 课时</span><span>7 个互动演示</span><span>1 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>知道电流的形成和电流方向的规定</li><li>知道电路的组成及各部分的作用，从能量转化的角度认识电源和用电器</li><li>认识常用元件的符号，会画简单的电路图，会按电路图连接实物</li><li>知道通路、断路和短路，知道短路的危害</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>电流的形成和方向</li><li>电路的组成</li><li>电路的三种状态</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>实物图与电路图的相互转换</li><li>会连接简单的实物电路</li></ul></div>
+    </div>
+
+    <!-- ========== 一、电流 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>电流</h2></div>
+      <p>用导线把电池、开关和小灯泡连接起来，闭合开关，小灯泡就亮了——电路中有了<b>电流</b>。电流是怎样形成的？它朝哪个方向流？</p>
+      <div class="concept"><h3><span class="def">电流</span>的形成和方向</h3><p style="margin:0">电荷的<b>定向移动</b>形成电流。物理学中规定：<b>正电荷定向移动的方向为电流的方向</b>。按照这个规定，在电源外部，电流从电源的<b>正极</b>经过用电器流向<b>负极</b>。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：电流的形成与方向</h3><span class="badge o">动画</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">“导线中的电荷”：闭合开关，看导线中的自由电子怎样运动，比较电子移动的方向和电流的方向。“发光二极管”：把 LED 反过来接，看看它还亮不亮。</p>
+          <div data-widget="current-flow"></div>
+        </div>
+      </div>
+
+      <div class="grid-2 mb">
+        <div class="tip tip-warn" style="margin:0"><b>易错：</b>电荷<b>移动</b>不一定形成电流，必须是<b>定向移动</b>。金属导体中能定向移动的只有带负电的<b>自由电子</b>，所以金属中<b>电流的方向与自由电子定向移动的方向相反</b>。</div>
+        <div class="tip tip-good" style="margin:0"><b>得到持续电流的条件：</b>① 电路中有<b>电源</b>；② 电路是<b>闭合</b>的（通路）。两个条件缺一不可。</div>
+      </div>
+      <div class="example">
+        <b>例题</b>　电视机显像管尾部的热灯丝发射出电子，高速撞击在荧光屏上使屏幕发光。显像管内电流的方向是从灯丝到荧光屏，还是从荧光屏到灯丝？
+        <details class="reveal"><summary>看解答</summary><p>电子带负电，电流方向与电子定向移动的方向相反。电子从灯丝飞向荧光屏，所以电流方向是<b>从荧光屏到灯丝</b>。</p></details>
+      </div>
+    </section>
+
+    <!-- ========== 二、电路的构成 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no exp">知识点 2</span><h2>电路的构成</h2></div>
+      <div class="concept"><h3><span class="def">电路</span></h3><p style="margin:0">用导线把<b>电源</b>、<b>用电器</b>、<b>开关</b>连接起来组成的电流的路径，叫做电路。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>实验：电路的组成</h3><span class="badge o">实验</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">点画面中的电池、开关、用电器和导线，看看它们的作用；换成小电动机、蜂鸣器试试；再拿走一样东西，看看会怎样。</p>
+          <div data-widget="circuit-parts"></div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th>组成部分</th><th>作用</th><th>能量转化（举例）</th></tr></thead>
+          <tbody>
+            <tr><td>电源</td><td><b>提供</b>电能</td><td>干电池：化学能 → 电能；发电机：机械能 → 电能</td></tr>
+            <tr><td>用电器</td><td><b>消耗</b>电能</td><td>灯泡：电能 → 光能、内能；电动机：电能 → 机械能；蜂鸣器：电能 → 声能</td></tr>
+            <tr><td>开关</td><td><b>控制</b>电路的通断</td><td>—</td></tr>
+            <tr><td>导线</td><td><b>输送</b>电能</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip tip-warn"><b>注意：</b>任何情况下都<b>不能</b>用导线把电池的两极直接连接起来，否则会损坏电池。</div>
+    </section>
+
+    <!-- ========== 三、电路图 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no">知识点 3</span><h2>电路图</h2></div>
+      <div class="concept"><h3><span class="def">电路图</span></h3><p style="margin:0">用统一规定的<b>符号</b>表示电路连接情况的图，叫做电路图。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>认一认：常用元件及其符号</h3><span class="badge o">练一练</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">“认一认”：常用元件的符号；“考一考”：看符号说出元件的名称。</p>
+          <div data-widget="symbol-match"></div>
+        </div>
+      </div>
+
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：看实物图，选电路图</h3><span class="badge o">练一练</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">从电源正极出发，顺着导线把实物电路“走”一遍，再从右边选出与它对应的电路图。点“下一题”换一个电路。</p>
+          <div data-widget="real-diagram"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-exam"><b>画电路图的规范：</b>① 元件要用<b>统一规定的符号</b>；② 从电源正极出发，<b>按电流的路径</b>依次画出各元件，顺序与实物图<b>一致</b>；③ 导线要<b>横平竖直</b>，画成方框形；④ 元件符号<b>不要画在拐角处</b>；⑤ 导线的交叉连接处要画<b>黑点</b>。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动手：按电路图连接实物</h3><span class="badge o">练一练</span><span class="badge p">难点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">先点一个接线柱，再点另一个接线柱，连上一根导线（点导线可以拆掉）。连好后点“检查连接”，也可以点开关试一试。</p>
+          <div data-widget="real-diagram" data-opts='{"mode":"wire"}'></div>
+        </div>
+      </div>
+
+      <div class="tip tip-good"><b>连接实物电路的要领：</b>连接时开关要<b>断开</b>；从电源的正极出发，按电路图<b>逐个</b>连接元件，最后回到电源负极；有分支的电路，先连好一条完整的路径，再把另一条支路并接在分支点和汇合点上。</div>
+    </section>
+
+    <!-- ========== 四、通路、断路、短路 ========== -->
+    <section class="kp" id="k4">
+      <div class="kp-title"><span class="kp-no exp">知识点 4</span><h2>通路、断路、短路</h2></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>实验：电路的三种状态</h3><span class="badge o">实验</span><span class="badge p">重点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">闭合开关，再试试拧下灯泡、让导线接头松开、用导线连接 L1 的两端、用导线直接连接电源两极，看看电路处于什么状态。</p>
+          <div data-widget="circuit-states"></div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th>状态</th><th>定义</th><th>特点</th></tr></thead>
+          <tbody>
+            <tr><td><b>通路</b></td><td>正常接通的电路</td><td>电路中有电流，用电器能够工作</td></tr>
+            <tr><td><b>断路</b>（开路）</td><td>电路中某处被切断</td><td>电路中没有电流，用电器不能工作</td></tr>
+            <tr><td><b>短路</b></td><td>导线<b>不经过用电器</b>直接跟电源两极连接</td><td>电流很大，可能烧坏电源，甚至引起火灾，<b>绝对不允许</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip tip-warn"><b>电源短路与局部短路：</b>导线直接连接电源两极是<b>电源短路</b>；导线（或闭合的开关）接在某个用电器的两端，这个用电器被<b>短路</b>（局部短路）——它几乎没有电流通过，不工作，<b>也不会损坏</b>；若电路中还有其他用电器，不会造成电源短路。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：判断电路的状态</h3><span class="badge o">随机出题</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">看电路图，判断电路处于什么状态。答完会显示电路中的电流。</p>
+          <div data-widget="state-judge"></div>
+        </div>
+      </div>
+
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>电路搭建台：自己连一连</h3><span class="badge o">动手</span><span class="badge t">模拟</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">在网格上放元件、画导线，闭合开关就能看到电流。示例中的电路 L2 被导线短路了——拆掉那根导线试试；也可以从“示例”中选别的电路，或者自己搭一个。</p>
+          <div data-widget="circuit-builder" data-opts='{"preset":"short","tools":["bat","bulb","sw","motor","led","bell"]}'></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>电流</h4><ul><li>电荷的定向移动形成电流</li><li>规定正电荷定向移动的方向为电流方向</li><li>电源外部：正极 → 用电器 → 负极</li></ul></div>
+        <div class="summary-item"><h4>电路的组成</h4><ul><li>电源：提供电能</li><li>用电器：消耗电能</li><li>开关：控制通断；导线：输送电能</li></ul></div>
+        <div class="summary-item"><h4>电路图</h4><ul><li>用规定的符号表示电路</li><li>横平竖直，元件不画在拐角处</li><li>与实物图一一对应</li></ul></div>
+        <div class="summary-item"><h4>三种状态</h4><ul><li>通路：有电流，用电器工作</li><li>断路：某处断开，没有电流</li><li>短路：电流很大，绝对不允许</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s1-charges.html"><small>← 上一节</small><b>第1节 两种电荷</b></a>
+      <a class="next" href="s3-series-parallel.html"><small>下一节 →</small><b>第3节 串联和并联</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版九年级物理全一册第十五章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '下列说法中正确的是（　）', cols: 1, options: ['正电荷定向移动的方向规定为电流的方向', '电路中有电源就一定有电流', '金属导体中电流的方向与自由电子定向移动的方向相同', '电荷的移动就形成电流'], answer: 0, explain: '电荷定向移动才形成电流；有电源而且电路闭合才有电流；金属中电流方向与自由电子定向移动的方向相反。' },
+    { type: 'choice', q: '电视机显像管尾部的热灯丝发射出电子，高速撞击荧光屏使屏幕发光。显像管内电流的方向是（　）', cols: 1, options: ['显像管中电流的方向不断改变', '从灯丝到荧光屏', '从荧光屏到灯丝', '显像管内是真空，无法通过电流'], answer: 2, explain: '电子带负电，电流方向与电子定向移动的方向相反，电子从灯丝飞向荧光屏，电流从荧光屏到灯丝。' },
+    { type: 'choice', q: '在电源外部，电流的方向是（　）', cols: 1, options: ['从电源负极经过用电器流向正极', '从用电器流向电源的两极', '没有确定的方向', '从电源正极经过用电器流向负极'], answer: 3, explain: '在电源外部，电流从电源正极经过用电器流向负极。' },
+    { type: 'choice', q: '干电池工作时，把（　）', options: ['机械能转化为电能', '化学能转化为电能', '电能转化为化学能', '电能转化为光能'], answer: 1, explain: '干电池是电源，工作时把化学能转化为电能。' },
+    { type: 'judge', q: '用电器是消耗电能的装置，小电动机工作时把电能转化为机械能。', answer: true, explain: '电动机消耗电能，把电能转化为机械能。' },
+    { type: 'choice', q: '发光二极管（LED）接入电路时，它较长的引脚应接在靠近电源（　）的一端。', options: ['正极', '负极', '任意一极', '开关'], answer: 0, explain: 'LED 具有单向导电性，电流只能从较长的引脚（正极）流入，从较短的引脚流出。' },
+    { type: 'choice', q: '下列电路状态中，可能会损坏电源的是（　）', options: ['开关断开', '通路', '断路', '电源短路'], answer: 3, explain: '电源短路时电流很大，会烧坏电源，甚至引起火灾。' },
+    { type: 'choice', q: '两盏灯 L1、L2 串联，闭合开关后，用一根导线接在 L1 的两端，会看到（　）', cols: 1, options: ['L1、L2 都亮，电源被烧坏', 'L1、L2 都不亮', 'L1 不亮，L2 亮', 'L1 亮，L2 不亮'], answer: 2, explain: 'L1 被短路，没有电流通过，不亮；电流经过导线和 L2 回到负极，L2 仍然发光（而且更亮）。' },
+    { type: 'judge', q: '电路中有持续电流时，电路一定是闭合的。', answer: true, explain: '得到持续电流的条件是有电源、电路闭合。' },
+    { type: 'choice', q: '画电路图时，下列做法正确的是（　）', cols: 1, options: ['元件符号可以画在导线的拐角处', '导线要横平竖直，元件的顺序与实物图一致', '可以用实物的简图代替元件符号', '元件的顺序可以与实物图不同'], answer: 1, explain: '电路图要用统一规定的符号，导线横平竖直，元件不画在拐角处，顺序与实物图一致。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/widgets/energy.js"></script>
+<script src="../assets/js/widgets/circuit.js"></script>
+<script src="../assets/js/widgets/circuitbasic.js"></script>
+<script src="../assets/js/widgets/builder.js"></script>
+</body>
+</html>

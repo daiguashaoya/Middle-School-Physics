@@ -660,6 +660,7 @@
     { no: 12, name: '简单机械', dir: 'chapter12', icon: '⚙️' },
     { no: 13, name: '内能', dir: 'chapter13', icon: '🔥' },
     { no: 14, name: '内能的利用', dir: 'chapter14', icon: '🚂' },
+    { no: 15, name: '电流和电路', dir: 'chapter15', icon: '🔋' },
   ];
 
   function enhanceNav() {
