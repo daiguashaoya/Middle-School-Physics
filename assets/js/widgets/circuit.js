@@ -4,15 +4,17 @@
  * PS.el.solve(net)           直流电路求解（节点电压法）。net.els = [{ id, t, a, b, ...参数 }]，a、b 为两端的节点名
  *                            元件 t：bat 电池组（a 为正极，E 电压、r 内阻）、bulb 灯泡（R、Pn 额定功率、open 拧下 / 烧断）、
  *                            sw 开关（on）、wire 导线（open 断了）、amm 电流表（a 为“+”接线柱，range 量程）、vm 电压表、
- *                            res 电阻、led 发光二极管（a 为正极，单向导电）、motor 电动机、bell 电铃
+ *                            res 电阻、rheo 变阻器（R）、led 发光二极管（a 为正极，单向导电）、motor 电动机、bell 电铃
  *                            返回 { V: { 节点: 电势 }, I: { id: 从 a 流向 b 的电流 }, P: { id: 功率 }, out: { 电池 id: 输出电流 }, short: [短路的电池 id] }
  * PS.el.circuit(spec)        固定布局的电路：spec.pos = { 节点: [x, y] }，spec.els 中导线可写 via 拐点；
  *                            返回 { solve(), step(dt), draw(ctx, o), path(e), deg }，draw 画导线、电流（小圆点）、元件符号、连接点
- * PS.el.sym(ctx, t, x1, y1, x2, y2, o)   在两点之间画元件符号（o.lit 灯泡亮度、o.on 开关闭合、o.n 电池节数、o.label、o.F）
+ * PS.el.sym(ctx, t, x1, y1, x2, y2, o)   在两点之间画元件符号（o.lit 灯泡亮度、o.on 开关闭合、o.n 电池节数、o.label、o.F；
+ *                            第16章加入 rheo 滑动变阻器（o.sp 滑片位置 0~1，o.tail 箭头尾部连到哪一端 ±1，0 不连）、rbox 电阻箱）
  * PS.el.chg(ctx, x, y, 正负, r)        电荷符号（圆圈里的 + 或 −）
  * PS.el.dots(ctx, pts, phase, o)        沿折线画移动的小圆点（o.electron 画成电子）；PS.el.speed(I) 小圆点的速度
  * PS.el.dial(ctx, x, y, w, o)           电流表 / 电压表的表盘（o.v 示数、o.range 量程、o.ranges [小, 大]、o.unit、o.terms 画接线柱、o.sel 选中的接线柱）
- * PS.el.reading(v, range)    按分度值取整的标准读数；PS.el.judge(x, v, range) 判断读数并给出提示
+ * PS.el.reading(v, range)    按分度值取整的标准读数；PS.el.judge(x, v, range, unit) 判断读数并给出提示（unit 为 'V' 时按电压表的 0~3 / 0~15 V 两个量程）
+ * PS.el.vread(net, sol, id)  电压表的示数（“+”接线柱 a 与“−”接线柱 b 的电势差）
  * PS.el.real                 实物图：battery 电池盒、bulb 灯泡和灯座、sw 单刀开关、wire 导线（返回路径点）、clip 鳄鱼夹
  * PS.el.three(view, o)       three.js 场景的公共部分（与第13章 PS.th.three 相同）
  * 共用样式 .el-msg（.ok / .bad / .info）、.el-pair、.el-chips、.el-read、.el-q、.el-ans、.el-tbl
@@ -43,6 +45,8 @@
     amm: { R: 0.02, range: 0.6 },
     vm: { R: 1e6, range: 3 },
     res: { R: 10 },
+    rheo: { R: 10 },
+    rbox: { R: 10 },
     led: { Vf: 1.8, Ron: 18 },
     motor: { R: 5 },
     bell: { R: 25 },
@@ -81,7 +85,7 @@
       case 'wire': return [p.open ? 0 : 1 / p.R, 0];
       case 'bulb': return [p.open ? 0 : 1 / p.R, 0];
       case 'led': return ledOn ? [1 / p.Ron, p.Vf] : [1e-9, 0];
-      default: return [p.open ? 0 : 1 / p.R, 0];
+      default: return [p.open ? 0 : 1 / Math.max(p.R, 1e-3), 0];
     }
   }
 
@@ -143,6 +147,9 @@
     });
     return find;
   };
+
+  /** 电压表的示数：网表中电压表 id 两端（a 为“+”接线柱）的电压 */
+  EL.vread = (net, sol, id) => { const e = net.els.find((x) => x.id === id); return e && sol ? (sol.V[e.a] || 0) - (sol.V[e.b] || 0) : 0; };
 
   /* 元件名称的首字母 → 类型（EL.layout 用） */
   EL.TYPE_OF = { S: 'sw', L: 'bulb', M: 'motor', A: 'amm', R: 'res', D: 'led', B: 'bell', V: 'vm', K: 'sw' };
@@ -314,6 +321,25 @@
         lead(w); ctx.fillStyle = '#fff'; ctx.fillRect(-w, -hh, 2 * w, 2 * hh); ctx.strokeRect(-w, -hh, 2 * w, 2 * hh);
         break;
       }
+      case 'rheo': {
+        /* 滑动变阻器：矩形 + 指向滑片的箭头，箭头尾部用导线连到一端（o.tail = 1 右端、−1 左端、0 不连） */
+        const w = s * 0.72, hh = s * 0.3, xp = -w + 2 * w * PS.clamp(o.sp == null ? 0.5 : o.sp, 0, 1), top = -hh - s * 0.62;
+        lead(w); ctx.fillStyle = '#fff'; ctx.fillRect(-w, -hh, 2 * w, 2 * hh); ctx.strokeRect(-w, -hh, 2 * w, 2 * hh);
+        const tail = o.tail == null ? 1 : o.tail;
+        ln(xp, top, xp, -hh - s * 0.08);
+        ctx.beginPath(); ctx.moveTo(xp, -hh - s * 0.02); ctx.lineTo(xp - s * 0.13, -hh - s * 0.24); ctx.lineTo(xp + s * 0.13, -hh - s * 0.24); ctx.closePath(); ctx.fillStyle = col; ctx.fill();
+        if (tail) { const xe = tail * (w + (L / 2 - w) * 0.5); ln(xp, top, xe, top); ln(xe, top, xe, 0); }
+        break;
+      }
+      case 'rbox': {
+        /* 电阻箱（可变电阻）：矩形 + 斜穿的箭头 */
+        const w = s * 0.72, hh = s * 0.3;
+        lead(w); ctx.fillStyle = '#fff'; ctx.fillRect(-w, -hh, 2 * w, 2 * hh); ctx.strokeRect(-w, -hh, 2 * w, 2 * hh);
+        const ax = -w * 0.85, ay = hh * 1.9, bx = w * 0.85, by = -hh * 1.9, an = Math.atan2(by - ay, bx - ax);
+        ln(ax, ay, bx, by);
+        ctx.beginPath(); ctx.moveTo(bx + Math.cos(an) * 2, by + Math.sin(an) * 2); ctx.lineTo(bx - Math.cos(an - 0.45) * s * 0.26, by - Math.sin(an - 0.45) * s * 0.26); ctx.lineTo(bx - Math.cos(an + 0.45) * s * 0.26, by - Math.sin(an + 0.45) * s * 0.26); ctx.closePath(); ctx.fillStyle = col; ctx.fill();
+        break;
+      }
       case 'led': {
         const w = s * 0.42;
         lead(w * 0.8);
@@ -394,7 +420,7 @@
         const pa = spec.pos[e.a], pb = spec.pos[e.b];
         let p1 = pa, p2 = pb;
         if (e.via && e.via.length) { p1 = e.via[e.via.length - 1]; }
-        EL.sym(ctx, e.t, p1[0], p1[1], p2[0], p2[1], { F: o.F, size: e.size || o.size, n: e.n, on: e.on, open: e.open, lit: e.t === 'bulb' || e.t === 'led' || e.t === 'bell' ? C.lit(e.id) * (e.t === 'led' ? 30 : 1) : 0, label: o.labels === false ? null : e.label, ls: e.ls, hl: o.hl && o.hl[e.id], lw: lw });
+        EL.sym(ctx, e.t, p1[0], p1[1], p2[0], p2[1], { F: o.F, size: e.size || o.size, n: e.n, on: e.on, open: e.open, sp: e.sp, tail: e.tail, color: e.color, lit: e.t === 'bulb' || e.t === 'led' || e.t === 'bell' ? C.lit(e.id) * (e.t === 'led' ? 30 : 1) : 0, label: o.labels === false ? null : e.label, ls: e.ls, hl: o.hl && o.hl[e.id], lw: lw });
       });
       Object.keys(C.deg).forEach((k) => { if (C.deg[k] >= 3 && spec.pos[k] && !(o.noDots && o.noDots[k])) EL.dot(ctx, spec.pos[k][0], spec.pos[k][1], o.jr || 5); });
       ctx.restore();
@@ -463,7 +489,7 @@
     const d = range / 30, ans = EL.reading(v, range), u = unit || 'A';
     if (isNaN(x)) return { ok: false, hint: '请输入一个数。' };
     if (Math.abs(x - ans) < d * 0.3) return { ok: true, hint: '✔ 读数正确：' + PS.fmt(ans, d < 0.05 ? 2 : 1) + ' ' + u + '。' };
-    const other = range === 3 || range === 15 ? range / 5 : range * 5;
+    const rg = u === 'V' ? [3, 15] : [0.6, 3], other = range === rg[0] ? rg[1] : rg[0];
     if (Math.abs(x - EL.reading(v * (other / range), other)) < (other / 30) * 0.3 || Math.abs(x - ans * (other / range)) < (other / 30) * 0.3) return { ok: false, hint: '看错了量程！现在接的是 0~' + range + ' ' + u + ' 量程，应该读' + (range < other ? '下' : '上') + '面一排刻度，每小格表示 ' + PS.round(d, 3) + ' ' + u + '。' };
     if (Math.abs(Math.abs(x - ans) - d) < d * 0.3) return { ok: false, hint: '差了一小格。这个量程每小格表示 ' + PS.round(d, 3) + ' ' + u + '，再数一数指针过了几小格。' };
     return { ok: false, hint: '不对。先看量程（每小格表示 ' + PS.round(d, 3) + ' ' + u + '），再数指针偏过了几大格、几小格。' };

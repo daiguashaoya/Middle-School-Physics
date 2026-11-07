@@ -1,6 +1,7 @@
 /* 第15章：电路搭建台 circuit-builder——在网格上放电池、灯泡、开关、电流表等元件，拖动画导线，闭合开关就能看到电流。
  * 元件占两格（中间的格点不连接），导线沿格点走，同一格点上的导线和元件端点连在一起（三条以上相连处画黑点）。
- * opts.preset 示例电路（simple / series / parallel / ammeter / parallelA / short / empty），opts.tools 可用的元件，opts.dial 显示电流表表盘，opts.lab 实验台模式。依赖 circuit.js */
+ * opts.preset 示例电路（simple / series / parallel / ammeter / parallelA / short / empty；第16章加入 voltmeter / seriesV / parallelV），
+ * opts.tools 可用的元件（第16章加入 vm 电压表、res 定值电阻；“示例”中只列出所用元件都在 tools 里的电路），opts.dial 显示电表表盘，opts.lab 实验台模式。依赖 circuit.js */
 (function () {
   'use strict';
   const { h } = PS;
@@ -11,7 +12,7 @@
   const EK = (p, q) => { const a = K(p), b = K(q); return a < b ? a + '|' + b : b + '|' + a; };
   const TYPES = {
     bat: { n: '电池', ico: '🔋', pre: '' }, bulb: { n: '灯泡', ico: '💡', pre: 'L' }, sw: { n: '开关', ico: '🔘', pre: 'S' },
-    amm: { n: '电流表', ico: 'Ⓐ', pre: 'A' }, motor: { n: '电动机', ico: '⚙️', pre: 'M' }, led: { n: '发光二极管', ico: '🔴', pre: 'D' }, bell: { n: '电铃', ico: '🔔', pre: '' },
+    amm: { n: '电流表', ico: 'Ⓐ', pre: 'A' }, vm: { n: '电压表', ico: 'Ⓥ', pre: 'V' }, res: { n: '定值电阻', ico: '▭', pre: 'R' }, motor: { n: '电动机', ico: '⚙️', pre: 'M' }, led: { n: '发光二极管', ico: '🔴', pre: 'D' }, bell: { n: '电铃', ico: '🔔', pre: '' },
   };
   const BULB_PN = 0.75;
 
@@ -23,6 +24,11 @@
     parallel: { n: '并联电路', els: [['bat', [7, 7], [5, 7]], ['sw', [5, 7], [3, 7], { label: 'S' }], ['bulb', [8, 1], [6, 1], { label: 'L1' }], ['sw', [5, 1], [3, 1], { label: 'S1' }], ['bulb', [8, 4], [6, 4], { label: 'L2' }], ['sw', [5, 4], [3, 4], { label: 'S2' }], ['w', [7, 7], [10, 7], [10, 1], [8, 1]], ['w', [8, 4], [10, 4]], ['w', [5, 1], [6, 1]], ['w', [5, 4], [6, 4]], ['w', [3, 7], [2, 7], [2, 1], [3, 1]], ['w', [3, 4], [2, 4]]] },
     ammeter: { n: '用电流表测电流', els: [['bat', [7, 7], [5, 7]], ['sw', [2, 5], [2, 3], { label: 'S' }], ['bulb', [8, 1], [6, 1], { label: 'L' }], ['amm', [10, 5], [10, 3], { label: 'A', range: 0.6 }], ['w', [7, 7], [10, 7], [10, 5]], ['w', [10, 3], [10, 1], [8, 1]], ['w', [6, 1], [2, 1], [2, 3]], ['w', [2, 5], [2, 7], [5, 7]]] },
     parallelA: { n: '并联电路中的电流', els: [['bat', [7, 7], [5, 7]], ['sw', [5, 7], [3, 7], { label: 'S' }], ['bulb', [8, 1], [6, 1], { label: 'L1' }], ['amm', [5, 1], [3, 1], { label: 'A1', range: 0.6 }], ['bulb', [8, 4], [6, 4], { label: 'L2', R: 12.7, Pn: 1.14 }], ['amm', [5, 4], [3, 4], { label: 'A2', range: 0.6 }], ['amm', [10, 7], [10, 5], { label: 'A', range: 0.6 }], ['w', [7, 7], [10, 7]], ['w', [10, 5], [10, 1], [8, 1]], ['w', [8, 4], [10, 4]], ['w', [5, 1], [6, 1]], ['w', [5, 4], [6, 4]], ['w', [3, 7], [2, 7], [2, 1], [3, 1]], ['w', [3, 4], [2, 4]]] },
+    voltmeter: { n: '用电压表测灯泡两端的电压', els: [['bat', [7, 7], [5, 7]], ['sw', [10, 5], [10, 3], { label: 'S' }], ['bulb', [7, 2], [5, 2], { label: 'L' }], ['vm', [7, 0], [5, 0], { label: 'V', range: 3, ls: -1 }], ['w', [7, 7], [10, 7], [10, 5]], ['w', [10, 3], [10, 2], [7, 2]], ['w', [5, 2], [2, 2], [2, 7], [5, 7]], ['w', [7, 2], [7, 0]], ['w', [5, 0], [5, 2]]] },
+    seriesV: { n: '串联电路中的电压', els: [['bat', [7, 7], [5, 7]], ['sw', [2, 4], [2, 6], { label: 'S' }], ['bulb', [10, 3], [8, 3], { label: 'L1' }], ['bulb', [7, 3], [5, 3], { label: 'L2', R: 12.7, Pn: 1.14 }], ['vm', [10, 1], [8, 1], { label: 'V1', range: 3 }], ['vm', [7, 1], [5, 1], { label: 'V2', range: 3 }], ['vm', [9, 5], [7, 5], { label: 'V', range: 3 }],
+      ['w', [7, 7], [11, 7], [11, 3], [10, 3]], ['w', [8, 3], [7, 3]], ['w', [5, 3], [2, 3], [2, 4]], ['w', [2, 6], [2, 7], [5, 7]], ['w', [10, 3], [10, 1]], ['w', [8, 1], [8, 3]], ['w', [7, 3], [7, 1]], ['w', [5, 1], [5, 3]], ['w', [10, 3], [10, 5], [9, 5]], ['w', [7, 5], [5, 5], [5, 3]]] },
+    parallelV: { n: '并联电路中的电压', els: [['bat', [7, 7], [5, 7]], ['sw', [5, 7], [3, 7], { label: 'S' }], ['bulb', [8, 2], [6, 2], { label: 'L1' }], ['bulb', [8, 4], [6, 4], { label: 'L2', R: 12.7, Pn: 1.14 }], ['vm', [8, 0], [6, 0], { label: 'V1', range: 3, ls: -1 }], ['vm', [8, 6], [6, 6], { label: 'V2', range: 3 }],
+      ['w', [7, 7], [10, 7], [10, 2], [8, 2]], ['w', [10, 4], [8, 4]], ['w', [6, 2], [2, 2], [2, 7], [3, 7]], ['w', [6, 4], [2, 4]], ['w', [8, 2], [8, 0]], ['w', [6, 0], [6, 2]], ['w', [8, 4], [8, 6]], ['w', [6, 6], [6, 4]]] },
     short: { n: '灯泡 L2 被短路', els: [['bat', [7, 7], [5, 7]], ['sw', [2, 5], [2, 3], { label: 'S' }], ['bulb', [3, 1], [5, 1], { label: 'L1' }], ['bulb', [7, 1], [9, 1], { label: 'L2' }], ['w', [7, 7], [10, 7], [10, 1], [9, 1]], ['w', [7, 1], [5, 1]], ['w', [3, 1], [2, 1], [2, 3]], ['w', [2, 5], [2, 7], [5, 7]], ['w', [7, 1], [7, 3], [9, 3], [9, 1]]] },
   };
 
@@ -38,12 +44,13 @@
       mkTool('pick', '👆 选择 / 操作', '点一下元件选中它；点开关可以闭合、断开；拖动元件可以移动'),
       mkTool('wire', '〰️ 画导线', '从一个格点拖到另一个格点；也可以先点起点、再点终点'),
       tools.map((k) => mkTool(k, TYPES[k].ico + ' ' + TYPES[k].n, '点一下画面放置' + TYPES[k].n)));
-    const presetSel = h('select', { class: 'cb-sel' }, Object.keys(PRESETS).map((k) => h('option', { value: k }, PRESETS[k].n)));
+    const usable = (k) => PRESETS[k].els.every((d) => d[0] === 'w' || tools.indexOf(d[0]) >= 0) || k === opts.preset;
+    const presetSel = h('select', { class: 'cb-sel' }, Object.keys(PRESETS).filter(usable).map((k) => h('option', { value: k }, PRESETS[k].n)));
     presetSel.value = opts.preset || 'simple';
     presetSel.addEventListener('change', () => load(presetSel.value));
     const dotT = PS.ui.toggle('显示电流', true, (v) => { st.dots = v; S.render(); });
     const eSeg = PS.ui.seg([{ value: false, label: '电流方向' }, { value: true, label: '电子移动' }], false, (v) => { st.electron = v; });
-    const numT = PS.ui.toggle('直接显示电流表示数', !opts.hideNum, (v) => { st.shown = v; S.render(); });
+    const numT = PS.ui.toggle(tools.indexOf('vm') >= 0 ? '直接显示电表的示数' : '直接显示电流表示数', !opts.hideNum, (v) => { st.shown = v; S.render(); });
     const view = h('div');
     const selBox = h('div', { class: 'cb-selbox' });
     const msg = h('div', { class: 'el-msg info' });
@@ -56,8 +63,8 @@
     S.canvas.style.touchAction = 'none';
     const DS = { box: dialBox, amm: null };
     let dialS = null;
-    if (opts.dial !== false && tools.indexOf('amm') >= 0) {
-      dialBox.append(h('div', { class: 'panel' }, h('h4', { class: 'cb-dial-t' }, '电流表的表盘'), h('div', { class: 'cb-dial' }), h('p', { class: 'small muted', style: { margin: '4px 0 0' } }, '读数时先看量程：0~0.6 A 每小格 0.02 A，0~3 A 每小格 0.1 A。')));
+    if (opts.dial !== false && (tools.indexOf('amm') >= 0 || tools.indexOf('vm') >= 0)) {
+      dialBox.append(h('div', { class: 'panel' }, h('h4', { class: 'cb-dial-t' }, '电流表的表盘'), h('div', { class: 'cb-dial' }), h('p', { class: 'small muted cb-dial-p', style: { margin: '4px 0 0' } }, '读数时先看量程：0~0.6 A 每小格 0.02 A，0~3 A 每小格 0.1 A。')));
       dialS = PS.stage(dialBox.querySelector('.cb-dial'), { ratio: '1 / 0.92', draw: drawDial });
     }
 
@@ -96,7 +103,7 @@
       for (let i = 1; ; i++) if (!used.has(pre + i)) return pre + i;
     }
     function make(t, p1, p2, o) {
-      const e = Object.assign({ id: 'e' + ++uid, t, p: [p1, p2] }, t === 'bat' ? { n: 2 } : {}, t === 'sw' ? { on: false } : {}, t === 'amm' ? { range: 0.6 } : {}, o || {});
+      const e = Object.assign({ id: 'e' + ++uid, t, p: [p1, p2] }, t === 'bat' ? { n: 2 } : {}, t === 'sw' ? { on: false } : {}, t === 'amm' ? { range: 0.6 } : {}, t === 'vm' ? { range: 3 } : {}, t === 'res' ? { R: 10 } : {}, o || {});
       if (e.label == null) e.label = nextLabel(t);
       return e;
     }
@@ -132,6 +139,7 @@
         if (e.t === 'bat') { n.E = 1.5 * e.n; n.r = 0.5 * e.n; }
         if (e.t === 'sw') n.on = e.on;
         if (e.t === 'bulb') { n.open = e.open || e.burnt; if (e.R) n.R = e.R; if (e.Pn) n.Pn = e.Pn; }
+        if (e.t === 'res') n.R = e.R;
         els.push(n);
       });
       return { els };
@@ -148,10 +156,15 @@
       netlist().els.forEach((n) => { st.deg[n.a] = (st.deg[n.a] || 0) + 1; st.deg[n.b] = (st.deg[n.b] || 0) + 1; });
       analyse();
       selPanel();
-      if (dialS) { DS.box.style.display = st.els.some((e) => e.t === 'amm') ? '' : 'none'; dialS.render(); }
+      if (dialS) { DS.box.style.display = st.els.some((e) => e.t === 'amm' || e.t === 'vm') ? '' : 'none'; dialS.render(); }
       S.render();
     }
     const I = (id) => (st.sol ? st.sol.I[id] || 0 : 0);
+    /** 电压表的示数：“+”接线柱（端点1）与“−”接线柱的电势差 */
+    const U = (e) => (st.sol ? (st.sol.V[K(e.p[0])] || 0) - (st.sol.V[K(e.p[1])] || 0) : 0);
+    const meterV = (e) => (e.t === 'vm' ? U(e) : I(e.id));
+    const unitOf = (e) => (e.t === 'vm' ? 'V' : 'A');
+    const fmtM = (e, v) => PS.fmt(EL.reading(v, e.range), e.t === 'vm' || e.range > 1 ? 1 : 2) + ' ' + unitOf(e);
     const lit = (e) => {
       if (!st.sol) return 0;
       if (e.t === 'led') return PS.clamp(I(e.id) / 0.03, 0, 1.4);
@@ -184,6 +197,11 @@
           if (v < -0.005) { lines.push('⚠️ 电流表 ' + nm + ' 的<b>正、负接线柱接反了</b>，指针向左偏，可能损坏电流表！'); cls = 'bad'; }
           else if (v > e.range) { lines.push('⚠️ 电流表 ' + nm + ' <b>超过量程</b>（指针打到头），' + (e.range < 1 ? '应换用 0~3 A 量程。' : '电流太大了！')); cls = 'bad'; }
           else if (st.shown) lines.push('Ⓐ 电流表 ' + nm + ' 的示数：' + PS.fmt(EL.reading(v, e.range), 2) + ' A（量程 0~' + e.range + ' A）。');
+        } else if (e.t === 'vm') {
+          const v = U(e);
+          if (v < -0.05) { lines.push('⚠️ 电压表 ' + nm + ' 的<b>正、负接线柱接反了</b>，指针向左偏！“+”接线柱要接在靠近电源正极的一端。'); cls = 'bad'; }
+          else if (v > e.range) { lines.push('⚠️ 电压表 ' + nm + ' <b>超过量程</b>（指针打到头），' + (e.range < 10 ? '应换用 0~15 V 量程。' : '电压太高了！')); cls = 'bad'; }
+          else if (st.shown) lines.push('Ⓥ 电压表 ' + nm + ' 的示数：' + PS.fmt(EL.reading(v, e.range), 1) + ' V（量程 0~' + e.range + ' V）。');
         } else if (e.t === 'motor') lines.push(Math.abs(I(e.id)) > 0.02 ? '⚙️ 电动机转动' + (I(e.id) < 0 ? '（反转）' : '') + '。' : '⚙️ 电动机不转。');
         else if (e.t === 'led') lines.push(lit(e) > 0.05 ? '🔴 发光二极管发光。' : '○ 发光二极管不发光' + (st.sol.V[K(e.p[1])] - st.sol.V[K(e.p[0])] > 0.5 ? '：<b>接反了</b>，电流不能从负极流向正极。' : '。'));
         else if (e.t === 'bell') lines.push(lit(e) ? '🔔 电铃在响。' : '🔕 电铃不响。');
@@ -191,7 +209,10 @@
       const dangling = Object.keys(st.deg || {}).filter((k) => st.deg[k] === 1).length;
       if (dangling) lines.push('<span class="muted">提示：有 ' + dangling + ' 个接线端没有连上（画面上的空心小圆圈）。</span>');
       if (!s.short.length && cls !== 'bad') cls = Ibat > 0.005 ? 'ok' : 'info';
-      if (Ibat < 0.005 && !s.short.length) lines.unshift('电路中<b>没有电流</b>：电路没有闭合（开关断开或某处断开）。');
+      if (Ibat < 0.005 && !s.short.length) {
+        const vs = st.els.filter((e) => e.t === 'vm' && U(e) > 0.5);
+        lines.unshift('电路中<b>没有电流</b>：电路没有闭合（开关断开或某处断开）。' + (vs.length && st.els.some((e) => e.t === 'sw' && e.on) ? '如果电压表<b>串联</b>在电路中：电压表的电阻很大，电路中几乎没有电流，灯泡不亮，电压表的示数接近电源电压。' : ''));
+      }
       msg.className = 'el-msg ' + cls; msg.innerHTML = lines.join('<br>');
     }
 
@@ -207,9 +228,11 @@
       if (e.t === 'sw') act(e.on ? '断开开关' : '闭合开关', () => { e.on = !e.on; PS.sound.clack(); }, 'btn btn-primary btn-sm');
       if (e.t === 'bulb') { if (e.burnt) act('换一个新灯泡', () => { e.burnt = false; }); else act(e.open ? '拧上灯泡' : '拧下灯泡', () => { e.open = !e.open; }); }
       if (e.t !== 'wire') act('⟳ 旋转', () => rotate(e));
-      if (e.t === 'bat' || e.t === 'amm' || e.t === 'led' || e.t === 'motor') act('⇄ 调换两端', () => { e.p = [e.p[1], e.p[0]]; });
+      if (e.t === 'bat' || e.t === 'amm' || e.t === 'vm' || e.t === 'led' || e.t === 'motor') act('⇄ 调换两端', () => { e.p = [e.p[1], e.p[0]]; });
       if (e.t === 'bat') row.append(PS.ui.seg([1, 2, 3].map((v) => ({ value: v, label: v + ' 节' })), e.n, (v) => { e.n = v; solve(); }).el);
       if (e.t === 'amm') row.append(PS.ui.seg([{ value: 0.6, label: '0~0.6 A' }, { value: 3, label: '0~3 A' }], e.range, (v) => { e.range = v; solve(); }).el);
+      if (e.t === 'vm') row.append(PS.ui.seg([{ value: 3, label: '0~3 V' }, { value: 15, label: '0~15 V' }], e.range, (v) => { e.range = v; solve(); }).el);
+      if (e.t === 'res') row.append(PS.ui.seg([5, 10, 15, 20].map((v) => ({ value: v, label: v + ' Ω' })), e.R, (v) => { e.R = v; solve(); }).el);
       act('🗑 删除', () => { st.els = st.els.filter((x) => x !== e); st.sel = null; }, 'btn btn-ghost btn-sm');
     }
     function rotate(e) {
@@ -349,7 +372,7 @@
         const vert = Math.abs(x1 - x2) < 1;
         EL.sym(ctx, e.t === 'bat' ? 'bat' : e.t, x1, y1, x2, y2, { F, size: C * 0.62, n: e.n, on: e.on, open: e.open || e.burnt, lit: lit(e), label: e.label, ls: e.ls || (vert ? -1 : 1), hl, lw: 3 });
         const ux = (x2 - x1) / (2 * C), uy = (y2 - y1) / (2 * C), nx = vert ? 1 : 0, ny = vert ? 0 : 1;
-        if (e.t === 'bat' || e.t === 'amm' || e.t === 'led') {
+        if (e.t === 'bat' || e.t === 'amm' || e.t === 'vm' || e.t === 'led') {
           const off = C * 0.42, side = C * 0.3;
           D.text(ctx, '+', x1 + ux * off + nx * side, y1 + uy * off + ny * side, { size: F(14), weight: 900, align: 'center', baseline: 'middle', color: '#e03131' });
           D.text(ctx, '−', x2 - ux * off + nx * side, y2 - uy * off + ny * side, { size: F(14), weight: 900, align: 'center', baseline: 'middle', color: '#1b2333' });
@@ -360,12 +383,13 @@
           ctx.save(); ctx.strokeStyle = '#2b8a3e'; ctx.lineWidth = 3;
           ctx.beginPath(); ctx.arc(cx, cy, r, a, a + 1.4); ctx.stroke(); ctx.beginPath(); ctx.arc(cx, cy, r, a + Math.PI, a + Math.PI + 1.4); ctx.stroke(); ctx.restore();
         }
-        if (e.t === 'amm') {
-          const v = I(e.id), cx = (x1 + x2) / 2 + (vert ? C * 0.95 : 0), cy = (y1 + y2) / 2 + (vert ? 0 : C * 0.68);
-          const bad = v < -0.005 || v > e.range;
-          const tx = bad ? (v < 0 ? '接反了！' : '超量程！') : st.shown ? PS.fmt(EL.reading(v, e.range), 2) + ' A' : '?';
-          D.text(ctx, tx, cx, cy, { size: F(13), weight: 800, align: 'center', baseline: 'middle', color: bad ? '#e03131' : '#3b5bdb', bg: 'rgba(255,255,255,.9)' });
+        if (e.t === 'amm' || e.t === 'vm') {
+          const v = meterV(e), sg = e.ls === -1 && !vert ? -1 : 1, cx = (x1 + x2) / 2 + (vert ? C * 0.95 : 0), cy = (y1 + y2) / 2 + (vert ? 0 : C * 0.68 * sg);
+          const bad = v < (e.t === 'vm' ? -0.05 : -0.005) || v > e.range;
+          const tx = bad ? (v < 0 ? '接反了！' : '超量程！') : st.shown ? fmtM(e, v) : '?';
+          D.text(ctx, tx, cx + (e.ls === -1 && !vert ? C * 1.6 : 0), e.ls === -1 && !vert ? (y1 + y2) / 2 : cy, { size: F(13), weight: 800, align: 'center', baseline: 'middle', color: bad ? '#e03131' : e.t === 'vm' ? '#0c8599' : '#3b5bdb', bg: 'rgba(255,255,255,.9)' });
         }
+        if (e.t === 'res') D.text(ctx, e.R + ' Ω', (x1 + x2) / 2 + (vert ? C * 0.7 : 0), (y1 + y2) / 2 + (vert ? 0 : C * 0.55), { size: F(12), weight: 700, align: 'center', baseline: 'middle', color: '#495057' });
       });
       // 连接点与空着的接线端
       Object.keys(st.deg || {}).forEach((k) => {
@@ -387,10 +411,12 @@
     function drawDial(ctx, w, hh) {
       const F = PS.virtual(ctx, w, hh, 400, 368);
       ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, 400, 368);
-      const a = st.sel && st.sel.t === 'amm' ? st.sel : st.els.find((e) => e.t === 'amm');
+      const a = st.sel && (st.sel.t === 'amm' || st.sel.t === 'vm') ? st.sel : st.els.find((e) => e.t === 'amm' || e.t === 'vm');
       if (!a) return;
-      const t = DS.box.querySelector('.cb-dial-t'); if (t) t.textContent = '电流表 ' + (a.label || '') + ' 的表盘（量程 0~' + a.range + ' A）';
-      EL.dial(ctx, 200, 150, 330, { v: I(a.id), range: a.range, terms: true, sel: ['-', String(a.range)], F });
+      const vm = a.t === 'vm';
+      const t = DS.box.querySelector('.cb-dial-t'); if (t) t.textContent = (vm ? '电压表 ' : '电流表 ') + (a.label || '') + ' 的表盘（量程 0~' + a.range + (vm ? ' V）' : ' A）');
+      const p = DS.box.querySelector('.cb-dial-p'); if (p) p.textContent = vm ? '读数时先看量程：0~3 V 每小格 0.1 V，0~15 V 每小格 0.5 V。点选其他电表可以看它的表盘。' : '读数时先看量程：0~0.6 A 每小格 0.02 A，0~3 A 每小格 0.1 A。' + (st.els.filter((e) => e.t === 'amm' || e.t === 'vm').length > 1 ? '点选其他电表可以看它的表盘。' : '');
+      EL.dial(ctx, 200, 150, 330, vm ? { v: U(a), range: a.range, ranges: [3, 15], unit: 'V', terms: true, sel: ['-', String(a.range)], F } : { v: I(a.id), range: a.range, terms: true, sel: ['-', String(a.range)], F });
     }
 
     const loop = PS.loop((dt) => { st.T += dt; if (st.dots || (st.sol && st.sol.short.length) || st.els.some((e) => e.t === 'motor')) S.render(); }, view);

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第2节 串、并联电路中电压的规律 · 看得见的物理</title>
+<meta name="description" content="九年级物理第十六章第2节：3D 探究串、并联电路中电压的规律（电压表接 L1、L2、电源两端，读数记录），串联 U = U₁ + U₂、并联 U = U₁ = U₂，电压的“高度”图，三个电压表同时测，电路故障的判断，电压规律的计算随机练习。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="16">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第16章 电压 电阻</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、串联电路的电压规律</a>
+    <a href="#k2">二、并联电路的电压规律</a>
+    <a href="#k3">三、应用与电路故障</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#voltage-law">🔬 实验：探究电压的规律</a>
+    <a href="../lab/index.html#circuit-fault">🔬 实验：判断电路故障</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第16章 电压 电阻</a> › 第2节</div>
+      <h1>串、并联电路中电压的规律</h1>
+      <p>串联电路中电流处处相等，并联电路干路电流等于各支路电流之和。那么，串联、并联电路中各部分的电压又有什么关系呢？用电压表来探究一下。</p>
+      <div class="hero-tags"><span>1 课时</span><span>6 个互动演示</span><span>2 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>通过实验探究得出串联、并联电路中电压的规律</li><li>会用电压的规律进行简单的计算</li><li>会用电压表判断简单的电路故障</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>探究串、并联电路中电压的规律</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>分析实验数据，得出规律</li><li>用电压表判断电路故障</li></ul></div>
+    </div>
+
+    <!-- ========== 一、串联电路的电压规律 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no exp">知识点 1</span><h2>探究串联电路中电压的规律</h2></div>
+      <div class="concept"><h3>实验设计</h3>
+        <p style="margin:0 0 6px"><b>问题：</b>两个灯泡串联，它们两端的电压 <span class="var">U</span><sub>AB</sub>、<span class="var">U</span><sub>BC</sub> 与两灯串联后的总电压 <span class="var">U</span><sub>AC</sub> 有什么关系？</p>
+        <p style="margin:0 0 6px"><b>器材：</b>两节干电池、开关、规格不同的小灯泡若干、电压表、导线。</p>
+        <p style="margin:0"><b>步骤：</b>① 断开开关，按电路图连接串联电路；② 把电压表分别并联在 L1 两端（A、B 之间）、L2 两端（B、C 之间）、L1 和 L2 两端（A、C 之间），测出 <span class="var">U</span><sub>AB</sub>、<span class="var">U</span><sub>BC</sub>、<span class="var">U</span><sub>AC</sub>；③ <b>换用不同规格的小灯泡</b>，再测几次；④ 分析数据，得出结论。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>3D 实验：探究串、并联电路中电压的规律</h3><span class="badge t">3D 模型</span><span class="badge o">实验</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">先选“串联电路”，把电压表依次接在 L1 两端、L2 两端、L1 和 L2 两端，闭合开关，读数并记录；换用不同规格的灯泡再测一组。再切换到“并联电路”，用同样的方法测 L1、L2 和电源两端的电压。可以拖动画面换角度观察。</p>
+          <div data-widget="vlaw-3d"></div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th>实验次数</th><th>L1 两端的电压 <span class="var">U</span><sub>AB</sub>/V</th><th>L2 两端的电压 <span class="var">U</span><sub>BC</sub>/V</th><th>串联总电压 <span class="var">U</span><sub>AC</sub>/V</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>1.4</td><td>1.4</td><td>2.8</td></tr>
+            <tr><td>2</td><td>1.2</td><td>1.6</td><td>2.8</td></tr>
+            <tr><td>3</td><td>1.1</td><td>1.7</td><td>2.8</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip tip-good"><b>结论：</b>串联电路两端的总电压等于各部分电路两端电压之和。<div class="formula" style="margin:6px 0 0">U = U₁ + U₂</div></div>
+      <div class="grid-2 mb">
+        <div class="tip tip-warn" style="margin:0"><b>注意：</b>串联电路中各用电器两端的电压<b>不一定相等</b>，与它们的规格有关：规格相同时电压相等，规格不同时一般不相等。各用电器分得的电压都小于总电压；导线两端的电压几乎为零。</div>
+        <div class="tip tip-exam" style="margin:0"><b>串联电池组：</b>串联电池组两端的电压等于每节电池两端电压之和。<b>n</b> 节新干电池串联，电压为 <b>1.5n V</b>（两节 3 V，三节 4.5 V）。</div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>电路搭建台：三个电压表同时测</h3><span class="badge o">动手</span><span class="badge t">模拟</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">三个电压表 V1、V2、V 分别测 L1、L2 两端和总电压。闭合开关，比较三个示数（点选一个电压表，右边显示它的表盘）；再选中电池改变节数，看规律是否仍然成立。</p>
+          <div data-widget="circuit-builder" data-opts='{"preset":"seriesV","tools":["bat","bulb","sw","amm","vm","res","motor","led"]}'></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 二、并联电路的电压规律 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no exp">知识点 2</span><h2>并联电路中电压的规律</h2></div>
+      <div class="concept"><h3>实验与结论</h3><p style="margin:0">把两个灯泡并联，用电压表分别测出 L1 两端的电压 <span class="var">U</span><sub>1</sub>、L2 两端的电压 <span class="var">U</span><sub>2</sub> 和电源两端的电压 <span class="var">U</span>（可以用上面 3D 实验的“并联电路”）。换用不同规格的灯泡多测几次，发现：</p>
+        <div class="formula">U = U₁ = U₂</div>
+        <p style="margin:0">并联电路中，各支路两端的电压<b>相等</b>，都等于电源两端的电压。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：电压的“高度”图</h3><span class="badge o">动画</span><span class="badge g">类比</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">把电路中各点的“电位”画成高度：电源把电荷“举高”，电荷经过用电器时“降低”。改变两个灯泡的规格和电池节数，比较串联和并联两种情况。</p>
+          <div data-widget="volt-hill"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-warn"><b>易错：</b>并联电路各支路两端的电压一定相等，但<b>两端电压相等的两个用电器不一定是并联</b>——两个规格相同的用电器串联时，它们两端的电压也相等。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>电路搭建台：并联电路中的电压</h3><span class="badge o">动手</span><span class="badge t">模拟</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">V1、V2 分别测 L1、L2 两端的电压。闭合开关，比较两个示数；两个灯泡的规格不同，电压一样吗？</p>
+          <div data-widget="circuit-builder" data-opts='{"preset":"parallelV","tools":["bat","bulb","sw","amm","vm","res","motor","led"]}'></div>
+        </div>
+      </div>
+
+      <div class="example">
+        <b>例题</b>　电源由 3 节新干电池串联组成，L1、L2 并联，开关 S 闭合后电压表 V 测电源电压，V1 测 L1 两端的电压，V2 测 L2 两端的电压。三个电压表的示数各是多少？若 A 处（干路）电流为 0.5 A，B 处（L2 所在支路）电流为 0.2 A，通过 L1 的电流是多少？
+        <details class="reveal"><summary>看解答</summary><p>电源电压 U = 3 × 1.5 V = 4.5 V；并联电路各支路两端电压相等且等于电源电压，所以三个电压表的示数都是 <b>4.5 V</b>。通过 L1 的电流 I₁ = I − I₂ = 0.5 A − 0.2 A = <b>0.3 A</b>。</p></details>
+      </div>
+    </section>
+
+    <!-- ========== 三、用电压表判断电路故障 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no">知识点 3</span><h2>电压规律的应用与电路故障</h2></div>
+      <div class="concept"><h3>实验中常见的故障</h3>
+        <ol style="margin:0;padding-left:1.4em">
+          <li>电压表指针<b>反向偏转</b>：正、负接线柱接反了。</li>
+          <li>电压表指针<b>不偏转</b>：电源不供电或电压表损坏；电压表或其他地方的接线断路；与电压表并联的用电器被<b>短路</b>。</li>
+          <li>闭合开关后电压表<b>有示数</b>（接近电源电压），但灯泡都不亮：与电压表并联的灯泡<b>断路</b>，或者电压表串联在电路中了。</li>
+        </ol></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：电路故障的判断</h3><span class="badge o">随机出题</span><span class="badge p">难点</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">电路中有一处故障。先闭合开关观察两灯和电流表，再把电压表改接到不同位置，根据示数找出故障。</p>
+          <div data-widget="fault-find"></div>
+        </div>
+      </div>
+
+      <div class="tip tip-exam"><b>判断方法（两灯串联）：</b>先看电流表——<b>无示数</b>（两灯都不亮）说明某处<b>断路</b>，<b>有示数</b>（一灯亮）说明某处<b>短路</b>。再看电压表——断路时，电压表接在哪个用电器两端有示数（接近电源电压），断路就在那里；短路时，电压表接在哪个用电器两端示数为零，哪个用电器就被短路了。</div>
+      <div class="example">
+        <b>例题</b>　电源电压为 6 V，L1、L2 串联，电压表测 L2 两端的电压。闭合开关后只有一只灯泡发光，电压表的示数为 6 V。故障可能是什么？
+        <details class="reveal"><summary>看解答</summary><p>有一只灯泡发光，说明电路是通的，故障是<b>短路</b>；电压表测 L2 两端的电压，示数等于电源电压 6 V，说明 L1 两端没有电压——<b>L1 被短路</b>，发光的是 L2。</p></details>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：电压规律的计算</h3><span class="badge o">随机出题</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">串联分压、并联电压相等、开关切换、看表盘、看错量程、小彩灯……题目随机生成，可以一直练下去。</p>
+          <div data-widget="volt-quiz" data-opts='{"set":"law"}'></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>串联电路</h4><ul><li>总电压等于各部分电压之和</li><li>U = U₁ + U₂</li><li>规格相同时各部分电压相等</li></ul></div>
+        <div class="summary-item"><h4>并联电路</h4><ul><li>各支路两端电压相等</li><li>U = U₁ = U₂</li><li>电压相等不一定是并联</li></ul></div>
+        <div class="summary-item"><h4>电池组</h4><ul><li>n 节干电池串联：1.5n V</li><li>多次实验：使结论具有普遍性</li><li>导线两端的电压几乎为零</li></ul></div>
+        <div class="summary-item"><h4>电路故障</h4><ul><li>电流表无示数 → 断路</li><li>电流表有示数、一灯不亮 → 短路</li><li>电压表接在断路处两端有示数</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s1-voltage.html"><small>← 上一节</small><b>第1节 电压</b></a>
+      <a class="next" href="s3-resistance.html"><small>下一节 →</small><b>第3节 电阻</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版九年级物理全一册第十六章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '两灯串联在 6 V 的电源上，L1 两端的电压为 2.5 V，则 L2 两端的电压为（　）', options: ['2.5 V', '3.5 V', '6 V', '8.5 V'], answer: 1, explain: '串联电路中 U = U₁ + U₂，U₂ = 6 V − 2.5 V = 3.5 V。' },
+    { type: 'choice', q: '两灯并联在由 2 节新干电池组成的电源上，L2 两端的电压为（　）', options: ['1.5 V', '3 V', '4.5 V', '无法确定'], answer: 1, explain: '并联电路各支路两端的电压都等于电源电压，3 V。' },
+    { type: 'judge', q: '两个用电器两端的电压相等，它们一定是并联的。', answer: false, explain: '两个规格相同的用电器串联时，它们两端的电压也相等。' },
+    { type: 'judge', q: '串联电路中，各用电器两端的电压一定相等。', answer: false, explain: '串联电路中各用电器分得的电压与规格有关，规格不同时一般不相等。' },
+    { type: 'fill', q: '4 节新干电池串联组成的电池组，电压是 ______ V。', answer: 6, tol: 0.001, unit: 'V', explain: '4 × 1.5 V = 6 V。' },
+    { type: 'choice', q: '探究串联电路电压规律时，换用不同规格的灯泡多次实验，目的是（　）', cols: 1, options: ['使结论具有普遍性', '保护电路', '使灯泡更亮', '减小误差'], answer: 0, explain: '多次实验、换用不同规格的灯泡，是为了避免偶然性，使结论具有普遍性。' },
+    { type: 'choice', q: '两灯串联，闭合开关后两灯都不亮，电压表接在 L2 两端时示数接近电源电压，故障是（　）', options: ['L1 断路', 'L1 短路', 'L2 断路', 'L2 短路'], answer: 2, explain: '两灯都不亮说明断路；电压表接在 L2 两端有示数，说明电压表经 L1 与电源连通，断路在 L2 处。' },
+    { type: 'fill', q: '电源电压保持不变，L1、L2 串联。开关切换后，电压表先测出总电压为 4.5 V，又测出 L1 两端的电压为 3 V，则 L2 两端的电压为 ______ V。', answer: 1.5, tol: 0.001, unit: 'V', explain: 'U₂ = U − U₁ = 4.5 V − 3 V = 1.5 V。' },
+    { type: 'choice', q: '小彩灯接在 220 V 电路中，每只小彩灯两端的电压不能超过 6 V，至少要串联（　）', options: ['36 只', '37 只', '38 只', '40 只'], answer: 1, explain: '220 V ÷ 6 V ≈ 36.7，要“至少”且不超过 6 V，所以要进一取整，37 只。' },
+    { type: 'choice', q: '在并联电路中，下列说法正确的是（　）', cols: 1, options: ['各支路电流相等，各支路两端电压之和等于电源电压', '各支路电流相等，各支路两端电压也相等', '干路电流等于各支路电流，电压之和等于电源电压', '干路电流等于各支路电流之和，各支路两端电压相等'], answer: 3, explain: '并联电路：I = I₁ + I₂，U = U₁ = U₂。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/vendor/three.min.js"></script>
+<script src="../assets/vendor/OrbitControls.js"></script>
+<script src="../assets/js/widgets/energy.js"></script>
+<script src="../assets/js/widgets/circuit.js"></script>
+<script src="../assets/js/widgets/vlaw.js"></script>
+<script src="../assets/js/widgets/builder.js"></script>
+<script src="../assets/js/widgets/circuit3d.js"></script>
+<script src="../assets/js/widgets/vlaw3d.js"></script>
+</body>
+</html>

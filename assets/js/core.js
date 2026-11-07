@@ -661,6 +661,7 @@
     { no: 13, name: '内能', dir: 'chapter13', icon: '🔥' },
     { no: 14, name: '内能的利用', dir: 'chapter14', icon: '🚂' },
     { no: 15, name: '电流和电路', dir: 'chapter15', icon: '🔋' },
+    { no: 16, name: '电压 电阻', dir: 'chapter16', icon: '⚡' },
   ];
 
   function enhanceNav() {

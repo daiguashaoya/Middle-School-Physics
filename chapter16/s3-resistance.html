@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第3节 电阻 · 看得见的物理</title>
+<meta name="description" content="九年级物理第十六章第3节：电阻表示导体对电流阻碍作用的大小（微观放大镜）、电阻的单位与常见的电阻、3D 探究影响导体电阻大小的因素（四根电阻丝、加热灯丝）、教材电阻表、拉长与对折、半导体（光敏电阻、热敏电阻、二极管）和超导现象。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="../index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#fff"/></svg></span><span>看得见的物理<small>初中物理 · 互动动画课堂</small></span></a>
+    <nav class="nav" data-root="../" data-ch="16">
+      <a href="../index.html">首页</a>
+      <a href="index.html" class="on">第16章 电压 电阻</a>
+      <a href="../lab/index.html">物理实验台</a>
+    </nav>
+    <button class="nav-toggle" aria-label="菜单"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  </div>
+</header>
+
+<div class="page-grid">
+  <aside class="toc">
+    <div class="toc-title">本节目录</div>
+    <a href="#k1">一、电阻</a>
+    <a href="#k2">二、影响电阻大小的因素</a>
+    <a href="#k3">三、半导体和超导现象</a>
+    <hr>
+    <a href="#summary">本节小结</a>
+    <a href="#practice">随堂练习</a>
+    <hr>
+    <a href="../lab/index.html#resist-factors">🔬 实验：探究影响电阻大小的因素</a>
+  </aside>
+
+  <main>
+    <section class="section-hero">
+      <div class="crumb"><a href="index.html">第16章 电压 电阻</a> › 第3节</div>
+      <h1>电　阻</h1>
+      <p>电压相同时，接入不同的导体，电路中的电流却不相同。导体对电流的阻碍作用有多大？它与哪些因素有关？</p>
+      <div class="hero-tags"><span>1 课时</span><span>6 个互动演示</span><span>1 个配套实验</span></div>
+    </section>
+
+    <div class="goals">
+      <div class="goal"><h4>🎯 学习目标</h4><ul><li>知道电阻表示导体对电流阻碍作用的大小，知道电阻的单位及换算</li><li>知道影响电阻大小的因素，知道电阻是导体本身的一种性质</li><li>了解半导体和超导现象</li></ul></div>
+      <div class="goal key"><h4>⭐ 重点</h4><ul><li>电阻的概念</li><li>影响电阻大小的因素</li></ul></div>
+      <div class="goal hard"><h4>🧩 难点</h4><ul><li>电阻是导体本身的性质</li><li>用控制变量法设计实验</li></ul></div>
+    </div>
+
+    <!-- ========== 一、电阻 ========== -->
+    <section class="kp" id="k1">
+      <div class="kp-title"><span class="kp-no">知识点 1</span><h2>电阻</h2></div>
+      <div class="concept"><h3><span class="def">电阻</span>（<span class="var">R</span>）</h3><p style="margin:0">导体虽然容易导电，但对电流也有一定的<b>阻碍作用</b>。在物理学中，用<b>电阻</b>表示导体对电流阻碍作用的大小，用字母 <span class="var">R</span> 表示。导体的电阻越大，表示导体对电流的阻碍作用越大。在电路图中，电阻（定值电阻）的符号是一个长方形框 ▭。</p>
+        <div class="formula">单位：欧姆（Ω）　　1 kΩ = 10³ Ω　　1 MΩ = 10⁶ Ω</div></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：导体对电流的阻碍作用</h3><span class="badge o">动画</span><span class="badge t">微观</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">“阻碍作用”：电源电压不变，在两个夹子之间换接不同的导体，比较电流表的示数和灯泡的亮暗，再看放大镜中自由电子的定向移动；“常见的电阻”：点一点图标，认识生活中各种电阻的大小。</p>
+          <div data-widget="resist-intro"></div>
+        </div>
+      </div>
+
+      <div class="grid-2 mb">
+        <div class="tip tip-good" style="margin:0"><b>电阻是导体本身的一种性质。</b>一个导体的电阻大小由它自身决定，与它两端是否有电压、是否有电流通过无关。电视机、收音机的电路板上有各种各样的电阻器（定值电阻）。</div>
+        <div class="tip tip-exam" style="margin:0"><b>常见的电阻：</b>实验用的小灯泡 5～50 Ω；实验室用的导线（每根）0.01～0.1 Ω；人的双手间（干燥）1 000～5 000 Ω，（潮湿）200～800 Ω。</div>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：电阻的单位换算</h3><span class="badge o">随机出题</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">kΩ、MΩ 与 Ω 之间的换算，题目随机生成。</p>
+          <div data-widget="volt-quiz" data-opts='{"set":"r"}'></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 二、影响电阻大小的因素 ========== -->
+    <section class="kp" id="k2">
+      <div class="kp-title"><span class="kp-no exp">知识点 2</span><h2>影响导体电阻大小的因素</h2></div>
+      <div class="concept"><h3>实验设计</h3>
+        <p style="margin:0 0 6px"><b>猜想：</b>导体的电阻可能与导体的<b>材料</b>、<b>长度</b>、<b>横截面积</b>有关。</p>
+        <p style="margin:0 0 6px"><b>器材：</b>示教板上有四根电阻丝——A 细长铜丝、B 细长镍铬合金丝、C 粗长镍铬合金丝、D 细短镍铬合金丝；电源、开关、小灯泡、电流表、导线。</p>
+        <p style="margin:0"><b>方法：</b>因素较多，每次只改变一个因素、控制其他因素相同（<b>控制变量法</b>）；电阻的大小看不见，通过<b>电流表的示数</b>（或灯泡的亮暗）来比较——电源电压不变时，电流越小，电阻越大（<b>转换法</b>）。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>3D 实验：探究影响导体电阻大小的因素</h3><span class="badge t">3D 模型</span><span class="badge o">实验</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">把鳄鱼夹依次接在 A、B、C、D 四根电阻丝两端，闭合开关，记录电流；再按控制变量法选出每次要比较的两根电阻丝。切换到“加热灯丝”，用酒精灯加热，观察电流的变化。</p>
+          <div data-widget="rfactor-3d"></div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="t">
+          <thead><tr><th>研究的问题</th><th>控制相同的因素</th><th>选用的电阻丝</th><th>结论</th></tr></thead>
+          <tbody>
+            <tr><td>电阻与材料的关系</td><td>长度、横截面积</td><td>A 和 B</td><td>材料不同，电阻不同</td></tr>
+            <tr><td>电阻与长度的关系</td><td>材料、横截面积</td><td>B 和 D</td><td>导体越长，电阻越大</td></tr>
+            <tr><td>电阻与横截面积的关系</td><td>材料、长度</td><td>B 和 C</td><td>横截面积越大，电阻越小</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip tip-good"><b>结论：</b>导体的电阻是导体本身的一种性质，它的大小决定于导体的<b>材料</b>、<b>长度</b>和<b>横截面积</b>，还与<b>温度</b>有关。对大多数导体来说，温度越高，电阻越大（也有少数导体的电阻随温度的升高而减小）。</div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：影响电阻大小的因素</h3><span class="badge o">动画</span><span class="badge p">常考</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">“改变一个导体”：换材料、改长度和粗细、加热，看电阻怎样变化；试试把导体拉长到 2 倍、对折起来。下面是教材中几种导体材料的电阻表。“两个导体串联比一比”：电阻不同的两段导体串联，电流和电压各有什么关系？</p>
+          <div data-widget="resist-factors"></div>
+        </div>
+      </div>
+
+      <div class="example">
+        <b>例题</b>　用同一种材料制成长度相等、横截面积不同的圆柱体 a 和 b（a 比 b 粗），把它们串联接入电路。通过 a、b 的电流 I<sub>a</sub>、I<sub>b</sub> 和它们两端的电压 U<sub>a</sub>、U<sub>b</sub> 的关系是怎样的？
+        <details class="reveal"><summary>看解答</summary><p>a、b 串联，电流处处相等：<b>I<sub>a</sub> = I<sub>b</sub></b>。材料、长度相同时，a 的横截面积大，电阻小，分得的电压小：<b>U<sub>a</sub> &lt; U<sub>b</sub></b>。</p></details>
+      </div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>练一练：会改变导体的电阻吗</h3><span class="badge o">分类</span><span class="badge p">易错</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">下面的做法会不会改变导体的电阻？点选你的判断。</p>
+          <div data-widget="resist-sort"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== 三、半导体和超导现象 ========== -->
+    <section class="kp" id="k3">
+      <div class="kp-title"><span class="kp-no">知识点 3</span><h2>半导体和超导现象</h2></div>
+      <div class="concept"><h3><span class="def">半导体</span>与<span class="def">超导现象</span></h3>
+        <p style="margin:0 0 6px">有一些材料，例如锗、硅，导电性能介于导体和绝缘体之间，叫做<b>半导体</b>。温度、光照、杂质等外界因素对半导体的导电性能有很大影响。利用半导体材料可以制作二极管、三极管，以及由它们组成的集成电路（芯片）。</p>
+        <p style="margin:0">某些物质在很低的温度时，电阻就变成了<b>零</b>，这就是<b>超导现象</b>。</p></div>
+      <div class="demo" data-fs>
+        <div class="demo-head"><h3>动画：半导体和超导现象</h3><span class="badge o">动画</span><span class="badge g">拓展</span></div>
+        <div class="demo-body">
+          <p class="demo-desc">“半导体”：改变光照、温度，看光敏电阻、热敏电阻的电阻和电路中的电流怎样变化；把二极管反过来接试试。“超导现象”：给汞、铅等材料降温，看电阻的变化，再判断哪些东西可以用超导材料来做。</p>
+          <div data-widget="semi-super"></div>
+        </div>
+      </div>
+
+      <div class="grid-2 mb">
+        <div class="tip tip-good" style="margin:0"><b>超导的好处：</b>用超导材料输送电能，可以大大降低由于电阻引起的电能损耗；用超导材料制作电子元件，不必考虑散热问题，元件尺寸可以大大缩小。</div>
+        <div class="tip tip-warn" style="margin:0"><b>易错：</b>利用电流<b>热效应</b>工作的用电器（电饭锅、电热水器、电炉、白炽灯的灯丝等）<b>不能</b>用超导材料制作——电阻为零就不会发热了。</div>
+      </div>
+    </section>
+
+    <!-- ========== 小结 ========== -->
+    <section class="kp" id="summary">
+      <div class="kp-title"><span class="kp-no sum">小结</span><h2>本节知识梳理</h2></div>
+      <div class="summary-grid">
+        <div class="summary-item"><h4>电阻</h4><ul><li>表示导体对电流阻碍作用的大小</li><li>用 R 表示，单位欧姆（Ω）</li><li>1 kΩ = 10³ Ω，1 MΩ = 10⁶ Ω</li></ul></div>
+        <div class="summary-item"><h4>影响因素</h4><ul><li>材料、长度、横截面积、温度</li><li>越长电阻越大，越粗电阻越小</li><li>电阻与电压、电流无关</li></ul></div>
+        <div class="summary-item"><h4>实验方法</h4><ul><li>控制变量法：每次只改变一个因素</li><li>转换法：用电流表示数比较电阻</li><li>多数导体温度越高电阻越大</li></ul></div>
+        <div class="summary-item"><h4>新材料</h4><ul><li>半导体：锗、硅，导电性能介于两者之间</li><li>超导：低温时电阻变为零</li><li>电热器不能用超导材料</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========== 练习 ========== -->
+    <section class="kp" id="practice">
+      <div class="kp-title"><span class="kp-no qz">练习</span><h2>随堂练习</h2></div>
+      <div data-quiz="q"></div>
+    </section>
+
+    <nav class="pager">
+      <a href="s2-voltage-law.html"><small>← 上一节</small><b>第2节 串、并联电路中电压的规律</b></a>
+      <a class="next" href="s4-rheostat.html"><small>下一节 →</small><b>第4节 变阻器</b></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="footer">看得见的物理 · 初中物理互动动画课堂 · 内容依据人教版九年级物理全一册第十六章 · <a href="https://github.com/daiguashaoya/Middle-School-Physics">GitHub</a></footer>
+
+<script>
+window.QUIZ = {
+  q: [
+    { type: 'choice', q: '关于导体的电阻，下列说法中正确的是（　）', cols: 1, options: ['电阻是导体本身的一种性质，与电压、电流无关', '通过导体的电流越大，导体的电阻越小', '导体中没有电流时，导体就没有电阻', '导体两端的电压越大，导体的电阻越大'], answer: 0, explain: '电阻是导体本身的一种性质，由材料、长度、横截面积和温度决定，与电压、电流无关。' },
+    { type: 'fill', q: '4.7 kΩ = ______ Ω。', answer: 4700, tol: 0.01, unit: 'Ω', explain: '1 kΩ = 10³ Ω，4.7 kΩ = 4 700 Ω。' },
+    { type: 'choice', q: '研究导体的电阻与材料的关系时，除了长度相同外，还应控制两根导线（　）', options: ['横截面积相同，材料相同', '横截面积不同，材料不同', '横截面积相同，材料不同', '横截面积不同，材料相同'], answer: 2, explain: '研究电阻与材料的关系，要控制长度、横截面积相同，只改变材料（控制变量法）。' },
+    { type: 'choice', q: '把一根粗细均匀的镍铬合金丝均匀拉长到原来的 2 倍，它的电阻将（　）', options: ['变为原来的一半', '不变', '变为原来的 2 倍', '变为原来的 4 倍'], answer: 3, explain: '拉长到 2 倍时长度变为 2 倍、横截面积变为一半，电阻变为原来的 4 倍。' },
+    { type: 'judge', q: '对大多数金属导体来说，温度越高，电阻越大。', answer: true, explain: '例如灯丝被加热后电阻变大，电流变小。' },
+    { type: 'choice', q: '实验中通过观察电流表示数的大小来比较电阻的大小，这种方法叫（　）', options: ['控制变量法', '转换法', '类比法', '等效替代法'], answer: 1, explain: '用看得见的电流大小反映看不见的电阻大小，是转换法。' },
+    { type: 'choice', q: '同种材料制成的两根导线，下列说法中正确的是（　）', cols: 1, options: ['长度相同时，粗的电阻小', '横截面积相同时，长的电阻小', '粗的电阻一定比细的小', '短的电阻一定比长的小'], answer: 0, explain: '材料、长度相同时，横截面积越大电阻越小；只比较一个因素而不控制其他因素，无法判断。' },
+    { type: 'choice', q: '下列物体中，可以用超导材料制作的是（　）', options: ['白炽灯的灯丝', '电饭锅的发热体', '电热水器的电热丝', '远距离输电线'], answer: 3, explain: '用超导材料输电可以大大减少电能损耗；利用电流热效应工作的用电器不能用超导材料。' },
+    { type: 'choice', q: '锗、硅等材料的导电性能介于导体和绝缘体之间，它们属于（　）', options: ['导体', '绝缘体', '半导体', '超导体'], answer: 2, explain: '锗、硅是常见的半导体材料，可以制作二极管、三极管等。' },
+    { type: 'judge', q: '同一根导线，接入电路时有电阻，从电路中取下来后电阻就变为零。', answer: false, explain: '电阻是导体本身的性质，不接入电路时也有电阻。' },
+  ],
+};
+</script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/vendor/three.min.js"></script>
+<script src="../assets/vendor/OrbitControls.js"></script>
+<script src="../assets/js/widgets/energy.js"></script>
+<script src="../assets/js/widgets/circuit.js"></script>
+<script src="../assets/js/widgets/vlaw.js"></script>
+<script src="../assets/js/widgets/resistance.js"></script>
+<script src="../assets/js/widgets/circuit3d.js"></script>
+<script src="../assets/js/widgets/rfactor3d.js"></script>
+</body>
+</html>

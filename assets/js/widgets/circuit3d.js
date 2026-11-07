@@ -1,5 +1,6 @@
 /* 第15章：3D 电路器材与两个 3D 实验——sp-3d 连接串联电路和并联电路、law-3d 探究串、并联电路中电流的规律。
- * PS.el.kit3d(E)：在 EL.three 场景中摆放电池盒、灯泡（灯座）、开关、电流表，用弯曲的导线连接接线柱，导线上的小球表示电流。
+ * PS.el.kit3d(E)：在 EL.three 场景中摆放电池盒、灯泡（灯座）、开关、电流表、电压表（第16章），用弯曲的导线连接接线柱，导线上的小球表示电流。
+ * K.net(o) 的 o.extra 可以追加别的元件（如第16章的电阻丝、变阻器），元件的节点名用“元件 id.接线柱”。
  * 依赖 three.js、OrbitControls、circuit.js */
 (function () {
   'use strict';
@@ -83,6 +84,29 @@
       c.top = new THREE.Vector3(0, 0.1, 0);
       return c;
     };
+    /* 电压表（第16章）：接线柱“−”“3”“15”，表盘与电流表相同（单位 V） */
+    K.voltmeter = function (id, x, z, ry) {
+      const c = comp(id, 'vm', x, z, ry), g = c.g;
+      const body = new THREE.Mesh(new THREE.BoxGeometry(0.115, 0.07, 0.06), Std(0x2f3d4a, { roughness: 0.6 })); body.position.y = 0.035; g.add(body);
+      const cv = document.createElement('canvas'); cv.width = 256; cv.height = 190;
+      const tex = new THREE.CanvasTexture(cv);
+      const face = new THREE.Mesh(new THREE.PlaneGeometry(0.1, 0.074), new THREE.MeshBasicMaterial({ map: tex })); face.position.set(0, 0.04, 0.0305); g.add(face);
+      const lab = document.createElement('canvas'); lab.width = 256; lab.height = 48;
+      const lc = lab.getContext('2d'); lc.fillStyle = '#2f3d4a'; lc.fillRect(0, 0, 256, 48); lc.font = 'bold 30px sans-serif'; lc.textAlign = 'center'; lc.fillStyle = '#f8f9fa'; [['−', 60], ['3', 128], ['15', 196]].forEach(([t, xx]) => lc.fillText(t, xx, 36));
+      const strip = new THREE.Mesh(new THREE.PlaneGeometry(0.1, 0.019), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(lab) })); strip.rotation.x = -Math.PI / 2; strip.position.set(0, 0.0705, 0.019); g.add(strip);
+      c.T['-'] = post(g, -0.032, -0.008, 0x212529, 0.07); c.T['3'] = post(g, 0, -0.008, 0xe03131, 0.07); c.T['15'] = post(g, 0.032, -0.008, 0xe03131, 0.07);
+      let last = '';
+      c.setValue = (v, range) => {
+        const key = PS.round(v, 4) + '|' + range;
+        if (key === last) return; last = key;
+        const ctx = cv.getContext('2d'); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = '#2f3d4a'; ctx.fillRect(0, 0, 256, 190);
+        EL.dial(ctx, 128, 95, 236, { v, range, ranges: [3, 15], unit: 'V', body: '#2f3d4a' });
+        tex.needsUpdate = true;
+      };
+      c.setValue(0, 3);
+      c.top = new THREE.Vector3(0, 0.1, 0);
+      return c;
+    };
     K.world = (key) => { const [id, k] = key.split(/\.(.+)/); const c = K.comps[id]; c.g.updateMatrixWorld(); return c.g.localToWorld(c.T[k].clone()); };
     K.wire = function (k1, k2, color) {
       const p1 = K.world(k1), p2 = K.world(k2), d = p1.distanceTo(p2);
@@ -105,7 +129,9 @@
         else if (c.kind === 'bulb') els.push({ id: c.id, t: 'bulb', a: c.id + '.2', b: c.id + '.1', R: (o.R && o.R[c.id]) || 10, Pn: (o.Pn && o.Pn[c.id]) || 0.75, open: o.open && o.open[c.id] });
         else if (c.kind === 'sw') els.push({ id: c.id, t: 'sw', a: c.id + '.2', b: c.id + '.1', on: o.on && o.on[c.id] });
         else if (c.kind === 'amm') { const rk = used.has(c.id + '.0.6') ? '0.6' : used.has(c.id + '.3') ? '3' : null; if (rk) { els.push({ id: c.id, t: 'amm', a: c.id + '.' + rk, b: c.id + '.-' }); c.range = +rk; } else c.range = null; }
+        else if (c.kind === 'vm') { const rk = used.has(c.id + '.3') ? '3' : used.has(c.id + '.15') ? '15' : null; if (rk) { els.push({ id: c.id, t: 'vm', a: c.id + '.' + rk, b: c.id + '.-' }); c.range = +rk; } else c.range = null; }
       });
+      if (o.extra) o.extra.forEach((e) => els.push(e));
       K.wires.forEach((w) => els.push({ id: w.id, t: 'wire', a: w.k1, b: w.k2 }));
       return { els };
     };
